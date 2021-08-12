@@ -1,9 +1,3 @@
----
-Exercise:
-    title: 'M05-Unit 4 Deploy Azure Application Gateway'
-    module: 'Module - Load balancing HTTP(S) traffic in Azure'
----
-
 # M05-Unit 4 Deploy Azure Application Gateway
  
 
@@ -176,24 +170,9 @@ In this example, you install IIS on the virtual machines to verify Azure created
 3. Run the following command to install IIS on the virtual machine. Change the Location parameter if necessary:
 
 ```Azure PowerShell
-Set-AzVMExtension `
-
- -ResourceGroupName ContosoResourceGroup `
-
- -ExtensionName IIS `
-
- -VMName BackendVM1 `
-
- -Publisher Microsoft.Compute `
-
- -ExtensionType CustomScriptExtension `
-
- -TypeHandlerVersion 1.4 `
-
- -SettingString '{"commandToExecute":"powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path \"C:\\inetpub\\wwwroot\\Default.htm\" -Value $($env:computername)"}' `
-
- -Location WestUS
+Set-AzVMExtension -ResourceGroupName ContosoResourceGroup -ExtensionName IIS -VMName BackendVM1 -Publisher Microsoft.Compute -ExtensionType CustomScriptExtension -TypeHandlerVersion 1.4 -SettingString '{"commandToExecute":"powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path \"C:\\inetpub\\wwwroot\\Default.htm\" -Value $($env:computername)"}' -Location WestUS
 ```
+>> Note: All command should be in single line, then run the command in one go.
 
 4. Create a second virtual machine and install IIS by using the Create virtual machines and Install IIS for testing steps that you previously completed. Use BackendVM2 for the virtual machine name and for the **VMName** setting of the **Set-AzVMExtension** cmdlet.
 
