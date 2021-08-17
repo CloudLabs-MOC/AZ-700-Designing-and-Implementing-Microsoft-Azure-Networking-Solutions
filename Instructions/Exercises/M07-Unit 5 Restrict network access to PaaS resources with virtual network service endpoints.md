@@ -28,17 +28,17 @@ In this exercise, you will:
 3. Select **+** **Create**.
 
 4. Enter, or select, the following information
-   ![Graphical user interface, text, application Description automatically generated](../media/create-virtual-network.png)
+   ![Graphical user interface, text, application Description automatically generated](../media/createvnet.png)
 
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
    | Subscription   | Select your subscription                      |
    | Resource group | Select the provided resource group
    | Name           | CoreServicesVNet                              |
-   | Location       | Select **West US**                            |
+   | Location       | Select **East US**                            |
 
 5. Select the **IP Addresses** tab and enter the following values (select **default** to change the subnet name):
-   ![Graphical user interface, text, application, email Description automatically generated](../media/create-virtual-network-ip.png)
+   ![Graphical user interface, text, application, email Description automatically generated](../media/IP.png)
 
    | **Setting**          | **Value**   |
    | -------------------- | ----------- |
@@ -47,7 +47,7 @@ In this exercise, you will:
    | Subnet Address range | 10.0.0.0/24 |
 
 6. Select the **Security** tab and enter the following values:
-   ![Graphical user interface, text, application, email Description automatically generated](../media/ create-virtual-network-security.png)
+   ![Graphical user interface, text, application, email Description automatically generated](../media/create-virtual-network-security.png)
 
    | **Setting**     | **Value** |
    | --------------- | --------- |
@@ -64,7 +64,7 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
 1. In the **Search resources, services, and docs** box at the top of the portal, enter CoreServicesVNet. When CoreServicesVNet appears in the search results, select it.
 
 2. Add a subnet to the virtual network. Under **Settings**, select **Subnets**, and then select **+ Subnet**, as shown in the following picture: 
-   ![Graphical user interface, application Description automatically generated](../media/create-subnet.png)
+   ![Graphical user interface, application Description automatically generated](../media/subnets.png)
 
 3. Under **Add subnet**, select or enter the following information:
 
@@ -78,7 +78,7 @@ Service endpoints are enabled per service, per subnet. Create a subnet and enabl
 
 You should now have two subnets configured:
 
-![Graphical user interface, text, application, email Description automatically generated](../media/configured-subnets.png)
+![Graphical user interface, text, application, email Description automatically generated](../media/configuredsubnet.png)
 
  
 
@@ -91,26 +91,26 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
 2. In Network security groups, select **+ Create**. 
 
 3. Enter or select, the following information: 
-   ![Graphical user interface, text, application Description automatically generated](../media/create-network-security-group.png)
+   ![Graphical user interface, text, application Description automatically generated](../media/nsg.png)
 
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
-   | Resource group | Select **Use existing** and select the provided resource group from Learn |
+   | Resource group | Select **Use existing** and select the provided resource group |
    | Name           | ContosoPrivateNSG                                            |
-   | Location       | Select **West US**                                           |
+   | Location       | Select **East US**                                           |
 
 4. select **Review + create**, then click **Create**:
 
 5. After the ContosoPrivateNSG network security group is created, select **Go to resource**.
-   ![Graphical user interface, text, application, email Description automatically generated](../media/nsg-deployment-complete.png)
+   ![Graphical user interface, text, application, email Description automatically generated](../media/deployednsg.png)
 
 6. Under **Settings**, select **Outbound security rules**.
 
 7. Select **+ Add**.
 
 8. Create a rule that allows outbound communication to the Azure Storage service. Enter, or select, the following information:
-   ![Graphical user interface, application Description automatically generated](../media/add-outbound-security-rule.png)
+   ![Graphical user interface, application Description automatically generated](../media/outboundsecurity1.png)
 
    | **Setting**             | **Value**                 |
    | ----------------------- | ------------------------- |
@@ -135,7 +135,7 @@ Create another outbound security rule that denies communication to the internet.
 1. Select **+Add** under **Outbound security rules**.
 
 2. Enter, or select, the following information:
-   ![Graphical user interface, application, email Description automatically generated](../media/add-outbound-security-rule-deny.png)
+   ![Graphical user interface, application, email Description automatically generated](../media/outboundsecurity2.png)
 
    | **Setting**             | **Value**                 |
    | ----------------------- | ------------------------- |
@@ -161,7 +161,7 @@ Create an inbound security rule that allows Remote Desktop Protocol (RDP) traffi
 2. Select **+ Add**.
 
 3. In Add inbound security rule, enter the following values::
-   ![Graphical user interface, application Description automatically generated](../media/add-inbound-security-rule.png)
+   ![Graphical user interface, application Description automatically generated](../media/inboundrule.png)
 
    | **Setting**             | **Value**                 |
    | ----------------------- | ------------------------- |
@@ -198,15 +198,15 @@ The steps necessary to restrict network access to resources created through Azur
 2. Select +Create.
 
 3. Enter, or select, the following information and accept the remaining defaults:
-   ![Graphical user interface, text, application, email Description automatically generated](../media/create-a-storage-account-basics.png)
+   ![Graphical user interface, text, application, email Description automatically generated](../media/storageaccount.png)
 
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
-   | Resource group | Select Use existing and select the resource group provided by Learn. |
-   | Name           | Enter a contosostoragewest                                |
+   | Resource group | Select Use existing and select the provided  resource group  |
+   | Name           | Enter a contosostorageswest                                  |
    | Performance    | Standard StorageV2 (general purpose v2)                      |
-   | Location       | Select West US                                               |
+   | Location       | Select East US                                               |
    | Replication    | Locally-redundant storage (LRS)                              |
 
 4. select **Review + create**, then click **Create**.
@@ -215,7 +215,7 @@ The steps necessary to restrict network access to resources created through Azur
 
 1. After the storage account is created, enter the name of the storage account in the **Search resources, services, and docs** box, at the top of the portal. When the name of your storage account appears in the search results, select it.
 2. Select **File shares**, as shown in the following picture: 
-   ![Graphical user interface, application Description automatically generated](../media/fileshare.png)
+   ![Graphical user interface, application Description automatically generated](../media/fileshares.png)
 3. Select **+ File share**.
 4. Enter marketing under **Name**, and then select **Create**.
 
@@ -230,7 +230,7 @@ By default, storage accounts accept network connections from clients in any netw
 3. Select **+Add existing virtual network**.
 
 4. Under **Add networks**, select the following values:
-   ![Graphical user interface, application Description automatically generated](../media/add-network-access.png)
+   ![Graphical user interface, application Description automatically generated](../media/networking.png)
 
    | **Setting**      | **Value**                    |
    | ---------------- | ---------------------------- |
@@ -253,30 +253,29 @@ To test network access to a storage account, deploy a VM to each subnet.
 1. In the Azure portal Home screen, select Virtual machinesSelect **+ Create**, then **+Virtual machine**.
 
 2. On the Basics tab, enter, or select, the following information: 
-   ![Graphical user interface, text, application, email Description automatically generated](../media/create-virtual-machine-basics.png)
+   ![Graphical user interface, text, application, email Description automatically generated](../media/virtualmachine.png)
 
    | **Setting**           | **Value**                                                    |
    | --------------------- | ------------------------------------------------------------ |
    | Project Details       |                                                              |
    | Subscription          | Select your subscription.                                    |
-   | Resource group        | Select **Use existing** and select the resource group provided by Learn |
+   | Resource group        | Select **Use existing** and select the provided resource group|
    | Instance Details      |                                                              |
    | Virtual machine name  | ContosoWestPublic                                            |
-   | Region                | (US) West US                                                 |
+   | Region                | (US) East US                                                 |
    | Availability Options  | No infrastructure redundancy required                        |
    | Image                 | Select **Windows Server 2019 Datacenter-Gen1**.                   |
    | Size                  | Standard_D2s_v3                                                 |
    | Administrator Account |                                                              |
-   | Authentication type   | SSH public key                                               |
-   | Username              | Enter a user name of your choosing.                          |
-   | Password              | Enter a password of your choosing.                           |
+   | Username              | Enter a user name of your choice.                          |
+   | Password              | Enter a password of your choice.                           |
    | Confirm Password      | Re-enter the password.                                       |
    | Inbound port rules    |                                                              |
    | Public inbound ports  | Allow selected ports                                         |
    | Select inbound ports  | RDP (3389)                                                   |
 
 3. Then select the **Networking** tab. Enter, or select, the following information:
-   ![Graphical user interface, application, email Description automatically generated](../media/createvm.png)
+   ![Graphical user interface, application, email Description automatically generated](../media/virtualmachine2.png)
 
    | **Setting**                | **Value**                  |
    | -------------------------- | -------------------------- |
@@ -300,7 +299,7 @@ The VM takes a few minutes to deploy. Do not continue to the next step until it 
 ## Task 10: Confirm access to storage account
 
 1. Once the ContosoWestPrivate VM finishes creating, open the blade for the VM by selecting Go to resource. Select the Connect button, then select RDP.
-   ![Graphical user interface, application Description automatically generated](../media/private-virtual-machine-connect.png)
+   ![Graphical user interface, application Description automatically generated](../media/rdpconnect.png)
 2. After selecting the Connect button and RDP, select the Download RDP File button. A Remote Desktop Protocol (.rdp) file is created and downloaded to your computer.
 3. Open the downloaded rdp file. If prompted, select Connect. Enter the user name and password you specified when creating the VM. You may need to select More choices, then Use a different account, to specify the credentials you entered when you created the VM.
 4. Select **OK**.
