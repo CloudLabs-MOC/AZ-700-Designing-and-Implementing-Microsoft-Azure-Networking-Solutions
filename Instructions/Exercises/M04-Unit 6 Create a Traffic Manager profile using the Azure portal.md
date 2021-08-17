@@ -1,8 +1,3 @@
----
-Exercise:
-    title: 'M04-Unit 6 Create a Traffic Manager profile using the Azure portal'
-    module: 'Module - Load balancing non-HTTP(S) traffic in Azure'
----
 
 # M04-Unit 6 Create a Traffic Manager profile using the Azure portal
 
@@ -36,8 +31,8 @@ In this section, you will create two instances of a web application deployed in 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription                                     |
-   | Resource group   | Select **Create  new**  Name: **Contoso-RG-TM1**             |
-   | Name             | **ContosoWebAppEastUS**                                      |
+   | Resource group   | Select: **Contoso-RG-TM1-{deploymeny-id}**             |
+   | Name             | **ContosoWebAppEastS**                                      |
    | Publish          | **Code**                                                     |
    | Runtime stack    | **ASP.NET V4.8**                                             |
    | Operating system | **Windows**                                                  |
@@ -60,8 +55,8 @@ In this section, you will create two instances of a web application deployed in 
 
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
-   | Resource group | Select **Create  new**  Name: **Contoso-RG-TM2**             |
-   | Name           | **ContosoWebAppWestEurope**                                  |
+   | Resource group | Select: **Contoso-RG-TM2-{deployment-id}**             |
+   | Name           | **ContosoWebAppWstEurope**                                  |
    | Region         | **West Europe**                                              |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
 
@@ -190,4 +185,3 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
  
-
