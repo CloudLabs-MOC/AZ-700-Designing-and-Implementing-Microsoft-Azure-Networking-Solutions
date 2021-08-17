@@ -30,7 +30,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 | **Tab**         | **Option**                                                   | **Value**                                |
 | --------------- | ------------------------------------------------------------ | -------------------------------------    |
-| Basics          | Resource group                                               | ContosoResourceGroup                     |
+| Basics          | Resource group                                               | ContosoResourceGroup-Deployment-id                     |
 |                 | Virtual machine name                                         | ManufacturingVM                          |
 |                 | Region                                                       | (Europe) North Europe                    |
 |                 | Availability options                                         | No infrastructure redundancy required    |

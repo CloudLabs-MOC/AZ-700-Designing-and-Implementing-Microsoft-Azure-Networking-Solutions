@@ -63,10 +63,12 @@ In this exercise, you will:
 
 | **Tab**      | **Option**         | **Value**            |
 | ------------ | ------------------ | -------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup |
+| Basics       | Resource Group     | ContosoResourceGroup-Deployment-id |
 |              | Name               | CoreServicesVnet     |
 |              | Region             | (US) West US         |
 | IP Addresses | IPv4 address space | 10.20.0.0/16         |
+
+**Note:** you will get Deployment-id from the enviroment link of lab guide .
 
  5. Use the information in the following table to create the CoreServicesVnet subnets.
 
@@ -94,7 +96,7 @@ In this exercise, you will:
 
 | **Tab**      | **Option**         | **Value**             |
 | ------------ | ------------------ | --------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup  |
+| Basics       | Resource Group     | ContosoResourceGroup-Deployment-id  |
 |              | Name               | ManufacturingVnet     |
 |              | Region             | (Europe) North Europe |
 | IP Addresses | IPv4 address space | 10.30.0.0/16          |
@@ -118,7 +120,7 @@ In this exercise, you will:
 
 | **Tab**      | **Option**         | **Value**            |
 | ------------ | ------------------ | -------------------- |
-| Basics       | Resource Group     | ContosoResourceGroup |
+| Basics       | Resource Group     | ContosoResourceGroup-Deployment-id |
 |              | Name               | ResearchVnet         |
 |              | Region             | West India           |
 | IP Addresses | IPv4 address space | 10.40.0.0/16         |

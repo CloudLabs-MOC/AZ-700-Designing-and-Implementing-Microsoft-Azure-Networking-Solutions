@@ -24,7 +24,7 @@ In this exercise, you will:
 
 | **Tab**         | **Option**                             | **Value**            |
 | --------------- | -------------------------------------- | -------------------- |
-| Basics          | Resource group                         | ContosoResourceGroup |
+| Basics          | Resource group                         | ContosoResourceGroup-Deployment-id |
 |                 | Name                                   | Contoso.com          |
 | Tags            | No changes required                    |                      |
 | Review + create | Review your settings and select Create |                      |
@@ -48,7 +48,7 @@ In this exercise, you will:
 | ----------------------------------- | --------------------------------------- |
 | Link name                           | CoreServicesVnetLink                    |
 | Subscription                        | No changes required                     |
-| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup) |
+| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup-Deployment-id) |
 | Enable auto registration            | Selected                                |
 | Review your settings and select OK. |                                         |
 
@@ -63,7 +63,7 @@ In this exercise, you will:
 | ----------------------------------- | ---------------------------------------- |
 | Link name                           | ManufacturingVnetLink                    |
 | Subscription                        | No changes required                      |
-| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup) |
+| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup-Deployment-id) |
 | Enable auto registration            | Selected                                 |
 | Review your settings and select OK. |                                          |
 
@@ -78,7 +78,7 @@ In this exercise, you will:
 | ----------------------------------- | ----------------------------------- |
 | Link name                           | ResearchVnetLink                    |
 | Subscription                        | No changes required                 |
-| Virtual Network                     | ResearchVnet (ContosoResourceGroup) |
+| Virtual Network                     | ResearchVnet (ContosoResourceGroup-Deployment-id) |
 | Enable auto registration            | Selected                            |
 | Review your settings and select OK. |                                     |
 
@@ -109,7 +109,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 | **Tab**         | **Option**                                                   | **Value**                             |
 | --------------- | ------------------------------------------------------------ | ------------------------------------- |
-| Basics          | Resource group                                               | ContosoResourceGroup                  |
+| Basics          | Resource group                                               | ContosoResourceGroup-Deployment-id    |
 |                 | Virtual machine name                                         | TestVM1                               |
 |                 | Region                                                       | (US) West US                          |
 |                 | Availability options                                         | No infrastructure redundancy required |
@@ -153,7 +153,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 | **Tab**         | **Option**                                                   | **Value**                             |
 | --------------- | ------------------------------------------------------------ | ------------------------------------- |
-| Basics          | Resource group                                               | ContosoResourceGroup                  |
+| Basics          | Resource group                                               | ContosoResourceGroup-Deployment-id                  |
 |                 | Virtual machine name                                         | TestVM2                               |
 |                 | Region                                                       | (US) West US                          |
 |                 | Availability options                                         | No infrastructure redundancy required |
