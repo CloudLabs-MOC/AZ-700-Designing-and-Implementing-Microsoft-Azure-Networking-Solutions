@@ -1,8 +1,3 @@
----
-Exercise:
-    title: 'M01-Unit 8 Connect two Azure Virtual Networks using global virtual network peering'
-    module: 'Module - Introduction to Azure Virtual Networks'
----
 # M01-Unit 8 Connect two Azure Virtual Networks using global virtual network peering
 
 ## Exercise scenario 
@@ -33,32 +28,32 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 5. Use the information in the following table to create your VM.
 
-| **Tab**         | **Option**                                                   | **Value**                             |
-| --------------- | ------------------------------------------------------------ | ------------------------------------- |
-| Basics          | Resource group                                               | ContosoResourceGroup                  |
-|                 | Virtual machine name                                         | ManufacturingVM                       |
-|                 | Region                                                       | (Europe) North Europe                 |
-|                 | Availability options                                         | No infrastructure redundancy required |
-|                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 1  |
-|                 | Azure Spot instance                                          | Not selected                          |
-|                 | Size                                                         | Standard_D2_v3 - 2vcpus, 8GiB memory  |
-|                 | Username                                                     | TestUser                              |
-|                 | Password                                                     | TestPa$$w0rd!                         |
-|                 | Public inbound ports                                         | Allow selected ports                  |
-|                 | Select inbound ports                                         | RDP (3389)                            |
+| **Tab**         | **Option**                                                   | **Value**                                |
+| --------------- | ------------------------------------------------------------ | -------------------------------------    |
+| Basics          | Resource group                                               | ContosoResourceGroup                     |
+|                 | Virtual machine name                                         | ManufacturingVM                          |
+|                 | Region                                                       | (Europe) North Europe                    |
+|                 | Availability options                                         | No infrastructure redundancy required    |
+|                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 1     |
+|                 | Azure Spot instance                                          | Not selected                             |
+|                 | Size                                                         | Standard_D2_v3 - 2vcpus, 8GiB memory     |
+|                 | Username                                                     | TestUser                                 |
+|                 | Password                                                     | TestPa$$w0rd!                            |
+|                 | Public inbound ports                                         | Allow selected ports                     |
+|                 | Select inbound ports                                         | RDP (3389)                               |
 |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected                              |
-| Disks           | No changes required                                          |                                       |
-| Networking      | Virtual network                                              | ManufacturingVnet                     |
-|                 | Subnet                                                       | DatabaseSubnet (10.30.10.0/24)        |
-|                 | Public IP                                                    | (new) ManufacturingVM-ip              |
-|                 | NIC network security group                                   | Basic                                 |
-|                 | Public inbound ports                                         | Allow selected ports                  |
-|                 | Select inbound ports                                         | RDP (3389)                            |
-|                 | Load balancing                                               | Not selected                          |
-| Management      | No changes required                                          |                                       |
-| Advanced        | No changes required                                          |                                       |
-| Tags            | No changes required                                          |                                       |
-| Review + create | Review your settings and select Create                       |                                       |
+| Disks           | No changes required                                          |                                          |
+| Networking      | Virtual network                                              | ManufacturingVnet                        |
+|                 | Subnet                                                       | ManufacturingSystemSubnet(10.30.10.0/24)        |
+|                 | Public IP                                                    | (new) ManufacturingVM-ip                 |
+|                 | NIC network security group                                   | Basic                                    |
+|                 | Public inbound ports                                         | Allow selected ports                     |
+|                 | Select inbound ports                                         | RDP (3389)                               |
+|                 | Load balancing                                               | Not selected                             |
+| Management      | No changes required                                          |                                          |
+| Advanced        | No changes required                                          |                                          |
+| Tags            | No changes required                                          |                                          |
+| Review + create | Review your settings and select Create                       |                                          |
 
 
 6. When the deployment is complete, select **Go to resource**.

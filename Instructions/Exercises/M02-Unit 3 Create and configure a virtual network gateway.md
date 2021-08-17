@@ -1,10 +1,3 @@
----
-Exercise:
-    title: 'M02-Unit 3 Create and configure a virtual network gateway'
-    module: 'Module - Design and implement hybrid networking'
----
-
-
 # M02-Unit 3 Create and configure a virtual network gateway
 
 In this exercise you will configure a virtual network gateway to connect the Contoso Core Services VNet and Manufacturing VNet. 
@@ -25,14 +18,26 @@ In this exercise, you will:
 
 ## Task 1: Create CoreServicesVnet and ManufacturingVnet
 
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. Click on the Azure Portal icon on the VM desktop and login with the Azure credentials from the Lab Environment output page.
 
-2. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the following files azuredeploy.json and azuredeploy.parameters.json into the Cloud Shell home directory.
+2. From the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-3. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
+   ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/cloud_shell.png)
+   
+3. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+
+4. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
+
+5. Navigate to the location that is specified. Az-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/Allfiles/Exercises/M02
+
+6. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the following files azuredeploy.json and azuredeploy.parameters.json into the Cloud Shell home directory.
+
+7. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
+
+ >Note: Use the RGName as the existing resource group name which was already defined
 
    ```powershell
-   $RGName = "ContosoResourceGroup"
+   $RGName = "ContosoResourceGroup" (Use existing rgname)
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
@@ -66,7 +71,7 @@ In this exercise, you will:
    |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected                              |
    | Disks           | No changes required                                          |                                       |
    | Networking      | Virtual network                                              | CoreServicesVnet                      |
-   |                 | Subnet                                                       | DatabaseSubnet (10.20.0.0/24)         |
+   |                 | Subnet                                                       | DatabaseSubnet (10.20.20.0/24)         |
    |                 | Public IP                                                    | (new) CoreServicesTestVM-ip           |
    |                 | NIC network security group                                   | Basic                                 |
    |                 | Public inbound ports                                         | Allow selected ports                  |
@@ -105,10 +110,10 @@ In this exercise, you will:
    |                 | Password                                                     | TestPa$$w0rd!                             |
    |                 | Public inbound ports                                         | Allow selected ports                      |
    |                 | Select inbound ports                                         | RDP (3389)                                |
-   |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected                                  |
+   |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected             |                     
    | Disks           | No changes required                                          |                                           |
    | Networking      | Virtual network                                              | ManufacturingVnet                         |
-   |                 | Subnet                                                       | ManufacturingSystemSubnet (10.40.40.0/24) |
+   |                 | Subnet                                                       | ManufacturingSystemSubnet (10.30.10.0/24)  |
    |                 | Public IP                                                    | (new) ManufacturingTestVM-ip              |
    |                 | NIC network security group                                   | Basic                                     |
    |                 | Public inbound ports                                         | Allow selected ports                      |
@@ -140,8 +145,6 @@ In this exercise, you will:
 15. On CoreServicesTestVM, open PowerShell, and run the following command: ipconfig
 16. Note the IPv4 address. 
 
- 
-
 ## Task 5: Test the connection between the VMs
 
 1. On the **ManufacturingTestVM**, open PowerShell.
@@ -155,8 +158,6 @@ In this exercise, you will:
 3. The test connection should fail, and you will see a result similar to the following:
 
    ![Test-NetConnection failed.](../media/test-netconnection-fail.png)
-
- 
 
 ##  Task 6: Create CoreServicesVnet Gateway
 
@@ -186,9 +187,7 @@ In this exercise, you will:
    |                 |                   | Configure BGP                               | Disabled                     |
    | Review + create |                   | Review your settings and select **Create**. |                              |
 
-   > [!NOTE] 
-   >
-   > It can take up to 45 minutes to create a virtual network gateway. 
+   >Note : It can take upto 45 minutes to create a virtual network gateway
 
 ## Task 7: Create ManufacturingVnet Gateway
 
@@ -209,7 +208,7 @@ In this exercise, you will:
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | Generation1                  |
    |                 |                   | Virtual network                             | ManufacturingVnet            |
-   |                 |                   | Subnet                                      | GatewaySubnet (10.30.0.0/27) |
+   |                 |                   | Subnet                                      | GatewaySubnet (10.20.0.0/27) |
    |                 | Public IP address | Public IP address                           | Create new                   |
    |                 |                   | Public IP address name                      | ManufacturingVnetGateway-ip  |
    |                 |                   | Public IP address SKU                       | Basic                        |
@@ -217,12 +216,8 @@ In this exercise, you will:
    |                 |                   | Configure BGP                               | Disabled                     |
    | Review + create |                   | Review your settings and select **Create**. |                              |
    
-   > [!NOTE]
-   >
-   > It can take up to 45 minutes to create a virtual network gateway. 
-
+   > Note: It can take upto 45 minutes to create a virtual network gateway.
  
-
 ## Task 8: Connect CoreServicesVnet to ManufacturingVnet 
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
@@ -231,10 +226,8 @@ In this exercise, you will:
 
 3. In CoreServicesGateway, select **Connections**, and then select **+ Add**.
 
-   > [!NOTE]
-   >
-   >  You will not be able to complete this configuration until the virtual network gateways are fully deployed.
-
+   > Note: You will not be able to complete this configuration until the virtual network gateways are fully deployed.
+   
 4. Use the information in the following table to create the connection:
 
    | **Option**                     | **Value**                         |

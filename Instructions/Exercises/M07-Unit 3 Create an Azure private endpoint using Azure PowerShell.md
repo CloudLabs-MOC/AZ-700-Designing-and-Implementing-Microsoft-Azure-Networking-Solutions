@@ -1,8 +1,4 @@
----
-Exercise:
-    title: 'M07-Unit 3 Create an Azure private endpoint using Azure PowerShell'
-    module: 'Module - Design and implement private access to Azure Services'
----
+
 
 # M07-Unit 3 Create an Azure private endpoint using Azure PowerShell
 
@@ -18,11 +14,22 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 
 - An Azure Web App with a PremiumV2-tier or higher app service plan deployed in your Azure subscription.
 
-1. In the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
+1. Click on the Azure Portal icon on the VM desktop and login with the Azure credentials from the Lab Environment details page.
 
-2. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the following files template.json and parameters.json into the Cloud Shell home directory.
+2. From the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
+   ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/shell.png)
+   
+3. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
+   
+4. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
 
-3. Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise:
+5. Navigate to the location that is specified. Az-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/Allfiles/Exercises/M07
+
+6. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the files -template.json and        parameters.json into the Cloud Shell home directory.
+   ![Screenshot of Azure Portal Azure Cloud Shell icon.](../media/upload.png)
+
+
+7. Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise:
 
    ```powershell
    $RGName = "CreatePrivateEndpointQS-rg"
@@ -34,28 +41,17 @@ If you choose to install and use PowerShell locally, this example requires the A
 
 In this exercise, you will:
 
-+ Task 1: Create a resource group
-+ Task 2: Create a virtual network and bastion host
-+ Task 3: Create a test virtual machine
-+ Task 4: Create a Private Endpoint
-+ Task 5: Configure the private DNS zone
-+ Task 6: Test connectivity to the Private Endpoint
-+ Task 7: Clean up resources
-
-## Task 1: Create a resource group
-
-An Azure resource group is a logical container into which Azure resources are deployed and managed.
-
-Create a resource group with [New-AzResourceGroup](https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroup):
-
-```Azure PowerShell
-New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'eastus'
-```
++ Task 1: Create a virtual network and bastion host
++ Task 2: Create a test virtual machine
++ Task 3: Create a Private Endpoint
++ Task 4: Configure the private DNS zone
++ Task 5: Test connectivity to the Private Endpoint
 
 
-## Task 2: Create a virtual network and bastion host
 
-You'll create a virtual network, subnet, and bastion host.
+## Task 1: Create a virtual network and bastion host
+
+You will create a virtual network, subnet, and bastion host.
 
 The bastion host will be used to connect securely to the virtual machine for testing the Private Endpoint.
 
@@ -84,7 +80,7 @@ $parameters1 = @{
 
  Name = 'MyVNet'
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
  Location = 'eastus'
 
@@ -102,7 +98,7 @@ $parameters2 = @{
 
  Name = 'myBastionIP'
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
  Location = 'eastus'
 
@@ -118,7 +114,7 @@ $publicip = New-AzPublicIpAddress @parameters2
 
 $parameters3 = @{
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
  Name = 'myBastion'
 
@@ -134,7 +130,7 @@ New-AzBastion @parameters3
 
 
 
-## Task 3: Create a test virtual machine
+## Task 2: Create a test virtual machine
 
 In this section, you'll create a virtual machine that will be used to test the Private Endpoint.
 
@@ -161,7 +157,7 @@ $cred = Get-Credential
 
 ## Command to get virtual network configuration. ##
 
-$vnet = Get-AzVirtualNetwork -Name myVNet -ResourceGroupName CreatePrivateEndpointQS-rg
+$vnet = Get-AzVirtualNetwork -Name myVNet -ResourceGroupName CreatePrivateEndpointQS-rg-<DeploymentID>
 
 ## Command to create network interface for VM ##
 
@@ -169,7 +165,7 @@ $parameters1 = @{
 
  Name = 'myNicVM'
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
  Location = 'eastus'
 
@@ -215,7 +211,7 @@ New-AzVMConfig @parameters2 | Set-AzVMOperatingSystem -Windows @parameters3 | Se
 
 ## Create the virtual machine ##
 
-New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM $vmConfig 
+New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg-<DeploymentID>' -Location 'eastus' -VM $vmConfig 
 
 
 ```
@@ -229,7 +225,7 @@ The ephemeral IP is disabled when a public IP address is assigned to the virtual
 
 For more information on outbound connections in Azure, see Using Source Network Address Translation (SNAT) for outbound connections.
 
-## Task 4: Create a Private Endpoint
+## Task 3: Create a Private Endpoint
 
 In this section, you'll create the Private Endpoint and connection using:
 
@@ -262,7 +258,7 @@ $privateEndpointConnection = New-AzPrivateLinkServiceConnection @parameters1
 
 ## Place virtual network into variable. ##
 
-$vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Name 'myVNet'
+$vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg-<DeploymentID>' -Name 'myVNet'
 
 ## Disable private endpoint network policy ##
 
@@ -274,7 +270,7 @@ $vnet | Set-AzVirtualNetwork
 
 $parameters2 = @{
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
  Name = 'myPrivateEndpoint'
 
@@ -292,7 +288,7 @@ New-AzPrivateEndpoint @parameters2
 
 
 
-## Task 5: Configure the private DNS zone
+## Task 4: Configure the private DNS zone
 
 In this section you'll create and configure the private DNS zone using:
 
@@ -307,13 +303,13 @@ In this section you'll create and configure the private DNS zone using:
 ```Azure PowerShell
 ## Place virtual network into variable. ##
 
-$vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Name 'myVNet'
+$vnet = Get-AzVirtualNetwork -ResourceGroupName 'CreatePrivateEndpointQS-rg-<DeploymentID>' -Name 'myVNet'
 
 ## Create private dns zone. ##
 
 $parameters1 = @{
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
  Name = 'privatelink.azurewebsites.net'
 
@@ -325,7 +321,7 @@ $zone = New-AzPrivateDnsZone @parameters1
 
 $parameters2 = @{
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
  ZoneName = 'privatelink.azurewebsites.net'
 
@@ -353,7 +349,7 @@ $config = New-AzPrivateDnsZoneConfig @parameters3
 
 $parameters4 = @{
 
- ResourceGroupName = 'CreatePrivateEndpointQS-rg'
+ ResourceGroupName = 'CreatePrivateEndpointQS-rg-<DeploymentID>'
 
  PrivateEndpointName = 'myPrivateEndpoint'
 
@@ -367,7 +363,7 @@ New-AzPrivateDnsZoneGroup @parameters4
 ```
 
 
-## Task 6: Test connectivity to the Private Endpoint
+## Task 5: Test connectivity to the Private Endpoint
 
 In this section, you'll use the virtual machine you created in the previous step to connect to the SQL server across the Private Endpoint.
 
@@ -375,7 +371,7 @@ In this section, you'll use the virtual machine you created in the previous step
 
 - Select **Resource groups** in the left-hand navigation pane.
 
-- Select **CreatePrivateEndpointQS-rg**.
+- Select **CreatePrivateEndpointQS-rg-DeploymentID**.
 
 - Select **myVM**.
 
@@ -387,7 +383,7 @@ In this section, you'll use the virtual machine you created in the previous step
 
 - Open Windows PowerShell on the server after you connect.
 
-- Enter nslookup <your- webapp-name>.azurewebsites.net. Replace <your-webapp-name> with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
+- Enter nslookup <your-webapp-name>.azurewebsites.net  Replace <your-webapp-name> with the name of the web app you created in the previous steps. You'll receive a message similar to what is displayed below:
 
   ```| Azure PowerShell |
   Server: UnKnown
@@ -411,13 +407,7 @@ A private IP address of **10.0.0.5** is returned for the web app name. This addr
   ![screen shot of page in Azure indicating an app service is up and running](../media/web-app-default-page.png)
 - Close the connection to **myVM**.
 
-## Task 7: Clean up resources
 
-When you're done using the Private Endpoint and the VM, use [Remove-AzResourceGroup](https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azresourcegroup) to remove the resource group and all the resources it has:
-
-```Azure PowerShell
-Remove-AzResourceGroup -Name CreatePrivateEndpointQS-rg -Force
-```
 
 
 

@@ -1,11 +1,4 @@
----
-Exercise:
-    title: 'M02-Unit 7 Create a Virtual WAN by using Azure Portal'
-    module: 'Module - Design and implement hybrid networking'
----
-
 # M02-Unit 7 Create a Virtual WAN by using Azure Portal
-
 
 In this exercise, you will create a Virtual WAN for Contoso.
 
@@ -16,8 +9,6 @@ In this exercise, you will:
 + Task 3: Connect a VNet to the Virtual Hub
 + Task 4: Clean up resources
 
-
-
 ## Task 1: Create a Virtual WAN
 
 1. From a browser, navigate to the Azure portal and sign in with your Azure account.
@@ -26,15 +17,13 @@ In this exercise, you will:
 
    ![Search for Virtual WAN in Azure Portal.](../media/search-for-virtual-wan.png)
 
- 
-
 3. On the Virtual WAN page, select + **Create**. 
 
 4. On the Create WAN page, on the **Basics** tab, fill in the following fields:
 
    - **Subscription:** Use the existing subscription
 
-   - **Resource group:** ContosoResourceGroup
+   - **Resource group:** ContosoResourceGroup (Use existing)
 
    - **Resource group location:** Choose a resource location from the dropdown. A WAN is a global resource and does not live in a particular region. However, you must select a region to manage and locate the WAN resource that you create.
 
@@ -51,20 +40,31 @@ In this exercise, you will:
 A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functionality. It takes 30 minutes to create the site-to-site VPN gateway in the virtual hub. You must create a Virtual WAN before you can create a hub.
 
 1. Locate the Virtual WAN that you created. 
+
 2. On the Virtual WAN page, under **Connectivity**, select **Hubs**.
+
 3. On the Hubs page, select **+New Hub** to open the Create virtual hub page.
+   
    ![Create Virtual Hub, Basics tab.](../media/create-vwan-hub.png)
+
 4. On the Create virtual hub page **Basics** tab, complete the following fields:
    - **Region:** West US
    - **Name:** ContosoVirtualWANHub-WestUS
    - **Hub private address space:** 10.60.0.0/24
+
 5. Select **Next: Site-to-site**.
+
 6. On the **Site-to-site** tab, complete the following fields:
    - **Do you want to create a Site to site (VPN gateway)?:** Yes
    - The **AS Number** field cannot be edited.
    - **Gateway scale units:** 1 scale unit = 500 Mbps
+
 7. Select **Review + Create** to validate.
+
 8. Select **Create** to create the hub. 
+
+>Note: It takes 30 minutes to create the hub
+
 9. After 30 minutes, **Refresh** to view the hub on the Hubs page. 
 
 ## Task 3: Connect a VNet to the Virtual Hub

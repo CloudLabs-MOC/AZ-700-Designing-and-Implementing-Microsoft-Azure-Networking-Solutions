@@ -1,9 +1,3 @@
----
-Exercise:
-    title: 'M08-Unit 3 Secure your virtual hub using Azure Firewall Manager'
-    module: 'Module - Design and implement network monitoring'
----
-
 # M08-Unit 3 Secure your virtual hub using Azure Firewall Manager
 
 In this exercise, you will create an internal load balancer for the fictional Contoso Ltd organization. Then you will create a Log Analytics workspace, and use Azure Monitor Insights to view information about your internal load balancer. You will view the Functional Dependency View, then view detailed metrics for the load balancer resource, and view resource health information for the load balancer. Finally, you will configure the load balancer's diagnostic settings to send metrics to the Log Analytics workspace you created. 
@@ -49,7 +43,7 @@ In this section, you will create a virtual network and a subnet.
    | **Setting**    | **Value**                                           |
    | -------------- | --------------------------------------------------- |
    | Subscription   | Select your subscription                            |
-   | Resource group | Select **Create new**<br /><br />Name: **IntLB-RG** |
+   | Resource group | Select **Use existing**<br /><br />Name: **IntLB-RG** |
    | Name           | **IntLB-VNet**                                      |
    | Region         | **(US) West US**                                    |
 
@@ -57,9 +51,11 @@ In this section, you will create a virtual network and a subnet.
 
 6. On the **IP Addresses** tab, in the **IPv4 address space** box, type **10.1.0.0/16**.
 
-7. Under **Subnet name**, select the word **default**.
+7. Under **Subnet name**, select the word **default**, if **default** is not showing then select **Add Subnet**.
 
-8. In the **Edit subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
+8. In the **Add subnet** pane, provide a subnet name of **myBackendSubnet**, and a subnet address range of **10.1.0.0/24**.
+
+   ![Add subnet](../media/virtual_network_1.png)
 
 9. Click **Save**.
 
@@ -72,6 +68,8 @@ In this section, you will create a virtual network and a subnet.
     | Bastion name                      | **myBastionHost**                                      |
     | AzureBastionSubnet address space  | **10.1.1.0/24**                                        |
     | Public IP address                 | Select **Create new**<br /><br />Name: **myBastionIP** |
+
+  ![Bastion Host](../media/virtualnetwork.png)
 
 12. Click **Review + create**.
 
@@ -102,8 +100,11 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | Type                  | **Internal**             |
    | SKU                   | **Standard**             |
    | Virtual network       | **IntLB-VNet**           |
+   | Frontend Name         | **LoadBalancerFrontEnd** |
    | Subnet                | **myBackendSubnet**      |
    | IP address assignment | **Dynamic**              |
+
+   ![Front End IP.](../media/load_balancer.png)
 
 6. Click **Review + create**.
 
@@ -190,7 +191,9 @@ In this section, you will create three VMs, that will be in the same availabilit
 
 2. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory.
 
-3. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:
+3. Navigate to the location specified here. AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/Allfiles/Exercises/M04 for uploading files.
+
+4. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:
 
    ```powershell
    $RGName = "IntLB-RG"
@@ -221,19 +224,29 @@ In this section, you will create three VMs, that will be in the same availabilit
 ## Task 8: Install IIS on the VMs
 
 1. On the Azure portal home page, click **All resources**, then click on **myVM1** from the resources list.
-2. On the **Overview** page, select **Connect**, then **Bastion**.
-3. Click **Use Bastion**.
-4. In the **Username** box, type **TestUser** and in the **Password** box, type **TestPa$$w0rd!**, then click **Connect**.
-5. The **myVM1** window will open in another browser tab.
-6. If a **Networks** pane appears, click **Yes**.
-7. Click the **Windows Start icon** in the bottom left corner of the window, then click the **Windows PowerShell** tile.
-8. To install IIS, run the following command in PowerShell: Install-WindowsFeature -name Web-Server -IncludeManagementTools
-9. To remove the existing default web home page, run the following command in PowerShell: Remove-Item C:\inetpub\wwwroot\iisstart.htm
-10. To add a new default web home page and add content to it, run the following command in PowerShell: Add-Content -Path "C:\inetpub\wwwroot\iisstart.htm" -Value $("Hello World from " + $env:computername)
-11. Close the Bastion session to **myVM1** by closing the browser tab.
-12. Repeat steps 1-11 above twice more to install IIS and the updated default home page on the **myVM2** and **myVM3** virtual machines.
 
- 
+2. On the **Overview** page, select **Connect**, then **Bastion**.
+
+3. Click **Use Bastion**.
+
+4. In the **Username** box, type **TestUser** and in the **Password** box, type **TestPa$$w0rd!**, then click **Connect**.
+
+5. The **myVM1** window will open in another browser tab.
+
+6. If a **Networks** pane appears, click **Yes**.
+
+7. Click the **Windows Start icon** in the bottom left corner of the window, then click the **Windows PowerShell** tile.
+
+
+8. To install IIS, run the following command in PowerShell: Install-WindowsFeature -name Web-Server -IncludeManagementTools
+
+9. To remove the existing default web home page, run the following command in PowerShell: Remove-Item C:\inetpub\wwwroot\iisstart.htm
+
+10. To add a new default web home page and add content to it, run the following command in PowerShell: Add-Content -Path "C:\inetpub\wwwroot\iisstart.htm" -Value $("Hello World from " + $env:computername)
+
+11. Close the Bastion session to **myVM1** by closing the browser tab.
+
+12. Repeat steps 1-11 above twice more to install IIS and the updated default home page on the **myVM2** and **myVM3** virtual machines.
 
 ## Task 9: Test the load balancer
 

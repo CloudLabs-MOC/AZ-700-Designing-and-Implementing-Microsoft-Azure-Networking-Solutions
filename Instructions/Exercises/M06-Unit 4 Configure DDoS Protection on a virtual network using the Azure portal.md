@@ -1,48 +1,18 @@
----
-Exercise:
-    title: 'M06-Unit 4 Configure DDoS Protection on a virtual network using the Azure portal'
-    module: 'Module - Design and implement network security'
----
-
 # M06-Unit 4 Configure DDoS Protection on a virtual network using the Azure portal
 
 Being responsible for Contoso's Network Security team, you are going to run a mock DDoS attack on the virtual network. The following steps walk you through creating a virtual network, configuring DDoS Protection, and creating an attack which you can observe and monitor with the help of telemetry and metrics.
 
 In this exercise, you will:
 
-+ Task 1: Create a resource group
-+ Task 2: Create a DDoS Protection plan
-+ Task 3: Enable DDoS Protection on a new virtual network
-+ Task 4: Configure DDoS telemetry
-+ Task 5: Configure DDoS diagnostic logs
-+ Task 6: Configure DDoS alerts
-+ Task 7: Submit a DDoS service request to run a DDoS attack
++ Task 1: Create a DDoS Protection plan
++ Task 2: Enable DDoS Protection on a new virtual network
++ Task 3: Configure DDoS telemetry
++ Task 4: Configure DDoS diagnostic logs
++ Task 5: Configure DDoS alerts
++ Task 6: Submit a DDoS service request to run a DDoS attack
 
 
-
-## Task 1: Create a resource group
-
-1. Log in to your Azure account.
-
-2. On the Azure portal home page, select **Resource groups**.
-
-3. Click **Create**. 
-
-4. On the **Basics** tab, in **Resource group**, enter **MyResourceGroup**.
-
-5. In **Region**, select your region from the list.
-
-6. Click **Review + create**.
-
-   ![Create Resource Group](../media/create-resource-group-ddos-protection-plan.png)
-
-7. Click **Create**.
-
-   ![End state when creating a resource group](../media/create-resource-group-end.png)
-
- 
-
-## Task 2: Create a DDoS Protection plan
+## Task 1: Create a DDoS Protection plan
 
 1. On the Azure portal home page, select **Create a resource**, then in the search box, type **DDoS** and click **DDoS protection plan** when it appears.
 
@@ -58,9 +28,9 @@ In this exercise, you will:
 
 5. Click **Create**.
 
- 
+   >>Note: It will take 20 minutes to reflect DDoS protection plan in Resource Group.
 
-## Task 3: Enable DDoS Protection on a new virtual network
+## Task 2: Enable DDoS Protection on a new virtual network
 
 Here you will enable DDoS on a new virtual network rather than on an existing one, so first you need to create the new virtual network, then enable DDoS protection on it using the plan you created previously.
 
@@ -88,7 +58,7 @@ Here you will enable DDoS on a new virtual network rather than on an existing on
 
  
 
-## Task 4: Configure DDoS telemetry
+## Task 3: Configure DDoS telemetry
 
 You create a Public IP address, and then set up telemetry in the next steps.
 
@@ -130,7 +100,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
  
 
-## Task 5: Configure DDoS diagnostic logs
+## Task 4: Configure DDoS diagnostic logs
 
 1. On the Azure home page, click **All resources**.
 
@@ -154,7 +124,7 @@ You create a Public IP address, and then set up telemetry in the next steps.
 
  
 
-## Task 6: Configure DDoS alerts
+## Task 5: Configure DDoS alerts
 
 In this step you will create a virtual machine, assign a public IP address to it, and then configure DDoS alerts.
 
@@ -251,7 +221,7 @@ In this step you will create a virtual machine, assign a public IP address to it
 
  
 
-## Task 7: Submit a DDoS service request to run a DDoS attack
+## Task 6: Submit a DDoS service request to run a DDoS attack
 
 1. Create an account with [BreakingPoint Cloud](https://breakingpoint.cloud/)
 
