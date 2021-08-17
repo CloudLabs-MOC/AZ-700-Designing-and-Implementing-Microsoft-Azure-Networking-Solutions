@@ -32,7 +32,7 @@ Private Endpoints can be created for different kinds of Azure services, such as 
 7. Deploy the following ARM templates to create the PremiumV2-tier Azure Web App needed for this exercise:
 
    ```powershell
-   $RGName = "CreatePrivateEndpointQS-rg"
+   $RGName = "CreatePrivateEndpointQS-rg-<DeploymentID>"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json
    ```
@@ -68,7 +68,7 @@ Create a virtual network and bastion host with:
 ```Azure PowerShell
 ## Create backend subnet config. ##
 
-$subnetConfig = New-AzVirtualNetworkSubnetConfig -Name myBackendSubnet -AddressPrefix 10.0.0.0/24```
+$subnetConfig = New-AzVirtualNetworkSubnetConfig -Name myBackendSubnet -AddressPrefix 10.0.0.0/24
 
 ## Create Azure Bastion subnet. ##
 
