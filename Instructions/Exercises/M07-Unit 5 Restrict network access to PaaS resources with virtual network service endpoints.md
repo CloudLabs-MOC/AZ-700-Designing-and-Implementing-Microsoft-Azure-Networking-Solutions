@@ -35,7 +35,7 @@ In this exercise, you will:
    | Subscription   | Select your subscription                      |
    | Resource group | Select the existing resource group
    | Name           | CoreServicesVNet                              |
-   | Location       | Select **East US**                            |
+   | Location       | Select **(US) East US**                            |
 
 5. Select the **IP Addresses** tab and enter the following values (select **default** to change the subnet name):
    ![Graphical user interface, text, application, email Description automatically generated](../media/IP.png)
@@ -99,7 +99,7 @@ By default, all VMs in a subnet can communicate with all resources. You can limi
    | Subscription   | Select your subscription                                     |
    | Resource group | Select **Use existing** and select the existing resource group |
    | Name           | ContosoPrivateNSG                                            |
-   | Location       | Select **East US**                                           |
+   | Location       | Select **(US) East US**                                           |
 
 4. select **Review + create**, then click **Create**:
 
@@ -206,7 +206,7 @@ The steps necessary to restrict network access to resources created through Azur
    | Subscription   | Select your subscription                                     |
    | Resource group | Select Use existing and select the existing resource group   | 
    | Name           | Contosostorageswest                                          |
-   | Location       | Select East US                                               |
+   | Location       | (US) East US                                               |
    | Performance    | Standard StorageV2 (general purpose v2)                      |
    | Replication    | Locally-redundant storage (LRS)                              |
 
