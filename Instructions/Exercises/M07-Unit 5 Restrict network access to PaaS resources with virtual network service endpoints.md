@@ -47,7 +47,6 @@ In this exercise, you will:
    | Subnet Address range | 10.0.0.0/24 |
 
 6. Select the **Security** tab and enter the following values:
-   
    | **Setting**     | **Value** |
    | --------------- | --------- |
    | BastionHost     | Disabled  |
