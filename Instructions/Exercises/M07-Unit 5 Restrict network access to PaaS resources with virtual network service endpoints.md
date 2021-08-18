@@ -47,14 +47,10 @@ In this exercise, you will:
    | Subnet Address range | 10.0.0.0/24 |
 
 6. Select the **Security** tab and enter the following values:
-   | **Setting**     | **Value** |
-   | --------------- | --------- |
-   | BastionHost     | Disabled  |
-   | DDoS protection | Disabled  |
-   | Firewall        | Disabled  |
+   ![Graphical user interface, text, application, email Description automatically generated](../media/create-virtual-network-security.png)
    
 7. Click **Review + Create**. Once the resource is validated select **Create**. 
-   ![Graphical user interface, text, application, email Description automatically generated](../media/create-virtual-network-security.png)
+   
 
 ## Task 2: Enable a service endpoint
 
