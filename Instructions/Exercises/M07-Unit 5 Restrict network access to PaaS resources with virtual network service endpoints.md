@@ -291,7 +291,7 @@ To test network access to a storage account, deploy a VM to each subnet.
 
 5. Select **Create** to start the virtual machine deployment. The VM takes a few minutes to deploy, but you can continue to the next step while the VM is creating.
 
-6. Create another virtual machine Complete steps 2-5 again, but name the virtual machine ContosoWestPrivate and and select the **Private** subnet.
+6. Create another virtual machine, repeat steps 2-5 again, but name the virtual machine ContosoWestPrivate and and select the **Private** subnet.
 
 The VM takes a few minutes to deploy. Do not continue to the next step until it finishes creating and its settings open in the portal.
 
