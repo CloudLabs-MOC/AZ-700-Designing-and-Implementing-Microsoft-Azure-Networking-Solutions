@@ -204,10 +204,10 @@ The steps necessary to restrict network access to resources created through Azur
    | **Setting**    | **Value**                                                    |
    | -------------- | ------------------------------------------------------------ |
    | Subscription   | Select your subscription                                     |
-   | Resource group | Select Use existing and select the existing resource group  |
-   | Name           | Enter a contosostorageswest                                  |
-   | Performance    | Standard StorageV2 (general purpose v2)                      |
+   | Resource group | Select Use existing and select the existing resource group   | 
+   | Name           | Contosostorageswest                                          |
    | Location       | Select East US                                               |
+   | Performance    | Standard StorageV2 (general purpose v2)                      |
    | Replication    | Locally-redundant storage (LRS)                              |
 
 4. select **Review + create**, then click **Create**.
