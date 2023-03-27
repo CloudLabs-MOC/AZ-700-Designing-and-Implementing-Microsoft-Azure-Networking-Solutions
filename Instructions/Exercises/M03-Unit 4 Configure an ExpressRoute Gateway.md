@@ -37,7 +37,7 @@ In this exercise, you will:
    | **Setting**          | **Value**                                                              |
    | -------------------- | ---------------------------------------------------------------------- |
    | Virtual Network Name | CoreServicesVNet                                                       |
-   | Resource Group       | Select az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>* |
+   | Resource Group       | Select az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>  |
    | Location             | West US                                                                |
 
 4. Select **Next : IP addresses**.
