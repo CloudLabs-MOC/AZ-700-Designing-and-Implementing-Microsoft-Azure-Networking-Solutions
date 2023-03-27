@@ -98,17 +98,17 @@ In this exercise, you will:
 
 21. On the **Backend targets** tab, enter or select the following information:
 
-    | **Setting**   | **Value**      |
-    | ------------- | -------------- |
-    | Target type   | Backend pool   |
-    | HTTP Settings | **Create new** |
+    | **Setting**      | **Value**      |
+    | ---------------- | -------------- |
+    | Target type      | Backend pool   |
+    | Backend Settings | **Add new**    |
 
 22. In **Add a HTTP setting**, enter or select the following information:
 
-    | **Setting**        | **Value**   |
-    | ------------------ | ----------- |
-    | HTTP settings name | HTTPSetting |
-    | Backend port       | 80          |
+    | **Setting**           | **Value**   |
+    | --------------------- | ----------- |
+    | Backend settings name | HTTPSetting |
+    | Backend port          | 80          |
 
 23. Accept the default values for the other settings in the **Add an HTTP setting** window, then select **Add** to return to **Add a routing rule**.
 
