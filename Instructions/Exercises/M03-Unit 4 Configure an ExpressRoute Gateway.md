@@ -34,11 +34,11 @@ In this exercise, you will:
 
 3. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
 
-   | **Setting**          | **Value**                        |
-   | -------------------- | -------------------------------- |
-   | Virtual Network Name | CoreServicesVNet                 |
-   | Resource Group       | ContosoResourceGroup             |
-   | Location             | West US                          |
+   | **Setting**          | **Value**                                                              |
+   | -------------------- | ---------------------------------------------------------------------- |
+   | Virtual Network Name | CoreServicesVNet                                                       |
+   | Resource Group       | Select az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>* |
+   | Location             | West US                                                                |
 
 4. Select **Next : IP addresses**.
 
@@ -56,13 +56,13 @@ In this exercise, you will:
 
 6. Select **+ Add subnet** and In the Add subnet pane, use the information in the following table to create the subnet:
 
-   | **Setting**                  | **Value**     |
-   | ---------------------------- | ------------- |
+   | **Setting**                  | **Value**               |
+   | ---------------------------- | ----------------------- |
    | Subnet template              | Virtual Network Gateway |
-   | Name                         | GatewaySubnet |
-   | Gateway Subnet address space | 10.20.0.0/27  |
-   | Starting address             | 10.20.0.0     |
-   | Subnet size                  | /27           |
+   | Name                         | GatewaySubnet           |
+   | Gateway Subnet address space | 10.20.0.0/27            |
+   | Starting address             | 10.20.0.0               |
+   | Subnet size                  | /27                     |
    
    
 
@@ -84,24 +84,24 @@ In this exercise, you will:
 
 2. On the **Create virtual network gateway** page, use the information in the following table to create the gateway:
 
-   | **Setting**               | **Value**                  |
-   | ------------------------- | -------------------------- |
-   | **Project details**       |                            |
-   | Resource Group            | ContosoResourceGroup       |
-   | **Instance details**      |                            |
-   | Name                      | CoreServicesVnetGateway    |
-   | Region                    | West US                    |
-   | Gateway type              | ExpressRoute               |
-   | VPN type                  | Route-based                |
-   | SKU                       | Standard                   |
-   | Virtual network           | CoreServicesVNet           |
-   | **Public IP address**     |                            |
-   | Public IP address         | Create new                 |
-   | Public IP address name    | CoreServicesVnetGateway-IP |
-   | Public IP address SKU     | Basic                      |
-   | Assignment                | Not configurable           |
-   | Enable active-active mode | Disabled                   |
-   | Configure BGP             | Disabled                   |
+   | **Setting**               | **Value**                                                               |
+   | ------------------------- | ----------------------------------------------------------------------- |
+   | **Project details**       |                                                                         |
+   | Resource Group            | Select az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>*  |
+   | **Instance details**      |                                                                         |
+   | Name                      | CoreServicesVnetGateway                                                 |
+   | Region                    | West US                                                                 |
+   | Gateway type              | ExpressRoute                                                            |
+   | VPN type                  | Route-based                                                             |
+   | SKU                       | Standard                                                                |
+   | Virtual network           | CoreServicesVNet                                                        |
+   | **Public IP address**     |                                                                         |
+   | Public IP address         | Create new                                                              |
+   | Public IP address name    | CoreServicesVnetGateway-IP                                              |
+   | Public IP address SKU     | Basic                                                                   |
+   | Assignment                | Not configurable                                                        |
+   | Enable active-active mode | Disabled                                                                |
+   | Configure BGP             | Disabled                                                                |
 
 3. Select **Review + Create**.
 
