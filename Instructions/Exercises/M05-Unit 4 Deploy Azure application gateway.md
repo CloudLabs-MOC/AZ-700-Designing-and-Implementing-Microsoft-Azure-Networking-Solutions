@@ -32,13 +32,13 @@ In this exercise, you will:
 
 4. On the Create application gateway **Basics** tab, enter, or select the following information:
 
-   | **Setting**         | **Value**                                    |
-   | ------------------- | -------------------------------------------- |
-   | Subscription        | Select your subscription.                    |
-   | Resource group      | Select Create new ContosoResourceGroup       |
-   | Application Gateway | ContosoAppGateway                            |
-   | Region              | Select **West US**                           |
-   | Virtual Network     | Select **Create new**                        |
+   | **Setting**         | **Value**                                                                    |
+   | ------------------- | ---------------------------------------------------------------------------- |
+   | Subscription        | Select your subscription.                                                    |
+   | Resource group      | Select az700-m05-899701-<inject key="DeploymentID" enableCopy="false"/>      |
+   | Application Gateway | ContosoAppGateway                                                            |
+   | Region              | Select **West US**                                                           |
+   | Virtual Network     | Select **Create new**                                                        |
 
 5. In Create virtual network, enter, or select the following information:
 
@@ -87,7 +87,7 @@ In this exercise, you will:
     | **Setting**   | **Value**         |
     | ------------- | ----------------- |
     | Listener name | Listener          |
-    | Priority      | 100          |
+    | Priority      | 100               |
     | Frontend IP   | Select **Public** |
 
 19. Accept the default values for the other settings on the **Listener** tab.
