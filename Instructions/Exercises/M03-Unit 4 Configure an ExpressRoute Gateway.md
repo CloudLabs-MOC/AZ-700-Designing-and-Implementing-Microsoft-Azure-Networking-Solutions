@@ -42,14 +42,29 @@ In this exercise, you will:
 
 4. Select **Next : IP addresses**.
 
-5. On the **IP Addresses** tab, in **IPv4 address space**, enter 10.20.0.0/16, and then select **+ Add subnet**. 
+5. On the **IP Addresses** tab, click on **Add an IP address space**.
+ 
+6. On **Add an IP address space** , use the information in the following table to create IPv4 address space. select **+ Add subnet**. 
+ 
+   | **Setting**                  | **Value**     |
+   | ---------------------------- | ------------- |
+   | Address space type           | IPv4          |
+   | Starting address             | 10.20.0.0     |
+   | Address space size           | /16           |
+   
+7. Click on  **Add**. 
 
-6. In the Add subnet pane, use the information in the following table to create the subnet:
+6. Select **+ Add subnet** and In the Add subnet pane, use the information in the following table to create the subnet:
 
    | **Setting**                  | **Value**     |
    | ---------------------------- | ------------- |
-   | Gateway Subnet name          | GatewaySubnet |
+   | Subnet template              | Virtual Network Gateway |
+   | Name                         | GatewaySubnet |
    | Gateway Subnet address space | 10.20.0.0/27  |
+   | Starting address             | 10.20.0.0     |
+   | Subnet size                  | /27           |
+   
+   
 
 7. And then select **Add**. 
 
