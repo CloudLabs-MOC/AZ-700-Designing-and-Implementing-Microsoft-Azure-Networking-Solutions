@@ -44,7 +44,7 @@ In this exercise, you will:
 
 5. On the **IP Addresses** tab, click on **Add an IP address space**.
  
-6. On **Add an IP address space** , use the information in the following table to create IPv4 address space. select **+ Add subnet**. 
+6. On **Add an IP address space** , use the information in the following table to create IPv4 address space.
  
    | **Setting**                  | **Value**     |
    | ---------------------------- | ------------- |
