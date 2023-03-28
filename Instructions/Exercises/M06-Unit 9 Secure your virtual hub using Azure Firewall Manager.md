@@ -7,18 +7,36 @@ In this exercise, you will create the spoke virtual network and create a secured
 In this part of the exercise, you will create the spoke virtual networks and subnets where you will place the workload servers. Then you will create the secured virtual hub and connect the hub and spoke virtual networks.
 
 In this exercise, you will:
++ Task 1: Create a resource group
++ Task 2: Create two spoke virtual networks and subnets
++ Task 3: Create the secured virtual hub
++ Task 4: Connect the hub and spoke virtual networks
++ Task 5: Deploy the servers
++ Task 6: Create a firewall policy and secure your hub
++ Task 7: Associate the firewall policy
++ Task 8: Route traffic to your hub
++ Task 9: Test the application rule
++ Task 10: Test the network rule
 
-+ Task 1: Create two spoke virtual networks and subnets
-+ Task 2: Create the secured virtual hub
-+ Task 3: Connect the hub and spoke virtual networks
-+ Task 4: Deploy the servers
-+ Task 5: Create a firewall policy and secure your hub
-+ Task 6: Associate the firewall policy
-+ Task 7: Route traffic to your hub
-+ Task 8: Test the application rule
-+ Task 9: Test the network rule
+## Task 1: Create a resource group
 
-## Task 1: Create two spoke virtual networks and subnets
+In this task, you will create a new resource group.
+
+1. Log in to your Azure account.
+
+1. On the Azure portal home page, select **Resource groups**.
+
+1. Select **Create**. 
+
+1. On the **Basics** tab, in **Resource group**, enter **fw-manager-rg-DeploymentID**.
+
+1. On the **Region**, select **(Europe)UK South** region from the list.
+
+1. Select **Review + create**.
+
+1. Select **Create**.
+
+## Task 2: Create two spoke virtual networks and subnets
 
 In this task, you will create the two spoke virtual networks each containing a subnet that will host your workload servers. 
 
@@ -45,7 +63,7 @@ Repeat steps 1 to 14 above to create another similar virtual network and subnet 
 - Subnet name: **Workload-02-SN**
 - Subnet address range: **10.1.1.0/24**
 
-## Task 2: Create the secured virtual hub
+## Task 3: Create the secured virtual hub
 
 In this task you will create your secured virtual hub using Firewall Manager.
 
@@ -100,7 +118,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 20. Note down the public IP address (e.g., **51.143.226.18**), which you will use later.
 
-## Task 3: Connect the hub and spoke virtual networks
+## Task 4: Connect the hub and spoke virtual networks
 
 In this task you will connect the hub and spoke virtual networks. This is commonly known as peering.
 
@@ -120,69 +138,28 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
  
 
-## Task 4: Deploy the servers
+## Task 5: Deploy the servers
 
-In this task you will deploy the two workload servers.
+1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. From the Azure portal home page, click **Create a resource**.
+1. In the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **FirewallManager.json** and **FirewallManager.parameters.json** into the Cloud Shell home directory one by one from the source folder **F:\Allfiles\Exercises\M06**.
 
-2. In the Popular offers list, select **Windows Server Datacenter 2019**.
+1. Deploy the following ARM templates to create the VM needed for this exercise:
 
-3. On the **Create a virtual machine** page, on the **Basics** tab, create a new VM using the information in the table below.
+   ```powershell
+   $RGName = "fw-manager-rg-DeploymentID"  (Replace with deployment ID)
+   
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
+   ```
+  
+1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-   | **Setting**          | **Value**                      |
-   | -------------------- | ------------------------       |
-   | Subscription         | Select your subscription       |
-   | Resource group       | **fw-manager-rg-DeploymentID** |
-   | Virtual machine name | **Srv-workload-01**            |
-   | Region               | Your region                    |
-   | Size                 | B1s                            |
-   | Username             | **MyAdmin**                    |
-   | Password             | **TestPa$$w0rd!**              |
-   | Confirm password     | **TestPa$$w0rd!**              |
-   | Public inbound ports | **None**                       |
+1. On the **Overview** page of **Srv-workload-01**, in the right-hand pane, under the **Networking** section, note down the **Private IP address** (e.g., **10.0.1.4**).
 
-4. Click **Next : Disks**.
-
-5. Click **Next : Networking**.
-
-6. In **Virtual network**, ensure that **Spoke-01** is selected.
-
-7. In **Subnet**, ensure that **Workload-01-SN** is selected. 
-
-8. In **Public IP**, select **None**.
-
-9. Click **Next : Management**.
-
-10. Under **Monitoring**, in **Boot diagnostics**, click **Disable**.
-
-11. Click **Review + create**.
-
-12. Click **Create**.
-
-13. When this deployment has completed, click **Create another VM**.
-
-14. Repeat steps **3 to 12** above to create another virtual machine but using the following information:
-
-    - Virtual machine name: **Srv-workload-02**
-    - Virtual network: **Spoke-02**
-    - Subnet: **Workload-02-SN**
-    - Public IP: **None**
-
-15. When deployment of the second VM has completed, click **Go to resource**.
-
-16. On the **Overview** page of **Srv-workload-02**, in the right-hand pane, under the **Networking** section, note down the **Private IP address** (e.g., **10.1.1.4**).
-
-17. Click **Home**.
-
-18. On the Azure portal home page, click **All resources**.
-
-19. Click the **Srv-workload-01** virtual machine.
-
-20. On the **Overview** page of **Srv-workload-01**, in the right-hand pane, under the **Networking** section, note down the **Private IP address** (e.g., **10.0.1.4**).
+1. On the **Overview** page of **Srv-workload-02**, in the right-hand pane, under the **Networking** section, note down the **Private IP address** (e.g., **10.1.1.4**).
 
 
-## Task 5: Create a firewall policy and secure your hub
+## Task 6: Create a firewall policy and secure your hub
 
 In this task you will first create your firewall policy, then secure your hub. The firewall policy will define collections of rules to direct traffic on one or more Secured virtual hubs.
 
@@ -301,7 +278,7 @@ In this task you will first create your firewall policy, then secure your hub. T
 
 51. Click **Create**.
 
-## Task 6: Associate the firewall policy
+## Task 7: Associate the firewall policy
 
 In this task you will associate the firewall policy with the virtual hub.
 
@@ -318,7 +295,7 @@ In this task you will associate the firewall policy with the virtual hub.
 
  
 
-## Task 7: Route traffic to your hub
+## Task 8: Route traffic to your hub
 
 In this task you will ensure that network traffic gets routed through your firewall.
 
@@ -335,7 +312,7 @@ In this task you will ensure that network traffic gets routed through your firew
 9. Once configuration has completed, ensure that under **INTERNET TRAFFIC** and **PRIVATE TRAFFIC**, it says **Secured by Azure Firewall** for both hub-spoke connections.
 
 
-## Task 8: Test the application rule
+## Task 9: Test the application rule
 
 In this part of the exercise, you will connect a remote desktop to the firewall public IP address, which is NATed to Srv-Workload-01. You will then use a web browser to test the application rule and connect a remote desktop to Srv-Workload-02 to test the network rule.
 
@@ -347,7 +324,7 @@ In this task you will test the application rule to confirm that it works as expe
 
 3. Click **Show Options**.
 
-4. In the **Username** box, enter **MyAdmin**.
+4. In the **Username** box, enter **TestUser**.
 
 5. Click **Connect**.
 
@@ -379,7 +356,7 @@ In this task you will test the application rule to confirm that it works as expe
 
 16. So, you have verified that you can connect to the one allowed FQDN but are blocked from all others.
 
-## Task 9: Test the network rule
+## Task 10: Test the network rule
 
 In this task you will test the network rule to confirm that it works as expected.
 
