@@ -38,10 +38,10 @@ This exercise requires two instances of a web application that run in different 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription.                                    |
-   | Resource group   | Select the resource group ContosoResourceGroup               |
-   | Name             | Enter a unique Name for your web app. This example uses WebAppContoso-1. |
+   | Resource group   | Select az700-m05-<inject key="DeploymentID" enableCopy="false"/>            |
+   | Name             | az700-m05-<inject key="DeploymentID" enableCopy="false"/>    |
    | Publish          | Select **Code**.                                             |
-   | Runtime stack    | Select **.NET Core 2.1 (LTS)**.                              |
+   | Runtime stack    | Select **.NET 6 (LTS)**.                              |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **Central US**.                                       |
    | Windows Plan     | Select **Create new** and enter myAppServicePlanCentralUS in the text box. |
@@ -62,7 +62,7 @@ This exercise requires two instances of a web application that run in different 
    | Resource group   | Select the resource group ContosoResourceGroup               |
    | Name             | Enter a unique Name for your web app. This example uses WebAppContoso-2. |
    | Publish          | Select **Code**.                                             |
-   | Runtime stack    | Select **.NET Core 2.1 (LTS)**.                              |
+   | Runtime stack    | Select **.NET 6 (LTS)**.                              |
    | Operating System | Select **Windows**.                                          |
    | Region           | Select **East US**.                                          |
    | Windows Plan     | Select **Create new** and enter myAppServicePlanEastUS in the text box. |
