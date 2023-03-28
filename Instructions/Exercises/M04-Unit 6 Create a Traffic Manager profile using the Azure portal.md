@@ -29,18 +29,18 @@ In this section, you will create two instances of a web application deployed in 
    | **Setting**      | **Value**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | Select your subscription                                     |
-   | Resource group   | Select **Existing**  Name: **Contoso-RG-TM1-Deployment ID**  |
-   | Name             | **ContosoWebAppEastUS-{Deploymentid}**                                      |
+   | Resource group   | Select **Existing**  Name: **Contoso-RG-TM1-<inject key="DeploymentID" enableCopy="false"/>**  |
+   | Name             | **ContosoWebAppEastUS-<inject key="DeploymentID" enableCopy="false"/>** |
    | Publish          | **Code**                                                     |
    | Runtime stack    | **ASP.NET V4.8**                                             |
    | Operating system | **Windows**                                                  |
    | Region           | **East US**                                                  |
-   | Windows Plan     | Select **Create  new**  Name: **ContosoAppServicePlanEastUS** |
+   | Windows Plan     | Select **Name: **ContosoAppServicePlanEastUS**               |
    | Sku and size     | **Standard S1 100 total ACU, 1.75-GB  memory**               |
 
-   **Note**: Replace Deployment ID, it can be obtained from the environment details tab.
+   
 
-3. Click **Next : Deployment**, then click **Next : Monitoring**.
+3. Click **Next : Deployment**, click **Next : Networking**, then click **Next : Monitoring**.
 
 4. On the **Monitoring** tab, select the **No** option for **Enable Application Insights**.
 
@@ -54,12 +54,12 @@ In this section, you will create two instances of a web application deployed in 
 
    | **Setting**    | **Value**                                                         |
    | -------------- | ------------------------------------------------------------      |
-   | Resource group | Select **Existing**  Name: **Contoso-RG-TM2-Deployment ID**       |
-   | Name           | **ContosoWebAppWestEurope-{Deploymentid}**                                       |
+   | Resource group | Select **Existing**  Name: **Contoso-RG-TM2-<inject key="DeploymentID" enableCopy="false"/>**       |
+   | Name           | **ContosoWebAppWestEurope-<inject key="DeploymentID" enableCopy="false"/>**                                       |
    | Region         | **West Europe**                                                   |
    | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope** |
 
-   **Note**: Replace Deployment ID, it can be obtained from the environment details tab.
+   
 
 8. On the Azure home page, click **All services**, in the left navigation menu, select **Web**, and then click **App Services**.
 
@@ -83,13 +83,13 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
    | **Setting**             | **Value**                        |
    | ----------------------- | ------------------------         |
-   | Name                    | **Contoso-TMProfile-{Deploymentid}**            |
+   | Name                    | **Contoso-TMProfile-<inject key="DeploymentID" enableCopy="false"/>**            |
    | Routing method          | **Priority**                     |
    | Subscription            | Select your subscription         |
-   | Resource group          | **Contoso-RG-TM1-Deployment ID** |
+   | Resource group          | **Contoso-RG-TM1-<inject key="DeploymentID" enableCopy="false"/>** |
    | Resource group location | **Default selected by resource group**                      |
 
-   **Note**: Replace Deployment ID, it can be obtained from the environment details tab.
+   
 
 5. Click **Create**.
 
@@ -97,7 +97,7 @@ Now you will create a Traffic Manager profile that directs user traffic based on
 
 In this section, you will add the website in the East US as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
 
-1. On the Azure portal home page, click **All resources**, then click on **Contoso-TMProfile-{Deploymentid}** in the resources list.
+1. On the Azure portal home page, click **All resources**, then click on **Contoso-TMProfile-<inject key="DeploymentID" enableCopy="false"/>** in the resources list.
 
 2. Under **Settings**, select **Endpoints**, and then click **Add**.
 
@@ -110,7 +110,7 @@ In this section, you will add the website in the East US as the primary endpoint
    | Type                 | **Azure endpoint**                |
    | Name                 | **myPrimaryEndpoint**             |
    | Target resource type | **App Service**                   |
-   | Target resource      | **ContosoWebAppEastUS-{Deploymentid} (East US)** |
+   | Target resource      | **ContosoWebAppEastUS-<inject key="DeploymentID" enableCopy="false"/> (East US)** |
    | Priority               | **1**                             |
 
 
@@ -121,13 +121,17 @@ In this section, you will add the website in the East US as the primary endpoint
    | **Setting**     | **Value**                                 |
    | --------------- | ----------------------------------------- |
    | Name            | **myFailoverEndpoint**                    |
-   | Target resource | **ContosoWebAppWestEurope-{Deploymentid} (West Europe)** |
+   | Target resource | **ContosoWebAppWestEurope-<inject key="DeploymentID" enableCopy="false"/> (West Europe)** |
    | Priority          | **2**                                     |
 
 
 6. Setting a priority of 2 means that traffic will route to this failover endpoint if the configured primary endpoint becomes unhealthy.
 
-7. The two new endpoints are displayed in the Traffic Manager profile. Notice that after a few minutes the **Monitoring status** should change to **Online**.
+7. on the left pane in settings select **Configuration**, then change *protocol* **HTTP** to **HTTPS**.
+
+   ![Picture 26](../media/protocol.png)
+
+8. The two new endpoints are displayed in the Traffic Manager profile. Notice that after a few minutes the **Monitoring status** should change to **Online**.
 
    ![Picture 22](../media/create-tmendpoints-2.png)
 
@@ -147,13 +151,13 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 4. The web app's default web site should be displayed.
 
-   ![Picture 24](../media/tm-webapp-test-1a.png)
+   ![Picture 24](../media/website-image.png)
 
 5. Currently all traffic is being sent to the primary endpoint as you set its **Priority** to **1**.
 
 6. To test the failover endpoint is working properly, you need to disable the primary site.
 
-7. On the **Contoso-TMProfile-{Deploymentid}** page, on the overview screen, select **myPrimaryEndpoint**.
+7. On the **Contoso-TMProfile-<inject key="DeploymentID" enableCopy="false"/>** page, on the overview screen, select **myPrimaryEndpoint**.
 
 8. On the **myPrimaryEndpoint** page, under **Status**, click **Disabled**, and then click **Save**.
 
@@ -161,7 +165,7 @@ In this section, you will check the DNS name of your Traffic Manager profile, an
 
 9. Close the **myPrimaryEndpoint** page (click the **X** in the top right corner of the page).
 
-10. On the **Contoso-TMProfile-{Deploymentid}** page, the **Monitor status** for **myPrimaryEndpoint** should now be **Disabled**.
+10. On the **Contoso-TMProfile-<inject key="DeploymentID" enableCopy="false"/>** page, the **Monitor status** for **myPrimaryEndpoint** should now be **Disabled**.
 
 11. Open a new web browser session, and paste (or enter) the **DNS name** entry (contoso-tmprofile.trafficmanager.net) into the address bar, and press Enter.
 

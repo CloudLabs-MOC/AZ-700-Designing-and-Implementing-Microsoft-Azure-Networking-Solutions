@@ -29,7 +29,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
 | **Tab**         | **Option**                                                   | **Value**                                |
 | --------------- | ------------------------------------------------------------ | -------------------------------------    |
-| Basics          | Resource group                                               | ContosoResourceGroup-{Deployment ID}     |
+| Basics          | Resource group                                               | ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>     |
 |                 | Virtual machine name                                         | ManufacturingVM                          |
 |                 | Region                                                       | (Europe) North Europe                    |
 |                 | Availability options                                         | No infrastructure redundancy required    |

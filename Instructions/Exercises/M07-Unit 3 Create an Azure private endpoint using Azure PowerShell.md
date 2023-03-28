@@ -19,7 +19,7 @@ Private Endpoints can be created for different kinds of Azure services, such as 
    
 3. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
    
-4. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
+4. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group, i.e. **CreatePrivateEndpointQS-rg**. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
 
 5. In your lab VM navigate to the location that is specified. **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07**
 
@@ -409,7 +409,7 @@ A private IP address of **10.0.0.5** is returned for the web app name. This addr
 - In the bastion connection to **myVM**, open Internet Explorer.
 - Enter the url of your web app, **https://&lt;your-webapp-name&gt;.azurewebsites.net**.
 - You'll receive the default web app page if your application hasn't been deployed:
-  ![screen shot of page in Azure indicating an app service is up and running](../media/web-app-default-page.png)
+  ![screen shot of page in Azure indicating an app service is up and running](../media/website-image.png)
 - Close the connection to **myVM**.
 
 

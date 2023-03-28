@@ -34,11 +34,11 @@ In this section, you will create a virtual network and a subnet.
    | **Setting**    | **Value**                                                |
    | -------------- | ------------------------------------------               |
    | Subscription   | Select your subscription                                 |
-   | Resource group | Select **Existing rg**  Name: **IntLB-RG-Deployment ID** |
+   | Resource group | Select **Existing rg**  Name: **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** |
    | Name           | **IntLB-VNet**                                           |
-   | Region         | **Default selected by Resource Group**                                         |
+   | Region         | **Default selected by Resource Group**                   |
 
- >Note : Deployment ID can be found in the Environment tab
+ 
 
 5. Click **Next : IP Addresses**.
 
@@ -88,7 +88,7 @@ In this section, you will create three VMs, that will be in the same availabilit
  
 4. In your lab VM Navigate to the location that is specified. **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04**.
 
-5. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the following files azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json into the Cloud Shell home directory.
+5. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the following files **azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json and azuredeploy.parameters.vm3.json** into the Cloud Shell home directory.
 
 6. Deploy the following ARM templates to create the virtual network, subnets, and VMs needed for this exercise:
 
@@ -120,7 +120,7 @@ In this section, you will create an internal Standard SKU load balancer. The rea
    | **Setting**           | **Value**                   |
    | --------------------- | ------------------------    |
    | Subscription          | Select your subscription    |
-   | Resource group        | **IntLB-RG-Deployment ID**  |
+   | Resource group        | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**  |
    | Name                  | **myIntLoadBalancer**       |
    | Region                | **Default selected by Resource Group**            |
    | Type                  | **Internal**                |
@@ -163,11 +163,10 @@ The backend address pool contains the IP addresses of the virtual NICs connected
    | Name            | **myBackendPool**    |
    | Virtual network | **IntLB-VNet**       |
    
-4. Under **Virtual Machines**, click **Add**.
+4. Under **IP configurations**, click **+ Add**.
 
-5. Select the checkboxes for all 3 VMs(**az700-vm1**,**az700-vm2** and **az700-vm3**) and then click **Add**.
+5. Select the checkboxes for all 3 VMs(**az700-vm1**,**az700-vm2** and **az700-vm3**) and then click **Save**.
 
-6. Click **Add**.
    ![Picture 7](../media/add-vms-backendpool.png)
 
  
@@ -178,7 +177,7 @@ The load balancer monitors the status of your app with a health probe. The healt
 
 1. On the Azure portal home page, click All resources, then click on myIntLoadBalancer from the resources list.
 
-2. Under **Settings**, click **Health probes**, then click **Add**.
+2. Under **Settings**, click **Health probes**, then click **+ Add**.
 
 3. On the **Add health probe** page, enter the information from the table below.
 
@@ -201,7 +200,7 @@ The load balancer monitors the status of your app with a health probe. The healt
 
 A load balancer rule is used to define how traffic is distributed to the VMs. You define the frontend IP configuration for the incoming traffic and the backend IP pool to receive the traffic. The source and destination port are defined in the rule. Here you will create a load balancer rule.
 
-1. On the Azure portal home page, click All resources, then click on myIntLoadBalancer from the resources list, under **Settings**, click **Load balancing rules**, then click **Add**.
+1. On the Azure portal home page, click All resources, then click on myIntLoadBalancer from the resources list, under **Settings**, click **Load balancing rules**, then click **+ Add**.
 
 2. On the **Add load balancing rule** page, enter the information from the table below.
 
@@ -220,7 +219,7 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    | Floating IP            | **Disabled**             |
 
 
-3. Click **Add**.
+3. Click **Save**.
    ![Picture 6](../media/create-loadbalancerrule.png)
 
 ## Task 5: Test the load balancer
@@ -238,12 +237,12 @@ In this section, you will create a test VM, and then test the load balancer.
    | **Setting**          | **Value**                                    |
    | -------------------- | -------------------------------------------- |
    | Subscription         | Select your subscription                     |
-   | Resource group       | **IntLB-RG-Deployment ID**                                 |
+   | Resource group       | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** |
    | Virtual machine name | **myTestVM**                                 |
-   | Region               | **Default selected by Resource Group**                             |
+   | Region               | **Default selected by Resource Group**       |
    | Availability options | **No infrastructure redundancy required**    |
-   | Image                | **Windows Server 2019 Datacenter - Gen 1**   |
-   | Size                 | **Standard_DS1_v2 - 1 vcpu, 3.5 GiB memory** |
+   | Image                | **Windows Server 2019 Datacenter - Gen 2**   |
+   | Size                 | **Standard_DS2_v2 - 2 vcpu, 7 GiB memory** |
    | Username             | **TestUser**                                 |
    | Password             | **TestPa$$w0rd!**                            |
    | Confirm password     | **TestPa$$w0rd!**                            |
@@ -279,17 +278,15 @@ In this section, you will create a test VM, and then test the load balancer.
 
 4. On the **Overview** page, select **Connect**, then **Bastion**.
 
-5. Click **Use Bastion**.
-
-6. In the **Username** box, type **TestUser** and in the **Password** box, type **TestPa$$w0rd!**, then click **Connect**.
+5. In the **Username** box, type **TestUser** and in the **Password** box, type **TestPa$$w0rd!**, then click **Connect**.
 
    **Note**: if you get error **A popup blocker is preventing new window from opening. Please allow popups and retry.** then click on popup icon in the address bar and select always allow popup then select done as shown in below image.
 
     ![reaponse](../media/popup.png)
 
-7. The **myTestVM** window will open in another browser tab.
+6. The **myTestVM** window will open in another browser tab.
 
-8. If a **Networks** pane appears, click **Yes**.
+7. If a **Networks** pane appears, click **Yes**.
 
 9. Click the **Internet Explorer** icon in the task bar to open the web browser.
 

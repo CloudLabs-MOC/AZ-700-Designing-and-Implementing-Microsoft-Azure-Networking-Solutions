@@ -24,7 +24,7 @@ In this exercise, you will:
 
 | **Tab**         | **Option**                             | **Value**            |
 | --------------- | -------------------------------------- | -------------------- |
-| Basics          | Resource group                         | ContosoResourceGroup-{Deployment ID} |
+| Basics          | Resource group                         | ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/> |
 |                 | Name                                   | Contoso.com          |
 | Tags            | No changes required                    |                      |
 | Review + create | Review your settings and select Create |                      |
@@ -49,7 +49,7 @@ In this exercise, you will:
 | ----------------------------------- | --------------------------------------- |
 | Link name                           | CoreServicesVnetLink                    |
 | Subscription                        | No changes required                     |
-| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup-{Deployment ID}) |
+| Virtual Network                     | CoreServicesVnet (ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>) |
 | Enable auto registration            | Selected                                |
 | Review your settings and select OK. |                                         |
 
@@ -65,7 +65,7 @@ In this exercise, you will:
 | ----------------------------------- | ---------------------------------------- |
 | Link name                           | ManufacturingVnetLink                    |
 | Subscription                        | No changes required                      |
-| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup-{Deployment ID}) |
+| Virtual Network                     | ManufacturingVnet (ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>) |
 | Enable auto registration            | Selected                                 |
 | Review your settings and select OK. |                                          |
 
@@ -80,7 +80,7 @@ In this exercise, you will:
 | ----------------------------------- | ----------------------------------- |
 | Link name                           | ResearchVnetLink                    |
 | Subscription                        | No changes required                 |
-| Virtual Network                     | ResearchVnet (ContosoResourceGroup-{Deployment ID}) |
+| Virtual Network                     | ResearchVnet (ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>) |
 | Enable auto registration            | Selected                            |
 | Review your settings and select OK. |                                     |
 
@@ -99,7 +99,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On the Azure home page, select **Virtual Machines**.
 
-2. In Virtual Machines, select **+ Add/Create &gt; + Start with a preset configuration**.
+2. In Virtual Machines, select **+ Create > + Start with a preset configuration**.
 
 ![Virtual machines with + Add and + Start with a preset configuration highlighted.](../media/add-virtual-machine-preset.png)
 
@@ -113,7 +113,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 | **Tab**         | **Option**                                                   | **Value**                             |
 | --------------- | ------------------------------------------------------------ | ------------------------------------- |
-| Basics          | Resource group                                               | ContosoResourceGroup-{Deployment ID}  |
+| Basics          | Resource group                                               | ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>  |
 |                 | Virtual machine name                                         | TestVM1                               |
 |                 | Region                                                       | (US) West US                          |
 |                 | Availability options                                         | No infrastructure redundancy required |
@@ -145,7 +145,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 1. On the Azure home page, select **Virtual Machines**.
 
-2. In Virtual Machines, select **+ Add/Create &gt; + Start with a preset configuration**.
+2. In Virtual Machines, select **+ Create > + Start with a preset configuration**.
 
 ![Virtual machines with + Add and + Start with a preset configuration highlighted.](../media/add-virtual-machine-preset.png)
 
@@ -157,7 +157,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
 | **Tab**         | **Option**                                                   | **Value**                             |
 | --------------- | ------------------------------------------------------------ | ------------------------------------- |
-| Basics          | Resource group                                               | ContosoResourceGroup-{Deployment ID}  |
+| Basics          | Resource group                                               | ContosoResourceGroup<inject key="DeploymentID" enableCopy="false"/>  |
 |                 | Virtual machine name                                         | TestVM2                               |
 |                 | Region                                                       | (US) West US                          |
 |                 | Availability options                                         | No infrastructure redundancy required |
