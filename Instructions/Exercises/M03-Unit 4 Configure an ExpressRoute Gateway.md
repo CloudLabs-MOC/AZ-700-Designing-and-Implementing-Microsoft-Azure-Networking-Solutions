@@ -43,6 +43,8 @@ In this exercise, you will:
 4. Select **Next : IP addresses**.
 
 5. On the **IP Addresses** tab, click on **Add an IP address space**.
+
+    ![Azure portal - add an IP address space](../media/ipaddspace.png)
  
 6. On **Add an IP address space** , use the information in the following table to create IPv4 address space.
  
@@ -51,7 +53,9 @@ In this exercise, you will:
    | Address space type           | IPv4          |
    | Starting address             | 10.20.0.0     |
    | Address space size           | /16           |
-   
+  
+    ![Azure portal - IPv4](../media/ipv4.png)
+  
 7. Click on  **Add**. 
 
 6. Select **+ Add subnet** and In the Add subnet pane, use the information in the following table to create the subnet:
@@ -64,11 +68,13 @@ In this exercise, you will:
    | Starting address             | 10.20.0.0               |
    | Subnet size                  | /27                     |
    
-   
+    ![Azure portal - IPv4](../media/subnet.png)
 
 7. And then select **Add**. 
 
 8. On the Create virtual network page, select **Review + Create**.
+
+     ![Azure portal - create a virtual network](../media/reviewandcreate.png)
 
 9. Confirm that the VNet passes the validation and then select **Create**.
 
