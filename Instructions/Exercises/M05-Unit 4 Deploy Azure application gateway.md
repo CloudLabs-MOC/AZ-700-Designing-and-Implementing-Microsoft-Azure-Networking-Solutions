@@ -28,7 +28,7 @@ In this exercise, you will:
 
    | **Setting**         | **Value**                                    |
    | ------------------- | -------------------------------------------- |
-   | Resource group      | Select the existing resource group **az700-m05-{DeploymentID}** |
+   | Resource group      | Select the existing resource group az700-m05-<inject key="DeploymentID" enableCopy="false"/> |
    | Application Gateway | ContosoAppGateway                            |
    | Region              | Select **West US**                           |
    | Virtual Network     | Select **Create new**                        |
@@ -80,6 +80,7 @@ In this exercise, you will:
     | **Setting**   | **Value**         |
     | ------------- | ----------------- |
     | Listener name | Listener          |
+    | Priority      | **100**           |
     | Frontend IP   | Select **Public** |
 
 19. Accept the default values for the other settings on the **Listener** tab.
@@ -88,18 +89,18 @@ In this exercise, you will:
 
 21. On the **Backend targets** tab, enter or select the following information:
 
-    | **Setting**   | **Value**      |
-    | ------------- | -------------- |
-    | Target type   | Backend pool   |
-    | Backend Target | BackendPool |
-    | HTTP Settings | **Add new** |
+    | **Setting**      | **Value**      |
+    | ---------------- | -------------- |
+    | Target type      | Backend pool   |
+    | Backend Target   | BackendPool    |
+    | Backend Settings | **Add new**    |
 
 22. In **Add a HTTP setting**, enter or select the following information:
 
-    | **Setting**        | **Value**   |
-    | ------------------ | ----------- |
-    | HTTP settings name | HTTPSetting |
-    | Backend port       | 80          |
+    | **Setting**           | **Value**   |
+    | --------------------- | ----------- |
+    | Backend settings name | HTTPSetting |
+    | Backend port          | 80          |
 
 23. Accept the default values for the other settings in the **Add an HTTP setting** window, then select **Add** to return to **Add a routing rule**.
 
@@ -136,11 +137,11 @@ To do this, you'll:
    | **Setting**          | **Value**                                        |
    | -------------------- | ------------------------------------------------ |
    | **Basics** tab       |                                                  |
-   | Resource group       | Select the existing resource group **az700-m05-{DeploymentID}**     |
+   | Resource group       | Select the existing resource group az700-m05-<inject key="DeploymentID" enableCopy="false"/> |
    | Virtual machine name | BackendVM1                                       |
    | Region               | West US                                          |
    | Image                | Select **Windows Server 2016 Datacenter - Gen2** |
-   | Size                 | Standard_D2s_v3 (2 vcpus, 8 GiB memory)                                   |
+   | Size                 | Standard_D2s_v3 (2 vcpus, 8 GiB memory)          |
    | Username             | TestUser                                         |
    | Password             | TestPa$$w0rd                                     |
    | Public inbound ports | None                                             |

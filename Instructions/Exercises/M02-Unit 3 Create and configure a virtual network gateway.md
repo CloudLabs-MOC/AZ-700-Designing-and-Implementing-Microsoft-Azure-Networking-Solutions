@@ -28,103 +28,52 @@ In this exercise, you will:
 
 4. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. Then select **Create new** against Storage account as well as File Share and provide a unique value in both of the fields and then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
 
-5. In your lab VM navigate to the location that is specified. **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**
+5. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
-6. In the toolbar of the Cloud Shell pane, click the Upload/Download files icon, in the drop-down menu, click Upload and upload the following files azuredeploy.json and azuredeploy.parameters.json into the Cloud Shell home directory.
-
-7. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
-
- >Note: Deployment ID can be obtained from environment details tab
+6. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
    ```powershell
-   $RGName = "ContosoResourceGroup-DeploymentID" (Replace the Deployment ID value here)
-   
+   $RGName = "ContosoResourceGroup"
+   #create resource group if it doesnt exist
+   New-AzResourceGroup -Name $RGName -Location "eastus"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
 ## Task 2: Create CoreServicesTestVM
 
-1. On the Azure home page, select **Virtual Machines**.
+1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-2. In Virtual Machines, select **+ Add** > **+ Start with a preset configuration**.
-   ![Virtual machines with + Add and + Start with a preset configuration highlighted.](../media/add-virtual-machine-preset.png)
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
-3. In Choose recommended defaults that match your workload, under **Select a workload environment**, select **Dev/Test**.
+1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-4. Under **Select a workload type**, select **General purpose (D-Series)**, and then select **Continue to create a VM**.
+   ```powershell
+   $RGName = "ContosoResourceGroup"
+   
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
+   ```
+  
+1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-5. Use the information in the following table to create your VM.
-
-   | **Tab**         | **Option**                                                   | **Value**                             |
-   | --------------- | ------------------------------------------------------------ | ------------------------------------- |
-   | Basics          | Resource group                                               | ContosoResourceGroup-DeploymentID     |
-   |                 | Virtual machine name                                         | CoreServicesTestVM                    |
-   |                 | Region                                                       | (US) West US                          |
-   |                 | Availability options                                         | No infrastructure redundancy required |
-   |                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 2  |
-   |                 | Azure Spot instance                                          | Not selected                          |
-   |                 | Size                                                         | Standard_D2s_v3 - 2vcpus, 8GiB memory  |
-   |                 | Username                                                     | TestUser                              |
-   |                 | Password                                                     | TestPa$$w0rd!                         |
-   |                 | Public inbound ports                                         | Allow selected ports                  |
-   |                 | Select inbound ports                                         | RDP (3389)                            |
-   |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected                              |
-   | Disks           | OS Disk Type                                                 | Standard SSD                          |
-   | Networking      | Virtual network                                              | CoreServicesVnet                      |
-   |                 | Subnet                                                       | DatabaseSubnet (10.20.20.0/24)         |
-   |                 | Public IP                                                    | (new) CoreServicesTestVM-ip           |
-   |                 | NIC network security group                                   | Basic                                 |
-   |                 | Public inbound ports                                         | Allow selected ports                  |
-   |                 | Select inbound ports                                         | RDP (3389)                            |
-   |                 | Load balancing                                               | Not selected                          |
-   | Management      | No changes required                                          |                                       |
-   | Advanced        | No changes required                                          |                                       |
-   | Tags            | No changes required                                          |                                       |
-   | Review + create | Review your settings and select Create                       |                                       |
-
-6. When the deployment is complete, select **Go to resource**.
+1. Verify that the virtual machine has been created.
 
 ## Task 3: Create ManufacturingTestVM
 
-1. On the Azure home page, select **Virtual Machines**.
+1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-2. In Virtual Machines, select **+ Add** > **+ Start with a preset configuration**.
-   ![Virtual machines with + Add and + Start with a preset configuration highlighted.](../media/add-virtual-machine-preset.png)
+1. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
-3. In Choose recommended defaults that match your workload, under **Select a workload environment**, select **Dev/Test**.
+1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
-4. Under **Select a workload type**, select **General purpose (D-Series)**, and then select **Continue to create a VM**.
+   ```powershell
+   $RGName = "ContosoResourceGroup"
+   
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
+   ```
+  
+1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
-5. Use the information in the following table to create your VM.
-
-   | **Tab**         | **Option**                                                   | **Value**                                 |
-   | --------------- | ------------------------------------------------------------ | ----------------------------------------- |
-   | Basics          | Resource group                                               | ContosoResourceGroup-DeploymentID         |
-   |                 | Virtual machine name                                         | ManufacturingTestVM                       |
-   |                 | Region                                                       | (Europe) North Europe                     |
-   |                 | Availability options                                         | No infrastructure redundancy required     |
-   |                 | Image                                                        | Windows 10 Pro, Version 20H2 - Gen 2      |
-   |                 | Azure Spot instance                                          | Not selected                              |
-   |                 | Size                                                         | Standard_D2s_v3 - 2vcpus, 8GiB memory      |
-   |                 | Username                                                     | TestUser                                  |
-   |                 | Password                                                     | TestPa$$w0rd!                             |
-   |                 | Public inbound ports                                         | Allow selected ports                      |
-   |                 | Select inbound ports                                         | RDP (3389)                                |
-   |                 | I confirm I have an eligible Windows 10 license with multi-tenant hosting rights. | Selected             |                     
-   | Disks           | OS Disk type                                                 | Standard SSD                              |
-   | Networking      | Virtual network                                              | ManufacturingVnet                         |
-   |                 | Subnet                                                       | ManufacturingSystemSubnet (10.30.10.0/24)  |
-   |                 | Public IP                                                    | (new) ManufacturingTestVM-ip              |
-   |                 | NIC network security group                                   | Basic                                     |
-   |                 | Public inbound ports                                         | Allow selected ports                      |
-   |                 | Select inbound ports                                         | RDP (3389)                                |
-   |                 | Load balancing                                               | Not selected                              |
-   | Management      | No changes required                                          |                                           |
-   | Advanced        | No changes required                                          |                                           |
-   | Tags            | No changes required                                          |                                           |
-   | Review + create | Review your settings and select **Create**                   |                                           |
-
-6. When the deployment is complete, select **Go to resource**.
+1. Verify that the virtual machine has been created.
 
 ## Task 4: Connect to the Test VMs using RDP
 

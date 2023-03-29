@@ -6,7 +6,7 @@ In this exercise, you will:
 
 + Task 1: Create a Virtual WAN
 + Task 2: Create a hub by using Azure Portal
-+ Task 3: Connect a VNet to the Virtual Hub
++ Task 3: Create a Vnet and connect it to the Virtual Hub
 
 ## Task 1: Create a Virtual WAN
 
@@ -68,15 +68,28 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
 ## Task 3: Connect a VNet to the Virtual Hub
 
-1. In the portal, type Virtual WAN into the search box and select **Virtual WANs** from the results list locate and select the Virtual WAN that you created.  
+1. On the Azure portal home page, navigate to the Global Search bar and search **Virtual Networks** and select virtual networks under services.
 
-2. In ContosoVirtualWAN, under **Connectivity**, select **Virtual network connections**.
+2. Select **Create** on the Virtual networks page.
+
+   | **Tab**      | **Option**         | **Value**            |
+   | ------------ | ------------------ | -------------------- |
+   | Basics       | Resource Group     | ContosoResourceGroup |
+   |              | Name               | ResearchVNet    |
+   |              | Region             | Check the region of the RG.      |
+   
+3. To finish creating the ResearchVNet, select **Review + create**.
+
+4. Verify your configuration passed validation, and then select **Create**.
+
+5. In the portal, type Virtual WAN into the search box and select **Virtual WANs** from the results list locate and select the Virtual WAN that you created.  
+6. In ContosoVirtualWAN, under **Connectivity**, select **Virtual network connections**.
 
    ![Virtual WAN configuration page with Virtual network connections highlighted.](../media/connect-vnet-to-virtual-hub.png)
 
-3. On ContosoVirtualWAN | Virtual network connections, select **+ Add connection**.
+7. On ContosoVirtualWAN | Virtual network connections, select **+ Add connection**.
 
-4. In Add connection, use the following information to create the connection.
+8. In Add connection, use the following information to create the connection.
 
    - **Connection name:** ContosoVirtualWAN-to-ResearchVNet
 
@@ -92,6 +105,6 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
    - **Associate Route Table:** Default
 
-5. Select **Create**.
+9. Select **Create**.
 
 Congratulations! You have created a Virtual WAN and a Virtual WAN Hub and connected the ResearchVNet to the hub.

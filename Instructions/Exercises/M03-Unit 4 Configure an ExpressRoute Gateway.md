@@ -29,31 +29,49 @@ In this exercise, you will:
 
 1. On the Create virtual networks pane, on the **Basics** tab, use the information in the following table to create the VNet:
 
-   | **Setting**          | **Value**                                                    |
-   | -------------------- | --------------------------------                             |
-   | Subscription         | the name of the Azure subscription you are using in this lab |
-   | Resource Group       | Select the existing resource group az700-m03-rg01-{Deployment ID}|
-   | Virtual Network Name | CoreServicesVNet                                             |
-   | Location             | West US                                                      |
+   | **Setting**          | **Value**                                                                                        |
+   | -------------------- | ------------------------------------------------------------------------------------------------ |
+   | Subscription         | the name of the Azure subscription you are using in this lab                                     |
+   | Resource Group       | Select the existing resource group az700-m03-rg01-<inject key="DeploymentID" enableCopy="false"/>|
+   | Virtual Network Name | CoreServicesVNet                                                                                 |
+   | Location             | West US                                                                                          |
 
    **Note**: Deployment ID can be obtained from environment details tab
 
 1. Select **Next : IP addresses**.
 
-1. On the **IP Addresses** tab, in **IPv4 address space**, enter **10.20.0.0/16**, and then select **+ Add subnet**. 
+1. On the **IP Addresses** tab, click on **Add an IP address space**.
 
-1. In the Add subnet pane, use the information in the following table to create the subnet:
+   ![Azure portal - add ip address space](../media/ipaddspace1.png)
 
-   | **Setting**                  | **Value**     |
-   | ---------------------------- | ------------- |
-   | Gateway Subnet name          | GatewaySubnet |
-   | Gateway Subnet address space | 10.20.0.0/27  |
+1. On **Add an IP address space**, use the information in the following table to create the IPv4 address space:
+   
+   | **Setting**          | **Value**                                                    |
+   | -------------------- | --------------------------------                             |
+   | Address space type   | the name of the Azure subscription you are using in this lab |
+   | Starting address     | 10.20.0.0                                                    |
+   | Address space size   | /16                                                          |                                                  
+
+   ![Azure portal - add ipv4](../media/ipv4.png)
+   
+1. Select **Add**.
+
+1. On the **IP address** tab, click on **+ Add a subnet**, use the information in the following table to create the subnet:
+
+   | **Setting**                  | **Value**               |
+   | ---------------------------- | ----------------------- |
+   | Subnet template              | Virtual Network Gateway |
+   | Name                         | GatewaySubnet           |
+   | Starting address             | 10.20.0.0               |
+   | Subnet size                  | /27                     |
+
+   ![Azure portal - add ipv4](../media/subnet.png)
 
 1. And then select **Add**.
 
 1. On the Create virtual network page, select **Review + Create**.
 
-    ![Azure portal - add gateway subnet](../media/add-gateway-subnet.png)
+    ![Azure portal - add gateway subnet](../media/review-create.png)
 
 1. Confirm that the VNet passes the validation and then select **Create**.
 
@@ -73,7 +91,7 @@ In this exercise, you will:
    
     **Note:** After selecting the existed Virtual network, the value of resource group will be automatically derived from virtual network’s resource group name.
     
-   ![image](../media/image1.png)
+   ![image](../media/image1-1.png)
 
    | **Setting**               | **Value**                                                                       |
    | ------------------------- | --------------------------                                                      |
