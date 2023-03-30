@@ -203,7 +203,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 In this section, you will create a test VM on the Manufacturing VNet to test if you can access resources inside another Azure virtual network from your ManufacturingVnet.
 
 
-## Task 9: Connect to the Test VMs using RDP
+## Connect to the Test VMs using RDP
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
@@ -239,7 +239,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
  
 
-## Task 10: Test the connection between the VMs
+## Task 9: Test the connection between the VMs
 
 1. On the ManufacturingVM, open a PowerShell prompt.
 
@@ -255,7 +255,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
  
 
-## Task 11: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
+## Task 10: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
 
 1. On the Azure home page, select **Virtual Networks**, and then select **CoreServicesVnet**.
 
@@ -292,7 +292,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
  
 
-## Task 12: Test the connection between the VMs
+## Task 11: Test the connection between the VMs
 
 1. On the ManufacturingVM, open a PowerShell prompt.
 
