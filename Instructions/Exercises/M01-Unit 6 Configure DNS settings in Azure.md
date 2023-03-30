@@ -13,7 +13,7 @@ In this exercise, you will:
 + Task 6: Link subnet for auto registration
 + Task 7: Create Virtual Machines to test the configuration
 + Task 8: Verify records are present in the DNS zone
-+ Task 9:Connect to the Test VMs using RDP
++ Task 9: Connect to the Test VMs using RDP
 
 
 ## Task 1: Create the Contoso resource group
