@@ -5,11 +5,17 @@ In this unit, you will configure connectivity between the CoreServicesVnet and t
 
 In this unit, you will:
 
-+ Task 1: Create a Virtual Machine to test the configuration
-+ Task 2: Connect to the Test VMs using RDP
-+ Task 3: Test the connection between the VMs
-+ Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
-+ Task 5: Test the connection between the VMs
++ Task 1: Create the Contoso resource group
++ Task 2: Create the CoreServicesVnet virtual network and subnet
++ Task 3: Create the ManufacturingVnet virtual network and subnets
++ Task 4: Create the ResearchVnet virtual network and subnets
++ Task 5: Create a private DNS Zone
++ Task 6: Link subnet for auto registration
++ Task 7: Create Virtual Machines to test the configuration
++ Task 8: Create a Virtual Machine to test the configuration
++ Task 9: Test the connection between the VMs
++ Task 10: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
++ Task 11: Test the connection between the VMs
 
 ## Task 1: Create the Contoso resource group
 
@@ -203,7 +209,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 In this section, you will create a test VM on the Manufacturing VNet to test if you can access resources inside another Azure virtual network from your ManufacturingVnet.
 
 
-## Connect to the Test VMs using RDP
+## Task 9: Connect to the Test VMs using RDP
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
@@ -239,7 +245,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
  
 
-## Task 9: Test the connection between the VMs
+## Task 10: Test the connection between the VMs
 
 1. On the ManufacturingVM, open a PowerShell prompt.
 
@@ -255,7 +261,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
  
 
-## Task 10: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
+## Task 11: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
 
 1. On the Azure home page, select **Virtual Networks**, and then select **CoreServicesVnet**.
 
@@ -292,7 +298,7 @@ In this section, you will create a test VM on the Manufacturing VNet to test if 
 
  
 
-## Task 11: Test the connection between the VMs
+## Task 12: Test the connection between the VMs
 
 1. On the ManufacturingVM, open a PowerShell prompt.
 
