@@ -5,10 +5,15 @@ In this unit, you will configure DNS name resolution for Contoso Ltd. You will c
 
 In this exercise, you will:
 
-+ Task 1: Create a private DNS Zone
-+ Task 2: Link subnet for auto registration
-+ Task 3: Create Virtual Machines to test the configuration
-+ Task 4: Verify records are present in the DNS zone
++ Task 1: Create the Contoso resource group
++ Task 2: Create the CoreServicesVnet virtual network and subnet
++ Task 3: Create the ManufacturingVnet virtual network and subnets
++ Task 4: Create the ResearchVnet virtual network and subnets
++ Task 5: Create a private DNS Zone
++ Task 6: Link subnet for auto registration
++ Task 7: Create Virtual Machines to test the configuration
++ Task 8: Verify records are present in the DNS zone
++ Task 9:Connect to the Test VMs using RDP
 
 
 ## Task 1: Create the Contoso resource group
@@ -215,7 +220,7 @@ In this section, you will create two test VMs to test the Private DNS zone confi
 
  
 
-### Connect to the Test VMs using RDP
+### Task 9: Connect to the Test VMs using RDP
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
