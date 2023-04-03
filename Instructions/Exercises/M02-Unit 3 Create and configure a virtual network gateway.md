@@ -26,7 +26,7 @@ In this exercise, you will:
    
 3. When prompted to select either **Bash** or **PowerShell**, select **PowerShell**.
 
-4. When prompted, select **Show advanced settings** and then select **Use existing** and choose existing resource group. enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share**, then click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
+4. Click on **Create storage**, and wait for the Azure Cloud Shell to initialize. 
 
 5. On the toolbar of the Cloud Shell pane, select the **Upload/Download files** icon, in the drop-down menu, select **Upload** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
