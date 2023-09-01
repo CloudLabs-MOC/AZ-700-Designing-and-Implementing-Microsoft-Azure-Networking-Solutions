@@ -12,6 +12,7 @@ In this exercise, you will:
 + Task 2: Create a Front Door for your application
 + Task 3: View Azure Front Door in action
 
+## Estimated timing: 30 minutes
 
 ## Task 1: Create two instances of a web app
 
