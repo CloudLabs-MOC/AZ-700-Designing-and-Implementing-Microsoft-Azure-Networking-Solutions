@@ -8,6 +8,8 @@ In this exercise, you will:
 + Task 2: Create a hub by using Azure Portal
 + Task 3: Connect a VNet to the Virtual Hub
 
+## Estimated timing: 90 minutes
+
 ## Task 1: Create a Virtual WAN
 
 1. From a browser, navigate to the Azure portal and sign in with your Azure account.
