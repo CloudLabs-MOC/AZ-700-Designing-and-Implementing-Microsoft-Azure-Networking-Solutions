@@ -10,6 +10,7 @@ In this exercise, you will:
 + Task 2: Retrieve your Service key
 + Task 3: Deprovisioning an ExpressRoute circuit
 
+## Estimated timing: 15 minutes
 
 ## Task 1: Create and provision an ExpressRoute circuit
 
