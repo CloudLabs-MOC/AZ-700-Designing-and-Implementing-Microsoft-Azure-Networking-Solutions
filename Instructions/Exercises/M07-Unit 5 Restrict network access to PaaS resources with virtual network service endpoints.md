@@ -18,6 +18,8 @@ In this exercise, you will:
 + Task 9: Create virtual machines
 + Task 10: Confirm access to storage account
 
+## Estimated timing: 45 minutes
+
 ## Task 1: Create a virtual network
 
 1. On the Azure Portal home page, select **+ Create a resource**.
