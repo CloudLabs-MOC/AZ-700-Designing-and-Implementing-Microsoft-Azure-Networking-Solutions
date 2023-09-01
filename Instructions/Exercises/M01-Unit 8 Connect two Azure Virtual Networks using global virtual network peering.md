@@ -11,6 +11,8 @@ In this unit, you will:
 + Task 4: Create VNet peerings between CoreServicesVnet and ManufacturingVnet
 + Task 5: Test the connection between the VMs
 
+## Estimated timing: 20 minutes
+
 ## Task 1: Create a Virtual Machine to test the configuration
 
 In this section, you will create a test VM on the Manufacturing VNet to test if you can access resources inside another Azure virtual network from your ManufacturingVnet.
