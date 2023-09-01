@@ -11,6 +11,7 @@ In this exercise, you will:
 + Task 5: Configure DDoS alerts
 + Task 6: Submit a DDoS service request to run a DDoS attack
 
+## Estimated timing: 60 minutes
 
 ## Task 1: Create a DDoS Protection plan
 
