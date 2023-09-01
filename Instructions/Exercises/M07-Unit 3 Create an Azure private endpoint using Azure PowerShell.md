@@ -43,7 +43,7 @@ In this exercise, you will:
 + Task 4: Configure the private DNS zone
 + Task 5: Test connectivity to the Private Endpoint
 
-
+## Estimated timing: 45 minutes
 
 ## Task 1: Create a virtual network and bastion host
 
