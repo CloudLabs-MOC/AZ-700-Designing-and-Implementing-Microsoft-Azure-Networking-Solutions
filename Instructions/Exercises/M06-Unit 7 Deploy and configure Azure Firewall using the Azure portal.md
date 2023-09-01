@@ -14,6 +14,7 @@ In this exercise, you will:
 + Task 8: Change the primary and secondary DNS address for the server's network interface
 + Task 9: Test the firewall
 
+## Estimated timing: 60 minutes
 
 ## Task 1: Create a virtual network and subnets
 
