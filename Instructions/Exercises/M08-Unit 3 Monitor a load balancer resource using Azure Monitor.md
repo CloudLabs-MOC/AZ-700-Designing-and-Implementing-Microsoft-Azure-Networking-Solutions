@@ -23,7 +23,7 @@ The diagram below illustrates the environment you will be deploying in this exer
 + Task 13: View resource health
 + Task 14: Configure diagnostic settings
 
-
+## Estimated timing: 60 minutes
 
 ## Task 1: Create the virtual network
 
