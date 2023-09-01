@@ -19,7 +19,7 @@ In this exercise, you will:
 + Task 1: Create the VNet and gateway subnet
 + Task 2: Create the virtual network gateway
 
-
+## Estimated timing: 60 minutes
 
 ## Task 1: Create the VNet and gateway subnet
 
