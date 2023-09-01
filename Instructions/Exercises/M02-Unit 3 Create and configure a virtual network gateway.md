@@ -16,6 +16,8 @@ In this exercise, you will:
 + Task 10: Verify that the connections connect 
 + Task 11: Test the connection between the VMs
 
+## Estimated timing: 90 minutes
+
 ## Task 1: Create CoreServicesVnet and ManufacturingVnet
 
 1. Click on the Azure Portal icon on the VM desktop and login with the Azure credentials from the Lab Environment output page.
