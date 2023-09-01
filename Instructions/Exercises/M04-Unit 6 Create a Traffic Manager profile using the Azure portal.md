@@ -17,6 +17,7 @@ The diagram below approximately illustrates the environment you will be deployin
 + Task 3: Add Traffic Manager endpoints
 + Task 4: Test the Traffic Manager profile
 
+## Estimated timing: 45 minutes
 
 ## Task 1: Create the web apps
 
