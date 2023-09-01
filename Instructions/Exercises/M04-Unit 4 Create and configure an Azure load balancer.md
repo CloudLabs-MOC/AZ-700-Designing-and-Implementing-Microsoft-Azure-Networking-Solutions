@@ -17,6 +17,8 @@ In this exercise, you will:
 + Task 4: Create load balancer resources
 + Task 5: Test the load balancer
 
+## Estimated timing: 60 minutes
+
 ## Task 1: Create the virtual network
 
 In this section, you will create a virtual network and a subnet.
