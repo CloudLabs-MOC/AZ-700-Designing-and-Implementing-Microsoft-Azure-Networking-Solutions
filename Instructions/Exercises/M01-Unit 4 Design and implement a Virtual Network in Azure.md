@@ -49,6 +49,8 @@ In this exercise, you will:
 + Task 3: Create the ResearchVnet virtual network and subnets
 + Task 4: Verify the creation of VNets and Subnets
 
+## Estimated timing: 20 minutes
+
 
 ## Task 1: Create the CoreServicesVnet virtual network and subnets
 
