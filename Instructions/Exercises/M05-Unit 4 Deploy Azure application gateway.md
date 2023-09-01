@@ -14,6 +14,7 @@ In this exercise, you will:
 + Task 3: Add backend servers to backend pool
 + Task 4: Test the application gateway
 
+## Estimated timing: 30 minutes
 
 ## Task 1: Create an application gateway
 
