@@ -45,11 +45,15 @@ In this task, you'll create CoreServicesVnet and ManufacturingVnet, you set up t
    
 1. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and then select **Region** **<inject key="Region" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share**, then click on **Create**.
 
-    ![](../media/pwershell5.png)
+    ![](../media/pwershell-n1.png)
    
-1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)** and upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**
 
     ![](../media/pwershell2.png)
+
+1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
+
+    ![](../media/pwershelloo1.png)
 
 1. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
@@ -71,7 +75,16 @@ In this task, you'll create CoreServicesVM, you will create the CoreServicesVM v
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
+   ![](../media/unit6-image1.png)
+
+
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**
+
+    ![](../media/pwershell2.png)
+
+1. Upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
+
+    ![](../media/pwershelloo2.png)
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
    
@@ -100,7 +113,16 @@ In this task, you'll create ManufacturingVM, you will create the ManufacturingVM
 
 1. On the Azure portal, open the **PowerShell** session within the **Cloud Shell** pane.
 
-1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload** and upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**
+   ![](../media/unit6-image1.png)
+
+
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**
+
+    ![](../media/pwershell2.png)
+
+1. Upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**
+
+    ![](../media/pwershelloo3.png)
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
@@ -127,9 +149,13 @@ In this task, you'll create ManufacturingVM, you will create the ManufacturingVM
 
 In this task, you'll connect to the Test VMs using RDP, you'll connect to both ManufacturingVM and CoreServicesVM using Remote Desktop Protocol (RDP). 
 
-1. On the Azure Portal home page, search and select **Virtual Machines**.
+1. On the Azure Portal home page, search **Virtual Machines (1)** and select **Virtual Machines (2)**.
+
+    ![](../media/pwershelloo4.png)
 
 1. Select **ManufacturingVM**.
+
+    ![](../media/pwershelloo6.png)
 
 1. On **ManufacturingVM**, click on the **Connect (1)** dropdown and then select **Connect (2)**.
 
@@ -153,19 +179,37 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
+    ![](../media/pwershelloo4.png)
+
 1. Select **CoreServicesVM**.
 
-1. On **CoreServicesVM**, click on the **Connect** dropdown and then select **Connect**.
+    ![](../media/pwershelloo51.png)
 
-1. On **CoreServicesVM | Connect** page, click on **Download RDP file**. 
+1. On **CoreServicesVM**, click on the **Connect (1)** dropdown and then select **Connect (2)**.
+
+   ![](../media/m2-u3-t4-s3.png)
+
+1. On **CoreServicesVM | Connect (1)** page, click on **Download RDP file**.
+
+   ![](../media/m2-u3-t4-s4.png)
 
 1. Click on the **Keep** button within the warning pop-up that shows up.
 
+   ![](../media/m2-u3-t4-s5.png)
+
+     ![](../media/m2-u3-t4-s6-a.png)
+
 1. Open the **ManufacturingVM.rdp** file that was just downloaded and click on **Connect** when prompted.
+
+   ![](../media/m2-u3-t4-s6-b.png)
 
 1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and Admin password, enter **Pa55w.rd!!**
 
+    ![](../media/pwershelloo7.png)
+
 1. On both VMs, in **Networks**, select **Yes**.
+
+    ![](../media/pwershelloo10.png)
 
 1. On CoreServicesVM, open PowerShell, and run the following command: **ipconfig**
 
