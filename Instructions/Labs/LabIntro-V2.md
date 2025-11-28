@@ -70,7 +70,11 @@ Please make sure to use the CTRL+SHIFT+V or CTRL+V keys when pasting commands in
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](../media/sc900-image-2.png)
+     ![Enter Your Password](../media/mod8-gs-pass.png)
+
+1. If the pop-up **Stay signed in?** appears, click on **No**.
+
+   ![](../media/mod8-gs-pass(1).png)
  
 ## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
 

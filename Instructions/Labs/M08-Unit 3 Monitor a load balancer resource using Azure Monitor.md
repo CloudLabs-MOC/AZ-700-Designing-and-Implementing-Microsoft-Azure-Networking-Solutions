@@ -76,10 +76,11 @@ In this section, you will create a virtual network and a subnet.
 
    ![](../media/bastionerror1.png)
 
+1. Edit the **AzureBastionSubnet** and change the Starting address to **10.1.1.0**. Save the change.
+
 1. Click on **+ Add a Subnet**
 
-1. On the **Add a subnet** pane, provide a subnet name of **myBackendSubnet** **(1)**, and a **Starting address** of **10.1.0.0** **(2)** then **Size** of **/24** **(3)** and then 
-   select **Add (4)**.
+1. On the **Add a subnet** pane, provide a subnet name of **myBackendSubnet** **(1)**, and a **Starting address** of **10.1.0.0** **(2)** then **Size** of **/24** **(3)** and then select **Add (4)**.
 
    ![](../media/lab8-image2.png)
 
@@ -105,7 +106,7 @@ In this task, you will create an internal Standard SKU load balancer. The reason
 
    ![](../media/lab8-image1.png)
 
-1. Select **+ Create** from the drop down select **Standard Load balancer** on the **Load balancing and content delivery | Load balancers** page.
+1. Select **+ Create (1)** from the drop down select **Standard Load balancer (2)** on the **Load balancing and content delivery | Load balancers** page.
 
    ![virtual network](../media/lab02-az700-ima53.png)
       
@@ -114,27 +115,27 @@ In this task, you will create an internal Standard SKU load balancer. The reason
 
       | **Setting**           | **Value**                |
       | --------------------- | ------------------------ |
-      | Subscription          | Select your subscription |
-      | Resource group        | Select **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>**              |
-      | Name                  | **myIntLoadBalancer**    |
-      | Region                | **<inject key="Region" enableCopy="false"/>**         |
-      | SKU                   | **Standard**             |
-      | Type                  | **Internal**             |
+      | Subscription          | Select your subscription **(1)** |
+      | Resource group        | Select **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**              |
+      | Name                  | **myIntLoadBalancer (3)**    |
+      | Region                | **<inject key="Region" enableCopy="false"/> (4)**         |
+      | SKU                   | **Standard (5)**             |
+      | Type                  | **Internal (6)**             |
 
       ![virtual network](../media/lab02-az700-ima54.png)
     
-1. Select **Next : Frontend IP configurations**.
+1. Select **Next : Frontend IP configurations (7)**.
 
    | **Setting**           | **Value**                |
    | --------------------- | ------------------------ |
    |          |             | 
-   | Frontend IP configuration tab | + Add a frontend IP configuration |
-   | Name                  | **LoadBalancerFrontEnd** |
+   | Frontend IP configuration tab | + Add a frontend IP configuration **(1)** |
+   | Name                  | **LoadBalancerFrontEnd (2)** |
    | Virtual network       | **IntLB-VNet**           |
-   | Subnet                | **myBackendSubnet**      |
-   | IP address assignment | **Dynamic**              |
+   | Subnet                | **myBackendSubnet (3)**      |
+   | IP address assignment | **Dynamic (4)**              |
 
-1. Select **Save**.
+1. Select **Save (5)**.
 
    ![virtual network](../media/lab02-az700-ima55.png)
 
@@ -365,6 +366,7 @@ In this task, you will create a test VM, and then test the load balancer.
    | Virtual machine name | **myTestVM**                                 |
    | Region               |  **<inject key="Region" enableCopy="false"/>**                            |
    | Availability options | **No infrastructure redundancy required**    |
+   | Security type | **Standard**    |
    | Image                | Select **configure VM generation**, select Generation 1, select Apply. Now, select **Windows Server 2019 Datacenter - Gen 1**   |
    | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory** |
    | Username             | **TestUser**                                 |
