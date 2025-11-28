@@ -76,7 +76,7 @@ In this section, you will create a virtual network and a subnet.
 
    ![](../media/bastionerror1.png)
 
-1. Edit the AzureBastionSubnet and change the Starting address to 10.1.1.0. Save the change.
+1. Edit the **AzureBastionSubnet** and change the Starting address to **10.1.1.0**. Save the change.
 
 1. Click on **+ Add a Subnet**
 
