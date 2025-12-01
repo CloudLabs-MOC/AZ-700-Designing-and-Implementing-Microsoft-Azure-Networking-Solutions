@@ -8,7 +8,7 @@ In this lab, you will complete the following tasks:
 
 + Task 1: Create two instances of a web app
 + Task 2: Create a Front Door for your application
-+ Task 3: View Azure Front Door in action
++ Task 3: View Azure Front Door in action (Ready only)
 
 ## Estimated time: 30 minutes
 
@@ -147,17 +147,19 @@ In this task, you will configure Azure Front Door to direct user traffic to the 
 
    <validation step="f5cf3eee-49ad-4985-88ca-5bc0c80e8ddc" />
 
-## Task 3: View Azure Front Door in action
+## Task 3: View Azure Front Door in action (Read only)
 
 In this task, you will verify that Azure Front Door is working as expected by testing the global failover capabilities. After you create the Front Door, it will take a few minutes for the configuration to propagate across all regions. Once that's done, you'll test the Front Door's ability to direct traffic to the available web app instance.
 
 1. Navigate back to **Front Door and CDN profiles** page, on the Front Door resource in the **Overview (1)** blade, under **Properties (1)** tab locate the endpoint hostname that is created for your endpoint. This should be fdendpoint followed by a hyphen and a random string. For example, **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. **Copy** this FQDN. Copy the endpoint **(3)**.
 
-      ![Web App](../media/azn114.png)
+    ![Web App](../media/azn114.png)
 
 1. In a new browser tab, navigate to the Front Door endpoint FQDN. The default App Service page will be displayed.
 
-      ![Web App](../media/l5u6-12.png)
+    ![Web App](../media/l5u6-12.png)
+
+     >**Note**: Due to AFD service management restrictions being lifted, configuration changes may take up to 45 minutes to fully propagate. During this time, you may encounter a **Page not found** error. No need to wait please go through the lab content.
 
 1. To test instant global failover in action, try the following steps:
 
@@ -165,11 +167,11 @@ In this task, you will verify that Azure Front Door is working as expected by te
 
 1. Select one of your web apps **(1)**, then select **Stop (2)**. 
 
-      ![Web App](../media/azn115.png)
+    ![Web App](../media/azn115.png)
 
 1. Select **Yes** to verify.
 
-      ![Web App](../media/azn116.png)
+    ![Web App](../media/azn116.png)
 
 1. Switch back to your browser and select Refresh. You should see the same information page.
 
@@ -179,8 +181,8 @@ In this task, you will verify that Azure Front Door is working as expected by te
 
 1. Switch back to your browser and select Refresh. This time, you should see an error message.
 
-      ![Web App](../media/l5u6-14.png)
-      ![Web App](../media/azn117.png)      
+    ![Web App](../media/l5u6-14.png)
+    ![Web App](../media/azn117.png)      
 
 Congratulations! You have configured and tested an Azure Front Door.
 
