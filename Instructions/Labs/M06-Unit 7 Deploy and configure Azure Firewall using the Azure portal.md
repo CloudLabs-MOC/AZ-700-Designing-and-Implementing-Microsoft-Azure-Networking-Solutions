@@ -340,7 +340,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
     | **Rules Section**      |                                                              |
     | Name                   | **Allow-DNS (6)**                                                |
     | Source type            | **IP Address (7)**                                               |
-    | Source                 | **10.0.2.0/24 (8)**                                              |
+    | Source                 | **10.0.3.0/24 (8)**                                              |
     | Protocol               | **UDP (9)**                                                      |
     | Destination Ports      | **53 (10)**                                                       |
     | Destination Type       | **IP Address (11)**                                               |
