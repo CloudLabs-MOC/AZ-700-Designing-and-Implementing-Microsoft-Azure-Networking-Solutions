@@ -346,7 +346,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
     | Destination Type       | **IP Address (11)**                                               |
     | Destination            | **209.244.0.3, 209.244.0.4 (12)** <br />These are public DNS servers operated by Century Link. |
  
-    ​![Add a network rule collection](../media/azz26.png)
+    ​![Add a network rule collection](../media/aa1.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
