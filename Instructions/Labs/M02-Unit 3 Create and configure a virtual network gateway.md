@@ -55,8 +55,6 @@ In this task, you'll create CoreServicesVnet and ManufacturingVnet, you set up t
 
     ![](../media/pwershelloo1.png)
 
-
-
 1. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
    ```powershell
@@ -67,7 +65,7 @@ In this task, you'll create CoreServicesVnet and ManufacturingVnet, you set up t
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="847c0c62-8090-4d24-a8f1-cb650792ef71" /> 
 
@@ -86,8 +84,6 @@ In this task, you'll create CoreServicesVM, you will create the CoreServicesVM v
 1. Upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
     ![](../media/pwershelloo2.png)
-
-
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
    
