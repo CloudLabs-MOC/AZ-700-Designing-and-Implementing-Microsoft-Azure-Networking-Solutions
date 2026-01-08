@@ -159,8 +159,6 @@ In this task, your connecting to the Test VM using RDP.
 
 1. Click on **Yes** to access the VM.
 
-1. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
-
 1. On both VMs, in **Networks**, select **Yes**.
 
 1. On **testvm1**, Right click on **start (1)** and select **windows PowerShell (Admin) (2)**.
