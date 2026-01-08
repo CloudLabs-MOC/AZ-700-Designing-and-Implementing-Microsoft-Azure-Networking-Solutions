@@ -90,7 +90,7 @@ In this task, you will create two instances of a web application deployed in the
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-   <validation step="4d5ecc40-776d-459c-867f-50db4b49ce0c" />
+   <validation step="36930eeb-c0f6-46c0-baf6-37bb31706fee" />
 
 ## Task 2: Create a Traffic Manager profile
 
@@ -120,7 +120,7 @@ In this task you will create a Traffic Manager profile that directs user traffic
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-   <validation step="333aadc8-666f-456e-888e-52ca345debb7" />
+   <validation step="8f50a093-d219-4f28-ac78-0e2a6cfe80e1" />
 
 ## Task 3: Add Traffic Manager endpoints
 
@@ -179,7 +179,7 @@ In this task, you will add the website in the **<inject key="Region" enableCopy=
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-   <validation step="ecc8a93e-6f61-41d8-99ab-214a855c04d6" />
+   <validation step="6fcd3b3d-6682-4570-92f1-f68e4293e235" />
 
 ## Task 4: Test the Traffic Manager profile
 
@@ -237,7 +237,7 @@ In this task, you will check the DNS name of your Traffic Manager profile, and t
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-   <validation step="20dd3dc3-fd2c-4271-8cb3-6f7fb5223caf" />
+   <validation step="4569e3b9-efe7-43e2-b594-d77bb1d8fd11" />
 
 ## Key takeaways
 
