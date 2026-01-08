@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 + Task 1: Create the VNet and gateway subnet
 + Task 2: Create the virtual network gateway
 
-## Estimated time: 60 minutes
+## Estimated time: 60 Minutes
 
 ## Architecture diagram
 
@@ -46,11 +46,11 @@ In this task, you will create the VNet and gateway subnet, you are setting up a 
    | Virtual network name | CoreServicesVNet                 |
    | Region               | East US                          |
 
-1. To add IPv4 address space, on the **IP Addresses** tab, perform the following sub-steps:
-      - Click on **Add IPv4 address space (1)** in new address space box.
-      - Enter **10.20.0.0 (2)** in address space field.
-      - Enter **/16 (3)** in size filed.
-      - Then click on the **+ Add a subnet (4)** button.
+1. To add IPv4 address space, on the **IP Addresses (1)** tab, perform the following sub-steps:
+      - Click on **Add IPv4 address space (2)** in new address space box.
+      - Enter **10.20.0.0 (3)** in address space field.
+      - Enter **/16 (4)** in size filed.
+      - Then click on the **+ Add a subnet (5)** button.
 
          ![Azure portal - add gateway subnet](../media/lab02-az700-ima22.png)
 
@@ -75,7 +75,7 @@ In this task, you will create the VNet and gateway subnet, you are setting up a 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="4b8c0911-f548-4fa0-ad62-298ff78aa0e5" />
 
@@ -91,38 +91,33 @@ In this task, you will create the virtual network gateway, you're setting up an 
 
 1. On the **Create virtual network gateway** page, use the information in the following table to create the gateway:
 
-   **Note**: First try to select **Region** to get virtual network option to choose. It might take upto 15 minutes for the newly created virtual network option to show up. 
+   **Note:** First try to select **Region** to get virtual network option to choose. It might take upto 15 minutes for the newly created virtual network option to show up. 
 
    | **Setting**               | **Value**                  |
    | ------------------------- | -------------------------- |
    | **Project details**       |                            |
    | Resource Group            | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** (Auto-selected)     |
    | **Instance details**      |                            |
-   | Name                      | CoreServicesVnetGateway    |
-   | Region                    | East US                    |
-   | Gateway type              | ExpressRoute               |
-   | SKU                       | Standard                   |
-   | Virtual network           | CoreServicesVNet           |
-   | **Public IP address**     |                            |
-   | Public IP address         | Create new                 |
-   | Public IP address name    | CoreServicesVnetGateway-IP |
-   | Public IP address SKU     | Standard                   |
-   | Assignment                | Not configurable (Keep default)           |
+   | Name                      | CoreServicesVnetGateway  **(1)**  |
+   | Region                    | East US **(2)**                   |
+   | Gateway type              | ExpressRoute **(3)**               |
+   | SKU                       | Standard    **(4)**               |
+   | Virtual network           | CoreServicesVNet   **(5)**        |
     
-1. Select **Review + create**.
+1. Select **Review + create (6)**.
 
-     ![](../media/lab02-az700-ima25.png)
+     ![](../media/l3-u4-1.png)
    
 1. Confirm that the Gateway configuration passes validation and then select **Create**.
 
 1. When the deployment is complete, select **Go to Resource**.
 
-   >**Note**: it can take up to 45 minutes to deploy a Gateway.
+   >**Note:** it can take up to 45 minutes to deploy a Gateway.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully completed the task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="15a76eb7-8705-4ab0-8c7d-c006a7ba304f" />
 
