@@ -248,9 +248,9 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 ## Review
 In this lab, you have completed:
-+ Create the web apps
-+ Create a Traffic Manager profile
-+ Add Traffic Manager endpoints
-+ Test the Traffic Manager profile
++ Created the web apps
++ Created a Traffic Manager profile
++ Added Traffic Manager endpoints
++ Tested the Traffic Manager profile
  
 ## You have successfully completed the lab.
