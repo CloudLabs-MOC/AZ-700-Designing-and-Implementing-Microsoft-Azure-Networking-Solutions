@@ -26,7 +26,7 @@ In this lab, you will complete the following tasks:
 + Task 14: Configure diagnostic settings
 
 
-## Estimated time: 55 minutes
+## Estimated time: 55 Minutes
 
 ## Architecture diagram
 ![Diagram illustrating the load balancer architecture that will be created in the exercise - includes load balancer, VNet, subnet, Bastionsubnet, and VMs](../media/exercise-internal-standard-load-balancer-environment-diagram.png)
@@ -68,13 +68,13 @@ In this section, you will create a virtual network and a subnet.
     - IPv4 address space: **10.1.0.0** **(1)**
     - **IPv4 address Size**:  **/16** **(2)**
   
-      ![](../media/lab8-image4.png)
+      ![](../media/l8-1.png)
 
 1. Delete the existing subnets 
 
 1. In the error that appears click on **Add Azure Bastion Subnet** hyperlink.
 
-   ![](../media/bastionerror1.png)
+   ![](../media/l8-2.png)
 
 1. Edit the **AzureBastionSubnet** and change the Starting address to **10.1.1.0**. Save the change.
 
@@ -82,7 +82,7 @@ In this section, you will create a virtual network and a subnet.
 
 1. On the **Add a subnet** pane, provide a subnet name of **myBackendSubnet** **(1)**, and a **Starting address** of **10.1.0.0** **(2)** then **Size** of **/24** **(3)** and then select **Add (4)**.
 
-   ![](../media/lab8-image2.png)
+   ![](../media/l8-3.png)
 
 1. Select **Review + create**.
 
@@ -93,7 +93,7 @@ In this section, you will create a virtual network and a subnet.
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="eada944f-dd58-41ed-9734-c412d8ba0c77" />
 
@@ -104,11 +104,11 @@ In this task, you will create an internal Standard SKU load balancer. The reason
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Load Balancers (1)**, and then select **Load Balancers (2)** 
    under services.
 
-   ![](../media/lab8-image1.png)
+   ![](../media/l8-4.png)
 
 1. Select **+ Create (1)** from the drop down select **Standard Load balancer (2)** on the **Load balancing and content delivery | Load balancers** page.
 
-   ![virtual network](../media/lab02-az700-ima53.png)
+   ![virtual network](../media/l8-5.png)
       
 1.  On the **Basics** tab, use the information in the table below to create the load balancer.
     
@@ -147,7 +147,7 @@ In this task, you will create an internal Standard SKU load balancer. The reason
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="e15fb2ec-144b-4b80-b12b-d9bdd707e9b3" />
 
@@ -175,7 +175,7 @@ In this task, you will create a backend address pool for the internal load balan
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="1d015344-09c7-4807-a209-4f600847ccd6" />
 
@@ -197,12 +197,12 @@ In this task, you will create a health probe to monitor the status of the virtua
 
 1. Select **Save**.
 
-   ![Show health probe created in load balancer](../media/create-healthprobe.png)
+   ![Show health probe created in load balancer](../media/l8-6.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="2fd84d4b-1e07-4652-9970-59852fcf7237" />
 
@@ -250,8 +250,9 @@ In this task, you will create three VMs for the backend pool of the load balance
 
      ![](../media/pwershell4.png)
    
-1. Please make sure you have selected your resource group **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>** and then select **Region** **<inject key="Region" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create**.
+1.Select default subscription **(1)**, make sure you have selected your resource group **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)** and then select **Region** **<inject key="Region" enableCopy="false"/> (3)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (4)** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (5)** for the  **File share** , then click on **Create (6)**.
    
+   ![](../media/azn82.png)
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)** and upload the following files **azuredeploy.json**, **azuredeploy.parameters.vm1.json**, **azuredeploy.parameters.vm2.json** and **azuredeploy.parameters.vm3.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M08**.
 
@@ -267,7 +268,7 @@ In this task, you will create three VMs for the backend pool of the load balance
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
   
-1. You will be prompted to provide an Admin password. Provide Admin password: **Pa55w.rd1234567**.
+1. You will be prompted to provide an Admin password. Provide Admin password: **Pa55w.rd1234567**
      
    > **Note:** This will take several minutes to deploy and and you will be prompted to provide password for three times for 
     each VM deployment. When deployment completed, close the powershell.
@@ -275,7 +276,7 @@ In this task, you will create three VMs for the backend pool of the load balance
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="2318826d-31a4-408e-a07d-24b1c4430ae4" />
 
@@ -395,7 +396,7 @@ In this task, you will create a test VM, and then test the load balancer.
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="2eb3f37d-1cc8-4d69-a712-76d3913e96b0" />
 
@@ -404,9 +405,9 @@ In this task, you will create a test VM, and then test the load balancer.
 1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, under **Resources**, select 
    **myIntLoadBalancer** from the resources list.
 
-1. On the **Overview** page, make a note of the **Private IP address**, or copy it to the clipboard. 
+1. On the **Overview** page, make a note of the **Frontend IP address**, or copy it to the clipboard. 
 
-   >**Note:** you may have to select **See more** to see the **Private IP address**.
+   >**Note:** you may have to select **See more** to see the **Frontend IP address**.
 
 1. Select **Home**, then on the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**, under **Resources**, select **myTestVM** virtual machine that you just created.
 
@@ -427,7 +428,7 @@ In this task, you will create a test VM, and then test the load balancer.
 
 1. Select **Close** on the Internet Explorer security alerts that may pop-up. 
 
-1. Enter (or paste) the **Private IP address** (e.g. 10.1.0.4) from the previous step into the address bar of the browser and press Enter.
+1. Enter (or paste) the **Frontend IP address** (e.g. 10.1.0.4) from the previous step into the address bar of the browser and press Enter.
 
 1. The default web home page of the IIS Web server is displayed in the browser window. One of the three virtual machines in the backend pool will respond.
    
@@ -461,7 +462,7 @@ In this task, you will create a Log Analytics workspace to enable logging and mo
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="db11b2f8-63c5-4798-ab4e-a9a6b8748992" />
 
@@ -482,7 +483,7 @@ In this task, you will use the Functional Dependency View in the Azure portal to
 
 1. Notice that you can use the links in these pop-up windows to view information about these load balancer components and open their respective Azure portal blades.
 
-1. In the top right corner, select **View metrics** to reopen the metrics pane on the right-hand side of the screen.
+1. In the top right corner, select **Show metrics Pane** to reopen the metrics pane on the right-hand side of the screen.
 
 1. The Metrics pane provides a quick view of some key metrics for this load balancer resource, in the form of bar and line charts. 
 
