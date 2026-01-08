@@ -12,11 +12,11 @@ In this lab, you will complete the following tasks:
 + Task 2:  Create a Hub by Using Azure Portal.
 + Task 3: Connect a VNet to the Virtual Hub.
 
-## Estimated Duration: 65 minutes
+## Estimated Duration: 65 Minutes
 
 ## Architecture diagram
 
-   ‎![](../media/az700-m2-unit7.png)
+   ![](../media/az700-m2-unit7.png)
 
 ### Task 1: Create a Virtual WAN
 
@@ -27,6 +27,8 @@ In this task you will create a Virtual WAN (Wide Area Network) in Azure, which i
    ![](../media/azn32.png)
 
 1. On the Virtual WAN page, select + **Create**. 
+
+   ![](../media/createwan.png)
 
 1. On the Create WAN page, on the **Basics** tab, fill in the following fields:
 
@@ -42,13 +44,15 @@ In this task you will create a Virtual WAN (Wide Area Network) in Azure, which i
 
    - When you have finished filling out the fields, select **Review + create (6)**.
 
-     ![](../media/azn-33.png)
+     ![](../media/createwan1.png)
 
 1. Once validation passes, select **Create** to create the Virtual WAN. Wait for the deployment to get completed.
 
+   ![](../media/create.wan.png)
+
 1. Click on **Go to resource**.
 
-   ![](../media/azn34.png)
+   ![](../media/gotoresource.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -83,7 +87,7 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
 
    - Select **Next: Site-to-site (6)**   
 
-     ![](../media/azn36.png)
+     ![](../media/hub.png)
 
 1. On the **Site-to-site** tab, complete the following fields:
    - **Do you want to create a Site to site (VPN gateway)?:** `Yes (1)`
@@ -99,6 +103,8 @@ A hub contains gateways for site-to-site, ExpressRoute, or point-to-site functio
       ![](../media/lab2-unit7-image(4).png)
 
 1. Select **Create** to create the hub. 
+
+      ![](../media/createhub.png)
 
 1. After `30 minutes`, **Refresh** to view the hub on the Hubs page. Wait for the deployment to finish before proceeding to the next task.
 
