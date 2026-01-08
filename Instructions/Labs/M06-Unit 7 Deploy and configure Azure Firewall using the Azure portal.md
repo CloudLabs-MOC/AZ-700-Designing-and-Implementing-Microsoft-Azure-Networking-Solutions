@@ -481,14 +481,14 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 In this lab, you have completed:
 
-+  Create a virtual network and subnets
-+  Create a virtual machine
-+  Deploy the firewall and firewall policy
-+  Create a default route
-+  Configure an application rule
-+  Configure a network rule
-+  Configure a Destination NAT (DNAT) rule
-+  Change the primary and secondary DNS address for the server's network interface
-+  Test the firewall
++  Created a virtual network and subnets
++  Created a virtual machine
++  Deployed the firewall and firewall policy
++  Created a default route
++  Configured an application rule
++  Configured a network rule
++  Configured a Destination NAT (DNAT) rule
++  Changed the primary and secondary DNS address for the server's network interface
++  Tested the firewall
  
 ## You have successfully completed the lab.
