@@ -26,6 +26,10 @@ In this task, you will create and provision an ExpressRoute circuit, you're sett
 
    ![Azure portal - create ExpressRoute circuit menu](../media/azn40.png)
 
+1. Click on **+Create**.
+
+   ![Azure portal - create ExpressRoute circuit menu](../media/a7z1.png)
+
 1. On the **Create ExpressRoute** blade, specify the following settings and  on **Configuration** tab then click **Review + create (12)**:
 
    |Setting|Value|
@@ -127,8 +131,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 In this lab, you have completed:
 
-+ Creating and provision an ExpressRoute circuit
-+ Retrieving your Service key
-+ Deprovisioning an ExpressRoute circuit
++ Created and provision an ExpressRoute circuit
++ Retrieved your Service key
++ Deprovisioned an ExpressRoute circuit
 
 ## You have successfully completed the lab.
