@@ -199,6 +199,8 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
 
 1. Verify that both virtual machines have been created.
 
+   ![](../media/a7z3.png)
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -210,9 +212,11 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
 
 In this task, you will add two virtual machines to the backend pool of your Application Gateway, enabling the gateway to distribute traffic between the backend servers.
 
-1. On the Azure portal menu, from top left corner of page click **Show portal** menu and select **All resources**, then select **ContosoAppGateway**.
+1. On the Azure portal menu, from top left corner of page click **Show portal** menu and select **All resources**.
 
    ![](../media/unit4-image5.png)
+
+1. Then select **ContosoAppGateway**.   
    
 1. On the **ContosoAppGateway** blade, under **Settings** section, select **Backend pools**.
 
@@ -220,17 +224,19 @@ In this task, you will add two virtual machines to the backend pool of your Appl
 
     ![Azure Portal search for application gateway](../media/lab02-az700-ima32.png)
    
-1. On the **Edit backend pool** page, under **Backend targets**, in **Target type**, select **Virtual machine**.
+1. On the **Edit backend pool** page, under **Backend targets (1)**, 
 
-1. Under **Target**, select **BackendVM1-nic.** 
+   - In **Target type**, select **Virtual machine**.
 
-1. On **Target type**, select **Virtual machine**.
+      - Under **Target**, select **BackendVM1-nic.** 
 
-1. Under **Target**, select **BackendVM2-nic.**
+   - On **Target type**, select **Virtual machine**.
+
+      - Under **Target**, select **BackendVM2-nic.**
    
-1. Select **Save**.
+1. Select **Save (2)**.
 
-    ![Azure Portal search for application gateway](../media/l5u4-(5).png)  
+    ![Azure Portal search for application gateway](../media/a7z4.png)  
 
     **Note**: Wait for the deployment to complete before proceeding to the next step.
 
