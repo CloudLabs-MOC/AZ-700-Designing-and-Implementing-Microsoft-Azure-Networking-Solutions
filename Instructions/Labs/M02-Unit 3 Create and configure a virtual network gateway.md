@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 + Task 10: Verify that the connections connect 
 + Task 11: Test the connection between the VMs
 
-## Estimated time: 70 minutes
+## Estimated time: 70 Minutes
 
 ## Architecture diagram
  ![](../media/az700-m2-unit3.png)
@@ -55,19 +55,19 @@ In this task, you'll create CoreServicesVnet and ManufacturingVnet, you set up t
 
     ![](../media/pwershelloo1.png)
 
-
-
 1. Deploy the following ARM templates to create the virtual network and subnets needed for this exercise:
 
    ```powershell
    $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
+   
+   ![](../media/l2-u1-1.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="847c0c62-8090-4d24-a8f1-cb650792ef71" /> 
 
@@ -87,8 +87,6 @@ In this task, you'll create CoreServicesVM, you will create the CoreServicesVM v
 
     ![](../media/pwershelloo2.png)
 
-
-
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
    
       ```powershell
@@ -97,11 +95,15 @@ In this task, you'll create CoreServicesVM, you will create the CoreServicesVM v
       New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
       ``` 
 
-      >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
+      ![](../media/l2-u1-2.png)
+
+      >**Note:** You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
    
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 1. Verify that the virtual machine has been created.
+
+   ![](../media/l2-u1-3.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -134,11 +136,15 @@ In this task, you'll create ManufacturingVM, you will create the ManufacturingVM
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
 
+   ![](../media/l2-u1-4.png)
+   
    >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
 1. Verify that the virtual machine has been created.
+
+   ![](../media/l2-u1-5.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -165,7 +171,7 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
 1. On **ManufacturingVM | Connect** page, click on **Download RDP file**. 
 
-   ![](../media/m2-u3-t4-s4.png)
+   ![](../media/l2-u1-6.png)
 
 1. Click on the **Keep** button within the warning pop-up that shows up.
 
@@ -177,7 +183,15 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
    ![](../media/m2-u3-t4-s6-b.png)
 
-1. Connect to ManufacturingTestVM using the RDP file, and enter the username **TestUser** and Admin password **Pa55w.rd!!** provided during deployment. After connecting, minimize the RDP session.
+1. Click on **More choices**.
+
+1. Select **Use a different account**.
+
+1. Connect to ManufacturingTestVM using the RDP file, and enter the username **.\TestUser (1)** and Admin password **Pa55w.rd!! (2)** provided during deployment and then **OK (3)**. After connecting, minimize the RDP session.
+
+    ![](../media/l2-u1-7.png)
+
+1. Click on **Yes** to access the VM. 
 
 1. On the Azure Portal home page, select **Virtual Machines**.
 
@@ -193,7 +207,7 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
 1. On **CoreServicesVM | Connect** page, click on **Download RDP file**.
 
-   ![](../media/m2-u3-t4-s4.png)
+    ![](../media/l2-u1-8.png)
 
 1. Click on the **Keep** button within the warning pop-up that shows up.
 
@@ -201,11 +215,11 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
      ![](../media/m2-u3-t4-s6-a.png)
 
-1. Open the **ManufacturingVM.rdp** file that was just downloaded and click on **Connect** when prompted.
+1. Open the **CoreServicesVM.rdp** file that was just downloaded and click on **Connect** when prompted.
 
    ![](../media/m2-u3-t4-s6-b.png)
 
-1. Connect to CoreServicesTestVM using the RDP file, and the username **TestUser** and Admin password, enter **Pa55w.rd!!**
+1. Connect to CoreServicesTestVM using the RDP file, and the username **.\TestUser** and Admin password, enter **Pa55w.rd!!**
 
     ![](../media/pwershelloo7.png)
 
@@ -241,7 +255,7 @@ In this task you'll create CoreServicesVnet Gateway, you will create the CoreSer
 
 1. In Virtual network gateways, select **+ Create**.
 
-    ![](../media/pwershelloo11.png)
+    ![](../media/l2-u1-9.png)
 
 1. Use the information in the following table to create the virtual network gateway:
 
@@ -258,22 +272,22 @@ In this task you'll create CoreServicesVnet Gateway, you will create the CoreSer
    |                 |                   | Subnet                                      | **GatewaySubnet (10.20.0.0/27) (9)** |
    |                 | Public IP address | Public IP address                           | **Create new (10)**                  |
    |                 |                   | Public IP address name                      | **CoreServicesVnetGateway-ip (11)**   |
-   |                 |                   | Public IP address type                      | **Standard (12)**                    |
-   |                 |                   | Enable active-active mode                   | **Disabled (13)**                     |
-   |                 |                   | Configure BGP                               | **Disabled (14)**                    |                   |
-   |                 |                   | Enable Key Vault Access                        | **Disabled (15)**                    |
+   |                 |                   | Public IP address type                      | **Standard**                    |
+   |                 |                   | Enable active-active mode                   | **Disabled (12)**                     |
+   |                 |                   | Configure BGP                               | **Disabled (13)**                    |                   |
+   |                 |                   | Enable Key Vault Access                        | **Disabled (14)**                    |
 
-   ![](../media/9.png)
-   ![](../media/10.png)
+   ![](../media/l2-u1-10.png)
+   ![](../media/l2-u1-11.png)
 
-1. Select **Review + create** and **Create**.
+1. Select **Review + create (15)** and **Create**.
 
 1. It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="07197cc4-bdd3-415f-871c-4f6e1b00dea7" />
 
@@ -332,12 +346,12 @@ In this task, you'll create ManufacturingVnet Gateway, you will create a Manufac
 
 1.  Select **Review + create** and **Create**.
 
-    >**Note**: Please wait until deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
+    >**Note:** Please wait until deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="c5a08b41-af13-48c5-8abc-8a4e540ae643" />
 
@@ -351,9 +365,9 @@ In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set
 
     ![](../media/lab02-az700-ima12.png)
 
-1. On CoreServicesVnetGateway, from the left navigation menu, under **Settings** section select **Connections**, and then select **+ Add**.
+1. On CoreServicesVnetGateway, from the left navigation menu, under **Settings** section select **Connections (1)**, and then select **+ Add (2)**.
 
-     ![](../media/6.png)
+     ![](../media/l2-u1-12.png)
 
    >**Note**: You will not be able to complete this configuration until the virtual network gateways are fully deployed.
 
@@ -371,7 +385,7 @@ In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set
 
      ![](../media/lab02-az700-ima13.png)
    
-1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection then select **Review + create**.
+1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection then select **Next: Tags> (7)**.
 
       | **Option**                     | **Value**                         |
       | ------------------------------ | --------------------------------- |
@@ -382,9 +396,11 @@ In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set
       | Use Azure Private IP Address   | **Not selected (5)**                      |
       | Enable BGP                     | **Not selected (6)**                      |
 
-      ![](../media/lab02-az700-ima14.png)
+      ![](../media/l2-u1-13.png)
       
-1. To create the connection, click on **Create**.
+1. On the **Tags** tab, select **Next: Review + create**, then on the **Review + create** tab, review the settings and select **Review + create**.
+
+1. Click **Create** to create the connection.
    
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
 
@@ -414,7 +430,7 @@ In this task, you'll connect ManufacturingVnet to CoreServicesVnet, you'll estab
 
     ![](../media/lab02-az700-ima15.png)
    
-1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection then select **Review + create**. 
+1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection then select **Next: Tags> (7)**. 
 
       | **Option**                     | **Value**                         |
       | ------------------------------ | --------------------------------- |
@@ -425,10 +441,12 @@ In this task, you'll connect ManufacturingVnet to CoreServicesVnet, you'll estab
       | Use Azure Private IP Address   | **Not selected (5)**                    |
       | Enable BGP                     | **Not selected (6)**                     |
 
-      ![](../media/lab02-az700-ima16.png)
+      ![](../media/l2-u1-14.png)
       
-1. To create the connection, click on **Create**.
+1. On the **Tags** tab, select **Next: Review + create**, then on the **Review + create** tab, review the settings and select **Review + create**.
 
+1. Click **Create** to create the connection.
+   
 ## Task 10: Verify that the connections connect 
 
 In this task, you'll verify that the connections connect and you'll confirm the status of the connections between CoreServicesVnet and ManufacturingVnet. 
@@ -441,16 +459,16 @@ In this task, you'll verify that the connections connect and you'll confirm the 
 
 1. Wait until the status of both connections is **Connected**. You may need to refresh your screen. 
 
-    ![](../media/L2U3-1.png)
+    ![](../media/l2-u1-15.png)
    
-    ![](../media/EM-1.png)
+    ![](../media/l2-u1-16.png)
 
    >**Note:** It may take upto 30 minutes for the status of the two connections that was just established/created.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="638b26e2-d9a3-4d7a-ba0c-cf391847ec0b" />
 

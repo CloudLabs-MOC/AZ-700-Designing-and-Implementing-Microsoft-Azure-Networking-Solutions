@@ -13,7 +13,7 @@ In this lab, you will complete the following tasks:
 + Task 3: Create the ResearchVnet virtual network and subnets
 + Task 4: Verify the creation of VNets and Subnets
 
-## Estimated Duration: 25 minutes
+## Estimated Duration: 25 Minutes
 
 ## Architecture diagram
 ![](../media/design-implement-vnet-peering01.png)
@@ -47,7 +47,7 @@ In this task, you'll be setting up a virtual network (VNet) called CoreServicesV
    
    ![](../media/azv20.png)
 
-1. Select **+ Create** on the Virtual networks page. 
+1. Select **+ Create** on the **Network foundation | Virtual networks** page. 
    
 1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **CoreServicesVnet** virtual network and select **IP Address (5)** tab.
  
@@ -75,13 +75,13 @@ In this task, you'll be setting up a virtual network (VNet) called CoreServicesV
       | IP Addresses    | IPv4 address space | **10.20.0.0   (1)**         |
       |                 | IPv4 address Size  | **/16         (2)**         |
 
-      ![](../media/unit4-image4.png)
+      ![](../media/l1-3.png)
 
 1. Use the information in the following table to create the CoreServicesVnet subnets, to begin creating each subnet on the **Create virtual network** page, select **+ Add a subnet**.
 
     ![](../media/azn2.png)
 
-1. To finish creating each subnet, select **Add**.
+1. To finish creating each subnet, select **Add**. If needed, **Edit** (pencil icon) or **Delete** the default subnet.
 
     | **Subnet**             | **Option**           | **Value**              |
     | ---------------------- | -------------------- | ---------------------- |
@@ -111,7 +111,7 @@ In this task, you'll be setting up a virtual network (VNet) called CoreServicesV
 
 1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create (1)**.
 
-    ![](../media/000001.png)
+    ![](../media/l1-4.png)
  
 1. Repeat steps 1 -8 for each VNet based on the tables below mentioned in **Task 2** and **Task3**.
 

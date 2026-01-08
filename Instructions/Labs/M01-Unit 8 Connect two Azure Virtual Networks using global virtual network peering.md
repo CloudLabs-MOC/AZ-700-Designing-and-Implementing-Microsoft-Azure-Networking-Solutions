@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 + Task 5: Test the connection between the VMs
 + Task 6: Clean up resources
 
-## Estimated time: 20 minutes
+## Estimated time: 20 Minutes
 
 ## Architecture diagram
 
@@ -76,7 +76,7 @@ In this task, you will create a test VM on the Manufacturing VNet to test if you
 
 1. You will be prompted to provide an Admin password. Provide Admin password Password: **Pa$$w0rd1234**.   
 
-    ![](../media/azn14.png)  
+    ![](../media/l1-u8-1.png)  
    
 1. When the deployment is complete, go to the **Azure portal** home page, and then select **Virtual Machines**.
 
@@ -103,11 +103,11 @@ In this task, your connecting to the Test VM using RDP.
 
 1. On ManufacturingVM, select **Connect (1)** from the drop-down click on **Connect (2)**.
 
-   ![](../media/connect1.png)
+   ![](../media/l1-u8-2.png)
 
 1. On ManufacturingVM | Connect, select **Download RDP file**.
 
-   ![](../media/download1.png)
+   ![](../media/l1-u8-3.png)
 
 1. If any warning pops-up in "edge downloads" select **Keep**.
 
@@ -141,13 +141,11 @@ In this task, your connecting to the Test VM using RDP.
 
 1. On **testvm1 | Connect** page, under **Native RDP**, select **Download RDP file**. 
 
-   ![](../media/azn21.png)
+   ![](../media/l1-u8-4.png)
 
 1. If any warning pops-up in "edge downloads" select **Keep**.
 
 1. Click on **Open file**.
-
-   ![](../media/azn16.png)
 
 1. Select **Connect**.
 
@@ -160,8 +158,6 @@ In this task, your connecting to the Test VM using RDP.
 1. Connect to testvm1 using the RDP file, and the username **.\TestUser** and the password **Pa$$w0rd1234**.
 
 1. Click on **Yes** to access the VM.
-
-1. On both VMs, in **Choose privacy settings for your device**, select **Accept**.
 
 1. On both VMs, in **Networks**, select **Yes**.
 
@@ -205,11 +201,11 @@ In this task, you'll be creating VNet peering between CoreServicesVnet and Manuf
 
    ![](../media/azn25.png)
 
-1. In CoreServicesVnet, under **Settings**, select **Peerings**.
+1. In CoreServicesVnet, under **Settings**, select **Peerings (1)**.
 
-   ![screen shot of core services VNet Peering settings ](../media/create-peering-on-coreservicesvnet.png)
+1. On CoreServicesVnet | Peerings, select **+ Add (2)**.
 
-1. On CoreServicesVnet | Peerings, select **+ Add**.
+    ![](../media/l1-u8-5.png)
 
 1. Use the information in the following table to create the peering.
 
@@ -217,23 +213,22 @@ In this task, you'll be creating VNet peering between CoreServicesVnet and Manuf
    | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
    | Remote virtual network summary       |                                               |                                       |
    |                                      | Peering link name                             | **ManufacturingVnet-to-CoreServicesVnet (1)** |
-   |                                      | Virtual network deployment model              | **Resource manager (2)**                      |
    |                                      | I know my resource ID                         | Not selected                          |
-   |                                      | Subscription                                  | **Select the Subscription provided (3)**      |
-   |                                      | Virtual network                               | Select **ManufacturingVnet (4)**                     |
+   |                                      | Subscription                                  | **Select the Subscription provided (2)**      |
+   |                                      | Virtual network                               | Select **ManufacturingVnet (3)**                     |
    | Remote virtual network peering settings         |                                               |                                       |
-      |                                      | Allow 'ManufacturingVnet' to access 'CoreServicesVnet'                             | **Enabled (5)** |   
-      |                                      | Allow ''ManufacturingVnet' to receive forwarded traffic from 'CoreServicesVnet'                             | **Enabled (6)** |      
+      |                                      | Allow 'ManufacturingVnet' to access 'CoreServicesVnet'                             | **Enabled (4)** |   
+      |                                      | Allow ''ManufacturingVnet' to receive forwarded traffic from 'CoreServicesVnet'                             | **Enabled (5)** |      
    | Local virtual network summary        |                                               |                                       |
-   |                                      | Peering link name                             | **CoreServicesVnet-to-ManufacturingVnet (7)** |
+   |                                      | Peering link name                             | **CoreServicesVnet-to-ManufacturingVnet (6)** |
    | Local virtual network peering settings        |                                               |                                       |
-   |                                      | Allow 'CoreServicesVnet' to access 'ManufacturingVnet'                             | **Enabled (8)** |   
-   |                                      | Allow 'CoreServicesVnet' to receive forwarded traffic from 'ManufacturingVnet'                             | **Enabled (9)** |     
+   |                                      | Allow 'CoreServicesVnet' to access 'ManufacturingVnet'                             | **Enabled (7)** |   
+   |                                      | Allow 'CoreServicesVnet' to receive forwarded traffic from 'ManufacturingVnet'                             | **Enabled (8)** |     
         
-1. Review your settings and select **Add (10)**. 
+1. Review your settings and select **Add (9)**. 
 
-   ![](../media/azn26.png)
-   ![](../media/azn30.png)
+   ![](../media/l1-u8-6.png)
+   ![](../media/l1-u8-7.png)
 
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed.
 
