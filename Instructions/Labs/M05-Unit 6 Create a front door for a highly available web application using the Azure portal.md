@@ -10,7 +10,7 @@ In this lab, you will complete the following tasks:
 + Task 2: Create a Front Door for your application
 + Task 3: View Azure Front Door in action (Ready only)
 
-## Estimated time: 30 minutes
+## Estimated time: 30 Minutes
 
 ## Architecture diagram
 
@@ -24,11 +24,11 @@ This task requires two instances of a web application that run in different Azur
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp (1)**, and then select **App Services (2)** under services.
 
-   ![Web App](../media/l5u6-1.png)
+   ![Web App](../media/l5-u6-1.png)
 
 1. Select **+ Create (1)**  and then select **Web App (2)** to create a Web App.
 
-   ![Web App](../media/create.png)
+   ![Web App](../media/l5-u6-2.png)
 
 1. On the Create Web App page, on the **Basics** tab, enter or select the following information, and select **Review + create (10)**.
 
@@ -45,7 +45,7 @@ This task requires two instances of a web application that run in different Azur
    | Windows Plan     | Select **Create new** and enter **myAppServicePlanCentralUS (8)** in the text box |
    | Princing Plan    | Select **Standard S1 100 total ACU, 1.75 GB memory (9)**        |
 
-   ![Web App](../media/azv54.png)
+   ![Web App](../media/l5-u6-9.png)
 
 1. Review the Summary, and then select **Create**.
 
@@ -71,11 +71,11 @@ This task requires two instances of a web application that run in different Azur
    | Pricing Plan     | Select **Standard S1 100 total ACU, 1.75 GB memory (9)**        |
    |||
 
-   ![Web App](../media/azv54.png)
+   ![Web App](../media/l5-u6-4.png)
 
 1. Review the Summary, and then select **Create**.
 
-   **Note**: Wait for deployment to complete it might take several minutes.
+   **Note:** Wait for deployment to complete it might take several minutes.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task.
@@ -98,31 +98,31 @@ In this task, you will configure Azure Front Door to direct user traffic to the 
 
 1. On the Compare offerings page, select **Quick create (1)**. Then select **Continue to create a Front Door (2)**.
 
-    ![Web App](../media/azn112.png)
+    ![Web App](../media/l5-u6-3.png)
 
 1. On the Basics tab, enter or select the following information.
 
       | **Setting**             | **Value**                                    |
       | ----------------------- | -------------------------------------------- |
-      | Subscription            | Select your subscription (1).                    |
+      | Subscription            | Select your subscription **(1)**.                    |
       | Resource group          | Select **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)**                  |
-      | Resource group location | Accept default setting (3)                      |
-      | Name                    | **FrontDoor<inject key="DeploymentID" enableCopy="false"/> (4)**   |
-      | Tier                    | **Standard (5)**  |
-      | Endpoint Name           | **FDendpoint (6)**  |
-      | Origin Type             | **App Services (7)** | 
-      | Origin host name        | **WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> (8)** |
+      | Resource group location | Accept default setting                      |
+      | Name                    | **FrontDoor<inject key="DeploymentID" enableCopy="false"/> (3)**   |
+      | Tier                    | **Standard (4)**  |
+      | Endpoint Name           | **FDendpoint (5)**  |
+      | Origin Type             | **App Services (6)** | 
+      | Origin host name        | **WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> (7)** |
       |||
 
-1. Select **Review and Create (9)**, and then select **Create**.
+1. Select **Review and Create (8)**, and then select **Create**.
 
-   ![Web App](../media/l5u6-7.png)
+   ![Web App](../media/l5-u6-5.png)
 
 1. Wait for the resource to deploy, and then select **Go to resource**.
 
-1. On the Front Door resource in the Overview blade, locate the **Origin groups (1)**, to update select the origin group **default-origin-group (2)** from the list and click on **+ Add an origin (3)**
+1. On the Front Door resource in the Overview blade, select the **Origin groups (1)** under **Settings**, to update select the origin group **default-origin-group (2)** from the list and click on **+ Add an origin (3)**
 
-   ![Web App](../media/l5u6-8.png)
+   ![Web App](../media/l5-u6-6.png)
 
 1. On the **Add on Origin** window, add the following information and select **Add (5)**.
 
@@ -134,11 +134,11 @@ In this task, you will configure Azure Front Door to direct user traffic to the 
    | Origin host header      | Select **WebAppContoso-2-<inject key="DeploymentID" enableCopy="false"/> (4)** |
    |||
 
-   ![Web App](../media/l5u6-9.png)
+   ![Web App](../media/l5-u6-7.png)
 
 1. Select **Update**.
 
-   ![Web App](../media/l5u6-(10).png)
+   ![Web App](../media/l5-u6-8.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
