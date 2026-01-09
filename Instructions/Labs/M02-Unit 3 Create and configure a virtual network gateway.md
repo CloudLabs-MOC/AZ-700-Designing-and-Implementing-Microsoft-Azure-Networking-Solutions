@@ -43,9 +43,9 @@ In this task, you'll create CoreServicesVnet and ManufacturingVnet, you set up t
 
      ![](../media/pwershell4.png)
    
-1. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** and then select **Region** **<inject key="Region" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share**, then click on **Create**.
+1. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (1)** and then select **Region** **<inject key="Region" enableCopy="false"/> (2)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (3)** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (4)** for the  **File share**, then click on **Create (5)**.
 
-    ![](../media/pwershell-n1.png)
+    ![](../media/l2-u3-2n.png)
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**
 
@@ -108,7 +108,7 @@ In this task, you'll create CoreServicesVM, you will create the CoreServicesVM v
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
      <validation step="43d0668a-f35c-4b21-85ae-b7a6666b7b64" />
 

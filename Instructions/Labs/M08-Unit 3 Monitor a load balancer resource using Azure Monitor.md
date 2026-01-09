@@ -39,7 +39,7 @@ In this section, you will create a virtual network and a subnet.
 
 1. In Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual Networks (1)**, and then select **Virtual Networks (2)** under services.
 
-    ![](../media/lab8-image3.png)
+    ![](../media/azv20.png)
 
 1. Select **+ Create**.
 
@@ -250,7 +250,7 @@ In this task, you will create three VMs for the backend pool of the load balance
 
      ![](../media/pwershell4.png)
    
-1.Select default subscription **(1)**, make sure you have selected your resource group **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)** and then select **Region** **<inject key="Region" enableCopy="false"/> (3)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (4)** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (5)** for the  **File share** , then click on **Create (6)**.
+1. Select default subscription **(1)**, make sure you have selected your resource group **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)** and then select **Region** **<inject key="Region" enableCopy="false"/> (3)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (4)** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (5)** for the  **File share** , then click on **Create (6)**.
    
    ![](../media/azn82.png)
 

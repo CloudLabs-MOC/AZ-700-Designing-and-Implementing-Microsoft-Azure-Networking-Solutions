@@ -442,7 +442,7 @@ In this task, you will use the virtual machine you created in the previous step 
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups (1)**, and then select **Resource groups (2)** under services.
 
-   ![](../media/l7-u6-2.png)
+   ![](../media/l7-u6-2n.png)
 
 1. Select **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
