@@ -315,7 +315,7 @@ In this task, you will create a test VM, and then test the load balancer.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual machines (1)**, and then select **Virtual machines (2)** under services.
 
-   ![Picture 7](../media/azn99.png)
+    ![Picture 7](../media/azn99.png)
 
 1. Select **+ Create** and choose **Azure virtual machine**. On the **Create a virtual machine** page, on the **Basics** tab, use the information in the table below to create the first VM.
 
