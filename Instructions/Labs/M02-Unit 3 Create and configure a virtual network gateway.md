@@ -103,7 +103,7 @@ In this task, you'll create CoreServicesVM, you will create the CoreServicesVM v
 
 1. Verify that the virtual machine has been created.
 
-   ![](../media/l2-u1-3.png)
+    ![](../media/l2-u1-3.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 

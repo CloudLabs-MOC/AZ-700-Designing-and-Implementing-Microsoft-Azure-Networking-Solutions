@@ -206,7 +206,6 @@ In this task, you'll create the ResearchVnet virtual network and its subnet.
 
     ![](../media/azn8.png)
 
-
 1. Select **Create**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
