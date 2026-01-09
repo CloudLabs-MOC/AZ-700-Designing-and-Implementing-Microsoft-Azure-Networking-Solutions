@@ -153,7 +153,7 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="b6e75632-552c-426b-806e-3de77ccca05f" />
 
@@ -186,9 +186,7 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
       ![](../media/pwershell2.png)
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
-
-     **Important**: Please replace ContosoResourceGroup-(DID) with **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**
-   
+  
 
    ```powershell
    $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
@@ -201,10 +199,12 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
 
 1. Verify that both virtual machines have been created.
 
+   ![](../media/a7z3.png)
+
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="d91accdd-32fd-4212-96ac-3f721c86f133" />
 
@@ -212,9 +212,11 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
 
 In this task, you will add two virtual machines to the backend pool of your Application Gateway, enabling the gateway to distribute traffic between the backend servers.
 
-1. On the Azure portal menu, from top left corner of page click **Show portal** menu and select **All resources**, then select **ContosoAppGateway**.
+1. On the Azure portal menu, from top left corner of page click **Show portal** menu and select **All resources**.
 
    ![](../media/unit4-image5.png)
+
+1. Then select **ContosoAppGateway**.   
    
 1. On the **ContosoAppGateway** blade, under **Settings** section, select **Backend pools**.
 
@@ -222,17 +224,19 @@ In this task, you will add two virtual machines to the backend pool of your Appl
 
     ![Azure Portal search for application gateway](../media/lab02-az700-ima32.png)
    
-1. On the **Edit backend pool** page, under **Backend targets**, in **Target type**, select **Virtual machine**.
+1. On the **Edit backend pool** page, under **Backend targets (1)**, 
 
-1. Under **Target**, select **BackendVM1-nic.** 
+   - In **Target type**, select **Virtual machine**.
 
-1. On **Target type**, select **Virtual machine**.
+      - Under **Target**, select **BackendVM1-nic.** 
 
-1. Under **Target**, select **BackendVM2-nic.**
+   - On **Target type**, select **Virtual machine**.
+
+      - Under **Target**, select **BackendVM2-nic.**
    
-1. Select **Save**.
+1. Select **Save (2)**.
 
-    ![Azure Portal search for application gateway](../media/l5u4-(5).png)  
+    ![Azure Portal search for application gateway](../media/a7z4.png)  
 
     **Note**: Wait for the deployment to complete before proceeding to the next step.
 
@@ -243,7 +247,7 @@ In this task, you will add two virtual machines to the backend pool of your Appl
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="2c0059d3-d02b-4c7a-9937-c06f943ec1ef" />
 
@@ -279,10 +283,10 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 ### Review
 In this lab, you have completed:
 
-- Create an application gateway
-- Create virtual machines
-- Add backend servers to backend pool
-- Test the application gateway
+- Created an application gateway
+- Created virtual machines
+- Added backend servers to backend pool
+- Tested the application gateway
 
 ## You have successfully completed the lab.
 

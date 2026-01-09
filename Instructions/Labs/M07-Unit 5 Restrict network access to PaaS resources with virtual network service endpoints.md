@@ -19,7 +19,7 @@ In this lab, you will complete the following tasks:
 + Task 10: Confirm access to storage account
 + Task 11: Confirm access is denied to storage account
 
-## Estimated time: 35 minutes
+## Estimated time: 35 Minutes
 
 ## Architecture Diagram
 
@@ -29,26 +29,26 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a virtual network and a subnet.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network(1)**, and then select **Virtual network(2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network (1)**, and then select **Virtual network (2)** under services.
 
-    ![](../media/azv20.png)
+    ![](../media/srchvn.png)
 
 1. Select **+ Create**.
 
-1. On the **Create virtual network** blade specify the following information and the select **IP addresses (5)**:
+1. On the **Create virtual network** blade specify the following information and then select **IP addresses (5)**:
  
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
    | Subscription   | Select your subscription **(1)**                     |
-   | Resource group | Select **myResourceGroup(2)**                               |
-   | Name           | **CoreServicesVNet(3)**                              |
+   | Resource group | Select **myResourceGroup (2)**                               |
+   | Name           | **CoreServicesVNet (3)**                              |
    | Region         | Select **<inject key="Region" enableCopy="false"/> (4)**                     |
 
     ![](../media/azv21.png)
 
 1. On the **IP Addresses** tab, select **default** to change the subnet name. 
 
-    ![](../media/unit52.png)
+    ![](../media/dflt.png)
 
 1. Specify the following values and then **Save (4)**:    
 
@@ -75,21 +75,21 @@ In this task, you will create a virtual network and a subnet.
 
 In this task, you will add a subnet to the CoreServicesVNet and enable a service endpoint for Microsoft.Storage.
 
-1. Add a subnet to the virtual network. Under **Settings**, select **Subnets (1)**, and then select **+ Subnet (2)**, as shown in the following picture:
+1. Add a subnet to the virtual network. Under **Settings**, select **Subnets (1)**, and then select **+ Subnet (2)**.
 
     ![](../media/azv22.png)  
 
-1. Under **Add subnet**, select or enter the following information and select **Add**.
+1. Under **Add subnet**, select or enter the following information and select **Add (4)**.
 
    | **Setting**                 | **Value**                    |
    | --------------------------- | ---------------------------- |
-   | Name                        | **Private(1)**               |
-   | Subnet address range        | **10.0.1.0/24(2)**           |
-   | Service endpoints: Services | Select **Microsoft.Storage** |
+   | Name                        | **Private (1)**               |
+   | Subnet address range        | **10.0.1.0/24 (2)**           |
+   | Service endpoints: Services | Select **Microsoft.Storage (3)** |
 
-    ![](../media/unit54.png)
+    ![](../media/pvt.png)
 
-    ![](../media/unit55.png)
+    ![](../media/pvtadd.png)
 
 1. You should now have two subnets configured:
 
@@ -112,18 +112,18 @@ In this task, you will create a Network Security Group (NSG) to restrict network
 
 1. In Network security groups, select **+ Create**. 
 
-1. Enter or select, the following information and the **Review+Create (5)**
+1. Enter or select, the following information and then click on **Review+Create (5)**
 
     | **Setting**    | **Value**                                                    |
     | -------------- | ------------------------------------------------------------ |
     | Subscription   | Select your subscription **(1)**                                   |
-    | Resource group | Select **myResourceGroup(2)**                                              |
-    | Name           | **ContosoPrivateNSG(3)**                                            |
+    | Resource group | Select **myResourceGroup (2)**                                              |
+    | Name           | **ContosoPrivateNSG (3)**                                            |
     | Region         | Select **<inject key="Region" enableCopy="false"/> (4)**                                           |
 
     ![](../media/azv26.png)
 
-1. Select **Review + create(5)**, then select **Create**.
+1. Once the resource is validated select **Create**.
 
 1. After the ContosoPrivateNSG network security group is created, select **Go to resource**.
 
@@ -135,17 +135,17 @@ In this task, you will create a Network Security Group (NSG) to restrict network
   
     | **Setting**             | **Value**                 |
     | ----------------------- | ------------------------- |
-    | Source                  | Select **Service Tag(1)**    |
-    | Source service tag      | Select **VirtualNetwork(2)** |
+    | Source                  | Select **Service Tag (1)**    |
+    | Source service tag      | Select **VirtualNetwork (2)** |
     | Source port ranges      | * **(3)**                      |
-    | Destination             | Select **Service Tag(4)**    |
-    | Destination service tag | Select **Storage(5)**        |
+    | Destination             | Select **Service Tag (4)**    |
+    | Destination service tag | Select **Storage (5)**        |
     | Service                 | Custom **(6)**                   |
     | Destination port ranges | *  **(7)**                     |
     | Protocol                | Any **(8)**                   |
     | Action                  | Allow **(9)**                 |
     | Priority                | 100 **(10)**               |
-    | Name                    | Allow-Storage-All **11**     |
+    | Name                    | Allow-Storage-All **(11)**     |
 
     ![](../media/unit59.png)
 
@@ -183,6 +183,7 @@ In this task, you will add an outbound rule to deny communication to the interne
    | Name                    | **Deny-Internet-All (11)**         |
 
    ![](../media/azv28.png)
+
    ![](../media/azv29.png)   
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -196,18 +197,18 @@ In this task, you will add an outbound rule to deny communication to the interne
 
 In this task, you will create an inbound security rule to allow Remote Desktop Protocol (RDP) traffic (port 3389) to the subnet from anywhere, allowing remote management of resources.
 
-1. On ContosoPrivateNSG | Outbound security rules, from left navigation menu, under **Settings**, select **Inbound security rules (1)** and the **+Add (2)**.
+1. On **ContosoPrivateNSG | Outbound security rules**, from left navigation menu, under **Settings**, select **Inbound security rules (1)** and then click on **+Add (2)**.
 
    ![](../media/azv30.png)
 
-1. In Add inbound security rule, enter the following values and then **Add (11)**:
+1. In Add inbound security rule, enter the following values and then click on **Add (11)**:
 
    | **Setting**             | **Value**                 |
    | ----------------------- | ------------------------- |
    | Source                  | Any **(1)**                      |
    | Source port ranges      | * **(2)**                        |
-   | Destination             | Select **Service Tag(3)**    |
-   | Destination service tag | Select **VirtualNetwork(4)** |
+   | Destination             | Select **Service Tag (3)**    |
+   | Destination service tag | Select **VirtualNetwork (4)** |
    | Service                 | Custom **(5)**                  |
    | Destination port ranges | 3389 **(6)**                    |
    | Protocol                | Any **(7)**                   |
@@ -221,13 +222,13 @@ In this task, you will create an inbound security rule to allow Remote Desktop P
    
     > **Warning**: RDP port 3389 is exposed to the Internet. This is only recommended for testing. For production environments, we recommend using a VPN or private connection.
 
-1. From the left navigation menu, under **Settings**, select **Subnets(1)**.
+1. From the left navigation menu, under **Settings**, select **Subnets (1)**.
 
-   - Select **+ Associate(2)**
+   - Select **+ Associate (2)**
 
-   - Under **Associate subnet**, from the **Virtual network** dropdown select **CoreServicesVNet(3)**.
+   - Under **Associate subnet**, from the **Virtual network** dropdown select **CoreServicesVNet (3)**.
 
-   - Under **Subnet**, select **Private(4)**, and then select **OK (5)**.
+   - Under **Subnet**, select **Private (4)**, and then select **OK (5)**.
 
     ![](../media/azv33.png)
 
@@ -244,26 +245,26 @@ In this task, you will create an Azure Storage account and restrict network acce
 
 The steps necessary to restrict network access to resources created through Azure services enabled for service endpoints varies across services. See the documentation for individual services for specific steps for each service. The remainder of this exercise includes steps to restrict network access for an Azure Storage account, as an example.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account (1)**, and then select **Storage Account (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account (1)**, and then select **Storage accounts (2)** under services.
 
-    ![](../media/azv34.png)
+    ![](../media/strg.png)
 
 1. Select **+ Create**.
 
-1. Enter, or select, the following information and accept the remaining defaults and then **Review+Create (7)**:
+1. Enter, or select, the following information and accept the remaining defaults and then click on **Review+Create (7)**:
 
     | **Setting**    | **Value**                                                    |
     | -------------- | ------------------------------------------------------------ |
     | Subscription   | **Select your subscription (1)**                                    |
-    | Resource group | **myResourceGroup(2)**                                              |
+    | Resource group | **myResourceGroup (2)**                                              |
     | Region         | **<inject key="Region" enableCopy="false"/> (3)** 
     | Name           | Enter **contosostorage<inject key="DeploymentID" enableCopy="false"/> (4)** |
     | Performance    | **Standard (5)**                     |                                              |
-    | Redundancy    | **Locally-redundant storage (LRS)(6)**                              |
+    | Redundancy    | **Locally-redundant storage (LRS) (6)**                              |
 
     ![](../media/azv35.png)
 
-1. Then select **Create**.
+1. Once the resource is validated select **Create**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -276,13 +277,13 @@ The steps necessary to restrict network access to resources created through Azur
 
 In this task, your creating a file share in the storage account.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account (1)**, and then select **Storage Account (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account (1)**, and then select **Storage accounts (2)** under services.
 
-    ![](../media/azv34.png)
+    ![](../media/strg.png)
 
 1. From the list select **contosostorage<inject key="DeploymentID" enableCopy="false"/>** storage account.
 
-    ![](../media/unit66.png)
+    ![](../media/conslct.png)
 
 1. From left navigation pane of storage account under **Data storage**, select **File shares (1)** and then select **+ File share (2)**.
 
@@ -296,7 +297,7 @@ In this task, your creating a file share in the storage account.
 
     ![](../media/azv38.png)
 
-1. Then select **Create**.
+1. Once the resource is validated select **Create**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -309,17 +310,17 @@ In this task, your creating a file share in the storage account.
 
 In this task, you will configure the storage account to restrict network access by allowing connections only from the Private subnet in the CoreServicesVNet virtual network.
 
-1. On **contosostorage<inject key="DeploymentID" enableCopy="false"/>** storage account blade.
+1. Navigate to **contosostorage<inject key="DeploymentID" enableCopy="false"/>** storage account blade.
 
-1. From the left navigation pane, under **Security + networking** section, select **Networking**.
+1. From the left navigation pane, under **Security + networking (1)** section, select **Networking (2)**.
 
-   - Select **Enabled from all networks**
+   - Select **Enabled from all networks (3)**
 
-   - On the **Public network access** page, under **Public network access scope** select **Enable from selected networks**.
+      ![](../media/enb.png)
 
-   - Then select + Add a virtual network drop down then choose Add existing virtual network
+   - On the **Public network access** page, under **Public network access scope** select **Enable from selected networks (1)**.
 
-     ![](../media/kernel-image76.png)
+   - Then select **+ Add a virtual network (2)** drop down then choose **Add existing virtual network (3)**.
 
      ![](../media/kernel-image77.png)
        
@@ -334,9 +335,9 @@ In this task, you will configure the storage account to restrict network access 
    
    ![Graphical user interface, application Description automatically generated](../media/azv41.png)
 
-1. Select **Save** on top of the page below Networking.
+1. Select **Save** from the bottom left corner of the page.
 
-    ![](../media/azv42.png)
+   ![](../media/savet8.png) 
 
 1. Under **Security + networking** for the storage account, select **Access keys (1)**.
 
@@ -358,7 +359,7 @@ In this task, you'll create two virtual machines (VMs) to test network access to
 
 1. On **Getting started** window choose **Mount storage account (1)** then under **Storage account subscription (2)** select your available subscription from the dropdown and click on **Apply (3)**.
    
-     ![](../media/pwershell3.png)
+     ![](../media/msa.png)
    
 1. Within the Mount storage account pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
@@ -393,7 +394,7 @@ In this task, you'll create two virtual machines (VMs) to test network access to
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile VMs.json -TemplateParameterFile VMs.parameters.json
    ```
 
-   **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
+   **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**  .
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines** to find the newly created virtual machines.
 
@@ -410,15 +411,15 @@ In this task, you'll connect to the ContosoPrivate VM, map the Azure file share 
 
 1. Navigate to the **Virtual Machine** blade, select **ContosoPrivate** VM.
 
-   ![](../media/unit68.png)
+   ![](../media/cpr.png)
 
-1. On **ContosoPrivate | Connect** page, click on **Connect (1)** and from the dropdown click on **Connect (2)** again.
+1. On **ContosoPrivate** Virtual machine page, click on **Connect (1)** and from the dropdown click on **Connect (2)** again.
 
    ![](../media/azv46.png)
 
-1. Under **Native RDP**, select **Download RDP file**. 
+1. On **ContosoPrivate | Connect** page under **Native RDP**, select **Download RDP file**. 
 
-   ![](../media/imgai900.png)
+   ![](../media/drdp.png)
 
 1. Ignore the warning and click on **Keep**.
 
@@ -436,9 +437,9 @@ In this task, you'll connect to the ContosoPrivate VM, map the Azure file share 
 
 1. You may receive a certificate warning during the sign-in process. If you receive the warning, select **Yes** to proceed with the connection.
 
-1. On the **ContosoPrivate** VM, from the **start (1)** menu open the **windows powershell (Admin) (2)**.
+1. On the **ContosoPrivate** VM, from the **Start (1)** menu, right click on the **Windows Powershell (2)** tile and then click on **More (3)** and select **Run as administrator (4)**.
 
-   ![](../media/azv48.png)
+   ![](../media/psad.png)
 
     >**Note:** In the pop-up related to network visibility click **No**.
 
@@ -457,9 +458,9 @@ In this task, you'll connect to the ContosoPrivate VM, map the Azure file share 
 
    ![](../media/unit69.png)
 
-1. Confirm that the VM has no outbound connectivity to the internet from a command prompt:
+1. Confirm that the VM has no outbound connectivity to the internet by running the command:
 
-   **ping bing.com**
+   **`ping bing.com`**
 
    ![](../media/unit691.png)
    
@@ -475,7 +476,7 @@ In this task, you'll confirm that the ContosoPublic VM doesn't have access to th
 
 1. Select **ContosoPublic** Virtal machine.
 
-   ![](../media/azv49.png)
+   ![](../media/cpb.png)
 
 1. Complete steps 1-13 of previous task to get Confirm access to storage account task for the ContosoPublic VM.  
      
@@ -485,7 +486,7 @@ In this task, you'll confirm that the ContosoPublic VM doesn't have access to th
 
 1. Confirm that the public VM does have outbound connectivity to the internet from a command prompt:
 
-   **ping bing.com**
+   **`ping bing.com`**
 
    ![](../media/unit693.png)
 
@@ -493,9 +494,9 @@ In this task, you'll confirm that the ContosoPublic VM doesn't have access to th
 
 1. From your computer, browse to the Azure portal.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account (1)**, and then select **Storage Account (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account (1)**, and then select **Storage accounts (2)** under services.
 
-    ![](../media/azv34.png)
+    ![](../media/strg.png)
 
 1. Select **contosostorage<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -505,7 +506,7 @@ In this task, you'll confirm that the ContosoPublic VM doesn't have access to th
 
 1. On the **marketing** blade, from the left navigation menu, click on **Browse**.
 
-   ![](../media/azv51.png)
+   ![](../media/fsbr.png)
 
 1. You receive the error shown in the following screenshot:
 
