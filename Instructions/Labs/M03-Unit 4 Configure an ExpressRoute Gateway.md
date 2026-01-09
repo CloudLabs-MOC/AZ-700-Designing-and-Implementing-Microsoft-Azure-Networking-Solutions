@@ -132,7 +132,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 ### Review
 In this lab, you have completed:
 
-- Create the VNet and gateway subnet
-- Create the virtual network gateway
+- Created the VNet and gateway subnet
+- Created the virtual network gateway
   
 ## You have successfully completed the lab.

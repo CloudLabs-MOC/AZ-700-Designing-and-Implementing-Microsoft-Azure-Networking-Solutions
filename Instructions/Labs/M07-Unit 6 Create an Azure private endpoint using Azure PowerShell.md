@@ -508,11 +508,11 @@ In this task, you will use the virtual machine you created in the previous step 
 ## Review
 
 In this lab, you have completed:
-+ Deploy the prerequisite web app
-+ Create a virtual network and bastion host
-+ Create a test virtual machine
-+ Create a Private Endpoint
-+ Configure the private DNS zone
-+ Test connectivity to the Private Endpoint
++ Deployed the prerequisite web app
++ Created a virtual network and bastion host
++ Created a test virtual machine
++ Created a Private Endpoint
++ Configured the private DNS zone
++ Tested connectivity to the Private Endpoint
 
 ## You have successfully completed the lab.

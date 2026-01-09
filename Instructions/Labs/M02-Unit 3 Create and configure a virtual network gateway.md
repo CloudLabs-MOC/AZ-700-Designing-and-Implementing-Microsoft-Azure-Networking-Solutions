@@ -506,10 +506,10 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 ## Review
 In this lab, you have completed:
 
-- Create Virtual Networks and Virtual machine
-- Connect to VM's using RDP and Test the connection
-- Create Application gateway
+- Created Virtual Networks and Virtual machine
+- Connected to VM's using RDP and Test the connection
+- Created Application gateway
 - CoreServicesVnet to ManufacturingVnet 
-- Test the connection between the VMs
+- Tested the connection between the VMs
 
 ## You have successfully completed the lab.

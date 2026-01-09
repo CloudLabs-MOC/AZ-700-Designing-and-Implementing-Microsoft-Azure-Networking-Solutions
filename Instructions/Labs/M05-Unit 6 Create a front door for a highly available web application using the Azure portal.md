@@ -209,8 +209,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 ### Review
 In this lab, you have completed:
 
-- Create two instances of a web app
-- Create a Front Door for your application
-- View Azure Front Door in action
+- Created two instances of a web app
+- Created a Front Door for your application
+- Viewed Azure Front Door in action
 
 ## You have successfully completed the lab.
