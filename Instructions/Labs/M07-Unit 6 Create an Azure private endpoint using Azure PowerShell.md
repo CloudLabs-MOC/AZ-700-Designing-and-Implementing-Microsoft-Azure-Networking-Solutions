@@ -271,7 +271,7 @@ Create the virtual machine with the following commands:
    
    ```
 
-   ![](../media/azv9.png)     
+   ![](../media/l7-u6-1.png)     
 
    >**Note**: You will be prompted to provide UserName enter **TestUser** and Admin password enter **Pa55w.rd!!**.
 
@@ -442,17 +442,17 @@ In this task, you will use the virtual machine you created in the previous step 
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Resource groups (1)**, and then select **Resource groups (2)** under services.
 
-   ![](../media/azv12.png)
+   ![](../media/l7-u6-2n.png)
 
 1. Select **CreatePrivateEndpointQS-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. Select **myVM**.
 
-   ![](../media/azv13.png)
+   ![](../media/l7-u6-3.png)
 
 1. On the overview page for **myVM**, select **Connect (1)**. From the dropdown select **Connect via Bastion (2)** button.
 
-   ![](../media/azv14.png)
+   ![](../media/l7-u6-4.png)
 
 1. Enter the username **TestUser (1)** and password **Pa55w.rd!! (2)** that you entered during the virtual machine creation and then **Connect (3)**.
 
@@ -508,11 +508,11 @@ In this task, you will use the virtual machine you created in the previous step 
 ## Review
 
 In this lab, you have completed:
-+ Deploy the prerequisite web app
-+ Create a virtual network and bastion host
-+ Create a test virtual machine
-+ Create a Private Endpoint
-+ Configure the private DNS zone
-+ Test connectivity to the Private Endpoint
++ Deployed the prerequisite web app
++ Created a virtual network and bastion host
++ Created a test virtual machine
++ Created a Private Endpoint
++ Configured the private DNS zone
++ Tested connectivity to the Private Endpoint
 
 ## You have successfully completed the lab.

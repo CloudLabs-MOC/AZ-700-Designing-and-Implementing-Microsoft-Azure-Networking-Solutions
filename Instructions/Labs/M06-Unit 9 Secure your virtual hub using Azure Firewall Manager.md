@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 + Task 8: Test the application rule
 + Task 9: Test the network rule
   
-## Estimated time: 35 minutes
+## Estimated time: 35 Minutes
 
 ## Architecture Diagram
 
@@ -72,7 +72,7 @@ In this task, you will create the two spoke virtual networks each containing a s
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="d7de9d5e-72fb-4916-b248-82f5131bc47b" />
 
@@ -82,7 +82,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 1. From the Azure portal home page, from top left corner of page click **Show portal menu (1)**, select **All services (2)**.
 
-    ![All services](../media/e1t2p1.png)
+    ![All services](../media/l6-u9-0.png)
 
 1. In the search box, type **firewall manager (1)** and select **Firewalls (2)** when it appears.
 
@@ -116,7 +116,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
 1. Select **Create**.
 
-    >**NOTE** : This can take up to 30 minutes to deploy.
+    >**NOTE:**  This can take up to 30 minutes to deploy.
 
 1. When the deployment completes, from the Azure portal home page, select **All services**.
 
@@ -135,7 +135,7 @@ In this task you will create your secured virtual hub using Firewall Manager.
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="b3265fb0-eed5-4968-b37e-9bac99e6f9d5" />
 
@@ -166,7 +166,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
 
    ![virtual hub](../media/lab02-az700-ima43.png)
    
-10. Repeat steps 4 to 9 above to create another similar connection but using the **Connection name** of **hub-spoke-02** to connect the **Virtual network** of 
+10. Repeat **steps 4 to 9** above to create another similar connection but using the **Connection name** of **hub-spoke-02** to connect the **Virtual network** of 
     **Spoke-02**
 
 ### Task 4: Deploy the servers
@@ -202,7 +202,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile FirewallManager.json -TemplateParameterFile FirewallManager.parameters.json
    ```
-1.  You will be prompted to provide an admin password. provide adminPassword: **Pa55w.rd!!**.
+1.  You will be prompted to provide an admin password. provide adminPassword: **Pa55w.rd!!**
   
 1. Once the deployment has finished, navigate to the Azure portal home page, and proceed to select **Virtual Machines**.
 
@@ -215,7 +215,7 @@ In this task you will connect the hub and spoke virtual networks. This is common
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="8042eab8-4cb2-4924-8695-473059d3d064" />
 
@@ -375,7 +375,7 @@ In this task you will ensure that network traffic gets routed through your firew
 
 1. Select **Save (4)**. 
 
-    ![virtual hub](../media/lab02-az700-ima50.png)
+    ![virtual hub](../media/l6-u9-1.png)
    
     >**Note:** On **Secure internet traffic** pop-up, select **OK**.
 

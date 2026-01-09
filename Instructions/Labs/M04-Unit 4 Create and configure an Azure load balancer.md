@@ -146,7 +146,7 @@ In this task, you will create three VMs, that will be in the same availability s
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
 
- 1. Each VM will be deployed sequentially. During the process, you will be prompted to enter the administrator password every time.  So please provide adminPassword: **Pa55w.rd!!**.
+ 1. Each VM will be deployed sequentially. During the process, you will be prompted to enter the administrator password every time.  So please provide adminPassword: **Pa55w.rd!!**
 
  1. It may take `20-25 mins` to create these three VMs. Please wait until this job completes, and you will be prompted to provide password three times for each VM deployment.
 
@@ -297,7 +297,7 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
 
    ![Picture 7](../media/az7005.png)
 
-   ![Picture 7](../media/az7006.png)
+   ![Picture 7](../media/l4-u4-1.png)
 
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -323,22 +323,22 @@ In this task, you will create a test VM, and then test the load balancer.
     | -------------------- | -------------------------------------------- |
     | Subscription         | Select your subscription **(1)**                     |
     | Resource group       | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**        |
-    | Virtual machine name | **myTestVM(3)**                                 |
+    | Virtual machine name | **myTestVM (3)**                                 |
     | Region               |  **<inject key="Region" enableCopy="false"/> (4)**                              |
-    | Availability options | **No infrastructure redundancy required(5)**    |
+    | Availability options | **No infrastructure redundancy required (5)**    |
     | Security type        | **Standard (6)**                                    |
-    | Image                | **Windows Server 2019 Datacenter - x64 Gen 2(7)**   |
-    | Size                 | **Standard_D2s_v3 - 2 vcpu, 8 GiB memory(8)**   |
-    | Username             | **TestUser(9)**                                 |
+    | Image                | **Windows Server 2019 Datacenter - x64 Gen 2 (7)**   |
+    | Size                 | **Standard_D2s_v3 - 2 vcpu, 8 GiB memory (8)**   |
+    | Username             | **TestUser (9)**                                 |
     | Password             | `Pa55w.rd!!123` **(10)**                |
     | Confirm password     | `Pa55w.rd!!123` **(11)**                |
-    | Select inbound port     | **RDP(3389)(12)**                |
+    | Select inbound port     | **RDP(3389) (12)**                |
 
     ![Picture 7](../media/azn101.png)
 
-    ![Picture 7](../media/anz102.png)
+    ![Picture 7](../media/l4-u4-3.png)
 
-1. Select **Next : Disks**, then select **Next : Networking**. 
+1. Select **Next : Disks (13)**, then select **Next : Networking**. 
 
 1. On the **Networking** tab, use the information in the table below to configure networking settings and then select **Review + create (7)**:
 
@@ -369,9 +369,9 @@ In this task, you will connect to the myTestVM and test the internal load balanc
 
     ![](../media/azn91.png)
 
-1. On the **Overview** page, make a note in notepad of the **Private IP address**, or copy it to the clipboard. You may need to select **See more** in order to see the **Private IP address** field.
+1. On the **Overview** page, make a note in notepad of the **Frontend IP address**, or copy it to the clipboard. You may need to select **See more** in order to see the **Frontend IP address** field.
 
-    ![Picture 7](../media/azn104.png)
+    ![Picture 7](../media/l4-u4-2.png)
 
 1. Select **Home**, then on the Azure portal home page, select **All resources**, then select the **myTestVM** virtual machine that you just created.
 
