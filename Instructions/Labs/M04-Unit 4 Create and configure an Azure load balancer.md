@@ -434,10 +434,10 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 ## Review
 
 In this lab, you have completed:
-+ Create the virtual network
-+ Create backend servers
-+ Create the load balancer
-+ Create load balancer resources
-+ Test the load balancer
++ Created the virtual network
++ Created backend servers
++ Created the load balancer
++ Created load balancer resources
++ Tested the load balancer
 
 ## You have successfully completed the lab.

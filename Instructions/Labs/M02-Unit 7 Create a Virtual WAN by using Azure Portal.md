@@ -158,8 +158,8 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 In this lab, you have completed:
 
-+ Creating a Virtual WAN
-+ Creating a hub by using Azure Portal
-+ Connecting a VNet to the Virtual Hub
++ Created a Virtual WAN
++ Created a hub by using Azure Portal
++ Connected a VNet to the Virtual Hub
 
 ## You have successfully completed the lab.

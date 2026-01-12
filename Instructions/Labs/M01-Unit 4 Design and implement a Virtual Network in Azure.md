@@ -247,9 +247,9 @@ In this task, you'll be verifying the creation of the virtual networks (VNets) a
 
 In this lab, you have completed:
 
-+ Creating the CoreServicesVnet virtual network and subnets
-+ Creating the ManufacturingVnet virtual network and subnets
-+ Creating the ResearchVnet virtual network and subnets
-+ Verifying the creation of VNets and Subnets
++ Created the CoreServicesVnet virtual network and subnets
++ Created the ManufacturingVnet virtual network and subnets
++ Created the ResearchVnet virtual network and subnets
++ Verifyed the creation of VNets and Subnets
 
 ## You have successfully completed the lab.
