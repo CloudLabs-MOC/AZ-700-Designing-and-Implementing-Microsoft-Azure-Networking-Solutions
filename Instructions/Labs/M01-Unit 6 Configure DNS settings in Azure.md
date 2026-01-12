@@ -208,9 +208,9 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 In this lab, you have completed:
 
-+ Creating a private DNS Zone
-+ Linking subnet for auto registration
-+ Creating Virtual Machines to test the configuration
-+ Verifying records are present in the DNS zone
++ Created a private DNS Zone
++ Linked subnet for auto registration
++ Created Virtual Machines to test the configuration
++ Verifyed records are present in the DNS zone
 
 ## You have successfully completed the lab.

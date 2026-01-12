@@ -293,11 +293,11 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 
 In this lab, you have completed:
 
-+ Creating a Virtual Machine to test the configuration
-+ Connecting to the Test VMs using RDP
-+ Testing the connection between the VMs
-+ Creating VNet peerings between CoreServicesVnet and ManufacturingVnet
-+ Testing the connection between the VMs
++ Created a Virtual Machine to test the configuration
++ Connected to the Test VMs using RDP
++ Tested the connection between the VMs
++ Created VNet peerings between CoreServicesVnet and ManufacturingVnet
++ Tested the connection between the VMs
 
 ## You have successfully completed the lab.
 

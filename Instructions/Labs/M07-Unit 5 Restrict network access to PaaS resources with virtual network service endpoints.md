@@ -525,16 +525,16 @@ In this task, you'll confirm that the ContosoPublic VM doesn't have access to th
 ## Review
 In this lab, you have completed:
 
-+ Create a virtual network
-+ Enable a service endpoint
-+ Restrict network access for a subnet
-+ Add additional outbound rules 
-+ Allow access for RDP connections
-+ Restrict network access to a resource
-+ Create a file share in the storage account
-+ Restrict network access to a subnet
-+ Create virtual machines
-+ Confirm access to storage account
-+ Confirm access is denied to storage account
++ Created a virtual network
++ Enabled a service endpoint
++ Restricted network access for a subnet
++ Added additional outbound rules 
++ Allowed access for RDP connections
++ Restricted network access to a resource
++ Created a file share in the storage account
++ Restricted network access to a subnet
++ Created virtual machines
++ Confirmed access to storage account
++ Confirmed access is denied to storage account
 
 ## You have successfully completed the lab.
