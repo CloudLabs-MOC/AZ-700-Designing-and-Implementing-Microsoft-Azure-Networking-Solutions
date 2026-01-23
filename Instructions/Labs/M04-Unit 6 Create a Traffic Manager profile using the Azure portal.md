@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 + Task 3: Add Traffic Manager endpoints
 + Task 4: Test the Traffic Manager profile
 
-## Estimated time: 35 minutes
+## Estimated time: 50 minutes
 
 ## Architecture diagram
 
@@ -49,7 +49,18 @@ In this task, you will create two instances of a web application deployed in the
    | Pricing Plan     | **Standard S1 100 total ACU, 1.75-GB  memory (10)**               |
 
    ![Web App](../media/azn52.png)
-   ![Web App](../media/azn53.png)
+
+1. Continue updating web app information with below steps and values provided.   
+   | **Setting**      | **Value**                                                    |
+   | ---------------- | ------------------------------------------------------------ |
+   | Windows Plan     | Select **Create  new (1)**, Provide Name: **ContosoAppServicePlanEastUS (2)** and click **OK (3)** |
+   | Pricing Plan     | Click on **Explore pricing plans (1)** and select **Standard S1 (2)** from the list and clikc on **OK (3)**   |
+
+   ![Web App](../media/azn53-1.png)
+
+   ![Web App](../media/azn53-2.png)
+
+   ![Web App](../media/azn53-3.png)
    
 1. Select **Monitor + secure** tab from the top.
 
@@ -60,6 +71,8 @@ In this task, you will create two instances of a web application deployed in the
    ![Web App](../media/azn55.png)
 
 1. Select **Create**. When the Web App successfully deploys, it creates a default web site.
+
+   ![Web app](../media/azn55-1.png)
 
     >**Note**: We are currently encountering an issue while deploying the web app in East US. If you face the same issue, kindly change the region to another, then deploy the web app and proceed with the next step.
     
@@ -72,10 +85,11 @@ In this task, you will create two instances of a web application deployed in the
    | Resource group | Select **Contoso-RG-TM2-<inject key="DeploymentID" enableCopy="false"/> (1)**             |
    | Name           | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (2)**   |
    | Region         | **West Europe (3)**                                              |
-   | Windows Plan   | Select **Create  new**  Name: **ContosoAppServicePlanWestEurope (4)** |
+   | Windows Plan   | Select **Create  new (1)**, provide Name: **ContosoAppServicePlanWestEurope (2)** and click on **OK (3)** |
 
    ![Web App](../media/azn56.png)
-   ![Web App](../media/azn-57.png)         
+
+   ![Web App](../media/azn53-1.png)         
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **App Services (1)**, and then select **App Services (2)** under services.
 
@@ -85,12 +99,12 @@ In this task, you will create two instances of a web application deployed in the
 
    ![Picture 19](../media/azn61.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-   <validation step="36930eeb-c0f6-46c0-baf6-37bb31706fee" />
+   <validation step="4d5ecc40-776d-459c-867f-50db4b49ce0c" />
 
 ## Task 2: Create a Traffic Manager profile
 
@@ -101,6 +115,8 @@ In this task you will create a Traffic Manager profile that directs user traffic
    ![Picture 19](../media/azn51.png)
 
 1. On **Load balancing | Traffic Manager** page, select **+ Create**.
+
+   ![](../media/azn51-1.png)
 
 1. On the **Create Traffic Manager profile** page, use the information in the table below to create the Traffic Manager profile and then click **Review+Create (5)**
 
@@ -115,12 +131,12 @@ In this task you will create a Traffic Manager profile that directs user traffic
 
 1. Select **Create**. Wait for the deployment to complete.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-   <validation step="8f50a093-d219-4f28-ac78-0e2a6cfe80e1" />
+   <validation step="333aadc8-666f-456e-888e-52ca345debb7" />
 
 ## Task 3: Add Traffic Manager endpoints
 
@@ -170,16 +186,16 @@ In this task, you will add the website in the **<inject key="Region" enableCopy=
 
    ![Picture 21](../media/azn-67.png)    
 
-1. The two new endpoints are displayed in the Traffic Manager profile. Notice that after a few minutes the **Monitoring status (1)** should change to **Online (2)**.
+1. Navigate back to **Endpoints (1)**. The two new endpoints are displayed in the Traffic Manager profile. Notice that after a few minutes the **Monitoring status** should change to **Online (2)**.
 
-      ![Picture 22](../media/azn68.png)
+      ![Picture 22](../media/azn68-1.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-   <validation step="6fcd3b3d-6682-4570-92f1-f68e4293e235" />
+   <validation step="ecc8a93e-6f61-41d8-99ab-214a855c04d6" />
 
 ## Task 4: Test the Traffic Manager profile
 
@@ -201,11 +217,11 @@ In this task, you will check the DNS name of your Traffic Manager profile, and t
 
    ![Picture 24](../media/M0406.5.png)
 
-    >**Note**: If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page.
-
-     ![Picture 24](../media/azn71.png)    
-    
-     - Then select **Enable profile**. Then refresh the webpage.
+   >**Note**: If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page.
+   >
+   >  ![Picture 24](../media/azn71.png)    
+   >
+   >  Then select **Enable profile**. Then refresh the webpage.
    
 1. Currently all traffic is being sent to the primary endpoint as you set its **Priority** to **1**.
 
@@ -232,12 +248,12 @@ In this task, you will check the DNS name of your Traffic Manager profile, and t
 1. The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it 
    will take a few minutes before the resource groups are actually removed.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-   <validation step="4569e3b9-efe7-43e2-b594-d77bb1d8fd11" />
+   <validation step="20dd3dc3-fd2c-4271-8cb3-6f7fb5223caf" />
 
 ## Key takeaways
 
@@ -247,7 +263,9 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + You can nest Traffic Manager profiles to combine the benefits of more than one traffic-routing method. Nested profiles allow you to override the default Traffic Manager behavior to support larger and more complex application deployments.
 
 ## Review
+
 In this lab, you have completed:
+
 + Created the web apps
 + Created a Traffic Manager profile
 + Added Traffic Manager endpoints
