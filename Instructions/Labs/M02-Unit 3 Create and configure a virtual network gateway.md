@@ -64,10 +64,10 @@ In this task, you'll create CoreServicesVnet and ManufacturingVnet, you set up t
    
    ![](../media/l2-u1-1.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="847c0c62-8090-4d24-a8f1-cb650792ef71" /> 
 
@@ -91,13 +91,13 @@ In this task, you'll create CoreServicesVM, you will create the CoreServicesVM v
    
       ```powershell
       $RGName = "ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>"
-      
+
       New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile CoreServicesVMazuredeploy.json -TemplateParameterFile CoreServicesVMazuredeploy.parameters.json
       ``` 
 
       ![](../media/l2-u1-2.png)
 
-      >**Note:** You will be prompted to provide an Admin password, enter **Pa55w.rd!!**
+      >**Note:** You will be prompted to provide an Admin password, type and enter **Pa55w.rd!!**
    
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines**.
 
@@ -105,12 +105,12 @@ In this task, you'll create CoreServicesVM, you will create the CoreServicesVM v
 
     ![](../media/l2-u1-3.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-     <validation step="43d0668a-f35c-4b21-85ae-b7a6666b7b64" />
+  <validation step="43d0668a-f35c-4b21-85ae-b7a6666b7b64" />
 
 ## Task 3: Create ManufacturingVM
 
@@ -146,12 +146,12 @@ In this task, you'll create ManufacturingVM, you will create the ManufacturingVM
 
    ![](../media/l2-u1-5.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-     <validation step="8cbd870c-21af-498b-a7e2-3cbded97cf32" />
+  <validation step="8cbd870c-21af-498b-a7e2-3cbded97cf32" />
 
 ## Task 4: Connect to the Test VMs using RDP
 
@@ -193,7 +193,11 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
 1. Click on **Yes** to access the VM. 
 
-1. On the Azure Portal home page, select **Virtual Machines**.
+1. Inside the VM, in **Networks**, select **Yes**.
+
+    ![](../media/lab02-az700-ima9.png)
+
+1. Now, navigate back to Azure Portal home page, select **Virtual Machines**.
 
     ![](../media/pwershelloo4.png)
 
@@ -231,7 +235,9 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
 1. Note the IPv4 address. 
 
- ## Task 5: Test the connection between the VMs
+    ![](../media/copy-ipv4-address.png)
+
+## Task 5: Test the connection between the VMs
 
 1. On the **ManufacturingVM**, open PowerShell.
 
@@ -259,23 +265,23 @@ In this task you'll create CoreServicesVnet Gateway, you will create the CoreSer
 
 1. Use the information in the following table to create the virtual network gateway:
 
-   | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
-   | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
-   | Basics          | Project Details   | Subscription                                |**No changes required (1)**        |
+   | **Tab**         | **Section**       | **Option**                                  | **Value**                           |
+   | --------------- | ----------------- | ------------------------------------------- | ----------------------------------- |
+   | Basics          | Project Details   | Subscription                                |**No changes required (1)**          |
    |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)**    |
    |                 | Instance Details  | Name                                        | **CoreServicesVnetGateway (3)**     |
-   |                 |                   | Region                                      | **East US (4)**                      |
-   |                 |                   | Gateway type                                | **VPN (5)**                          |
-   |                 |                   | SKU                                         | **VpnGw1 (6)**                       |
+   |                 |                   | Region                                      | **East US (4)**                     |
+   |                 |                   | Gateway type                                | **VPN (5)**                         |
+   |                 |                   | SKU                                         | **VpnGw1AZ (6)**                    |
    |                 |                   | Generation                                  | **Generation1 (7)**                 |
    |                 |                   | Virtual network                             | **CoreServicesVnet (8)**            |
-   |                 |                   | Subnet                                      | **GatewaySubnet (10.20.0.0/27) (9)** |
-   |                 | Public IP address | Public IP address                           | **Create new (10)**                  |
-   |                 |                   | Public IP address name                      | **CoreServicesVnetGateway-ip (11)**   |
-   |                 |                   | Public IP address type                      | **Standard**                    |
-   |                 |                   | Enable active-active mode                   | **Disabled (12)**                     |
-   |                 |                   | Configure BGP                               | **Disabled (13)**                    |                   |
-   |                 |                   | Enable Key Vault Access                        | **Disabled (14)**                    |
+   |                 |                   | Subnet                                      | **GatewaySubnet (10.20.0.0/27) (9)**|
+   |                 | Public IP address | Public IP address                           | **Create new (10)**                 |
+   |                 |                   | Public IP address name                      | **CoreServicesVnetGateway-ip (11)** |
+   |                 |                   | Public IP address type                      | **Standard**                        |
+   |                 |                   | Enable active-active mode                   | **Disabled (12)**                   |
+   |                 |                   | Configure BGP                               | **Disabled (13)**                   |
+   |                 |                   | Enable Key Vault Access                     | **Disabled (14)**                   |
 
    ![](../media/l2-u1-10.png)
    ![](../media/l2-u1-11.png)
@@ -284,10 +290,10 @@ In this task you'll create CoreServicesVnet Gateway, you will create the CoreSer
 
 1. It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="07197cc4-bdd3-415f-871c-4f6e1b00dea7" />
 
@@ -320,38 +326,40 @@ In this task, you'll create ManufacturingVnet Gateway, you will create a Manufac
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateways**, and then select **Virtual network gateways** from the results.
 
+   ![](../media/8.png)
+
 1. In Virtual network gateways, select **+ Create**.
 
 1. Use the information in the following table to create the virtual network gateway:
 
    >**Important**: First select **Region** on the basics tab and specify the following.
 
-   | **Tab**         | **Section**       | **Option**                                  | **Value**                    |
-   | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
-   | Basics          | Project Details   | Subscription                                | No changes required          |
+   | **Tab**         | **Section**       | **Option**                                  | **Value**                        |
+   | --------------- | ----------------- | ------------------------------------------- | -------------------------------- |
+   | Basics          | Project Details   | Subscription                                | No changes required              |
    |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
-   |                 | Instance Details  | Name                                        | ManufacturingVnetGateway     |
-   |                 |                   | Region                                      | North Europe                 |
-   |                 |                   | Gateway type                                | VPN                          |
-   |                 |                   | SKU                                         | VpnGw1                       |
-   |                 |                   | Generation                                  | Generation1                  |
-   |                 |                   | Virtual network                             | ManufacturingVnet            |
-   |                 |                   | Subnet                                      | 10.30.0.0/27                 |
-   |                 | Public IP address | Public IP address                           | Create new                   |
-   |                 |                   | Public IP address name                      | ManufacturingVnetGateway-ip  |
-   |                 |                   | Public IP Address Type                      | Standard                     |
-   |                 |                   | Enable active-active mode                   | Disabled                     |
-   |                 |                   | Configure BGP                               | Disabled                     |
-  
+   |                 | Instance Details  | Name                                        | **ManufacturingVnetGateway**     |
+   |                 |                   | Region                                      | **North Europe**                 |
+   |                 |                   | Gateway type                                | **VPN**                          |
+   |                 |                   | SKU                                         | **VpnGw1AZ**                     |
+   |                 |                   | Generation                                  | **Generation1**                  |
+   |                 |                   | Virtual network                             | **ManufacturingVnet**            |
+   |                 |                   | Subnet                                      | **10.30.0.0/27**                 |
+   |                 | Public IP address | Public IP address                           | **Create new**                   |
+   |                 |                   | Public IP address name                      | **ManufacturingVnetGateway-ip**  |
+   |                 |                   | Public IP Address Type                      | **Standard**                     |
+   |                 |                   | Enable active-active mode                   | **Disabled**                     |
+   |                 |                   | Configure BGP                               | **Disabled**                     |
+   |                 |                   | Enable Key Vault Access                     | **Disabled**                     |
 
 1.  Select **Review + create** and **Create**.
 
     >**Note:** Please wait until deployment gets success it can take up to 45 minutes to create a virtual network gateway. 
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="c5a08b41-af13-48c5-8abc-8a4e540ae643" />
 
@@ -465,10 +473,10 @@ In this task, you'll verify that the connections connect and you'll confirm the 
 
    >**Note:** It may take upto 30 minutes for the status of the two connections that was just established/created.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="638b26e2-d9a3-4d7a-ba0c-cf391847ec0b" />
 
