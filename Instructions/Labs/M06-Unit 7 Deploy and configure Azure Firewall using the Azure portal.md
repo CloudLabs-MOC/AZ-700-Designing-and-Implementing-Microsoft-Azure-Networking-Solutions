@@ -417,7 +417,7 @@ In this task, you will configure the Srv-Work server's primary and secondary DNS
 
        ![](../media/azz31.png)
 
-1. Navigate back to the **Srv-Work** virtual machine. Restart the **Srv-Work** virtual machine.
+1. Navigate back to the **Srv-Work** virtual machine. Restart the **Srv-Work** virtual machine and click **Yes** to confirm.
 
      ![](../media/azz32.png)
 
