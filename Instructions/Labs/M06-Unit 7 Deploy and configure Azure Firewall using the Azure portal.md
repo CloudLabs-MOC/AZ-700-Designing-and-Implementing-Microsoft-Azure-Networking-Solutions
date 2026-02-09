@@ -18,7 +18,7 @@ In this lab, you will complete the following tasks:
 + Task 8: Change the primary and secondary DNS address for the server's network interface
 + Task 9: Test the firewall
 
-## Estimated time: 60 minutes
+## Estimated time: 60 Minutes
 
 ## Architecture diagram
 
@@ -28,8 +28,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a virtual network in Azure and configure two subnets: one for the Azure Firewall and another for the workload server.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network(1)**, and then select **Virtual 
-   network(2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network (1)**, and then select **Virtual network (2)** under services.
 
     ![](../media/azv20.png)
 
@@ -93,7 +92,7 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. On the Azure portal, select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-      ![](../media/unit6-image1.png)
+      ![](../media/lab7-02-1.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
 
@@ -119,7 +118,7 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**.
 
-      ![](../media/pwershell2.png)
+      ![](../media/lab7-02-2.png)
 
 1. Navigate to `C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M06` **(1)**, then upload the following files **firewall.json** and **firewall.parameters.json** files **(2)** and then **Open (3)**.
 
@@ -133,9 +132,9 @@ In this task, you will create the workload virtual machine and place it in the W
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile firewall.json -TemplateParameterFile firewall.parameters.json
    ```
 
-    ![](../media/azz9.png)   
+    ![](../media/lab7-02-3.png)   
 
-     >**Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
+     >**Note:** You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
 
 1. When the deployment is complete, go to the Azure portal home page, then search **Virtual Machines (1)** and select **Virtual Machines (2)**.
 
@@ -143,9 +142,9 @@ In this task, you will create the workload virtual machine and place it in the W
 
 1. Verify that the virtual machine has been created.
 
-1. Select **Srv-Work** virtual machine.
+1. On **Compute infrastructure | Virtual machines** page, select **Srv-Work** virtual machine.
 
-     ![](../media/unit74.png)
+     ![](../media/lab7-02-4.png)
 
 1. On the **Overview** page of **Srv-Work**, within the left navigation pane, under the **Networking** section, select **Network settings (1)** and make a note of the **Private IP address (2)** for this VM (e.g., **10.0.2.4**) you may need this in next coming tasks.
 
@@ -179,14 +178,14 @@ In this task, you will deploy the firewall into the virtual network with a firew
     | **Enable Firewall Management NIC**              | **Unselected (11)** (Once you disable, please add the Public Ip again that is mentioned in the above step)                                                   |
     |||
 
-    ![](../media/l6u7-4.png)    
-    ![](../media/azz12.png)
+    ![](../media/lab7-02-5.png)    
+    ![](../media/lab7-02-6.png)
 
-1. Click on **Review+create**.    
+1. Click on **Review + create**.    
 
 1. Select **Create** and wait for the firewall deployment to complete.
 
-    ![](../media/azz13.png)
+    ![](../media/lab7-02-7.png)
 
 1. When deployment of the firewall is completed, select **Go to resource**.
 
@@ -224,11 +223,11 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
     | ------------------------ | ------------------------ |
     | Subscription             | Select your subscription **(1)** |
     | Resource group           | **Test-FW-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**  |
-    | Region                   | **<inject key="Region" enableCopy="false"/> (3)** |
-    | Name                     | **Firewall-route (4)**       |
-    | Propagate gateway routes | **Yes (5)**                  |
+    | Name                     | **Firewall-route (3)**       |
+    | Propagate gateway routes | **Yes (4)**                  |
+    | Region                   | **<inject key="Region" enableCopy="false"/> (5)** |
  
-     ![](../media/unit76.png)
+     ![](../media/lab7-02-8.png)
 
 1. Select **Review + create**.
 
@@ -288,11 +287,11 @@ In this task, you will add an application rule that allows outbound access to ww
 
 1. In the list of resources, select your firewall policy, **fw-test-pol**.
 
-     ![](../media/azz23.png)
+     ![](../media/lab7-02-9.png)
 
 1. From the left navigation menu, under **Rules** section, select **Application Rules (1)** and then select **+ Add a rule collection (2)**.
 
-     ![](../media/azz24.png)
+     ![](../media/lab7-02-10.png)
 
 1. On the **Add a rule collection** page, create a new application rule using the information in the table below, and select **Add (12)**.
 
@@ -326,7 +325,7 @@ In this task, you will add a network rule that allows outbound access to two IP 
 
 1. On the **fw-test-pol** page, from the left navigation menu, under **Rules** section, select **Network Rules (1)** and then select **+ Add a rule collection (2)**.
 
-     ![](../media/azz27.png)
+     ![](../media/lab7-02-11.png)
 
 1. On the **Add a rule collection** page, create a new network rule using the information in the table below, and select **Add (13)**.
 
@@ -361,7 +360,7 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
 
 1. On the **fw-test-pol** page, from the left navigation menu, under **Rules** section, select **DNAT Rules (1)** and select **+ Add a rule collection (2)**.
 
-     ![](../media/azz28.png)
+     ![](../media/lab7-02-12.png)
 
 1. On the **Add a rule collection** page, create a new DNAT rule using the information in the table below.
 
@@ -379,7 +378,7 @@ In this task, you will add a DNAT rule that allows you to connect a remote deskt
       | Destination Ports     | **3389**                                                     |
       | Destination           | Enter the firewall public IP address from **fw-pip** that you noted earlier.<br />(For e.g. - 20.90.136.51) |
       | Translated type       | **IP Address**                                                     |
-      | Translated address or    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />For e.g. - 10.0.2.4 |
+      | Translated address or    | Enter the private IP address from **Srv-Work** that you noted earlier.<br />For e.g. - 10.0.3.4 |
       | Translated port       | **3389 (6)**                                                     |
 
       ![Add a DNAT rule collection](../media/add-a-dnat-rule1.png)
@@ -418,7 +417,7 @@ In this task, you will configure the Srv-Work server's primary and secondary DNS
 
        ![](../media/azz31.png)
 
-1. Navigate back to the **Srv-Work** virtual machine. Restart the **Srv-Work** virtual machine.
+1. Navigate back to the **Srv-Work** virtual machine. Restart the **Srv-Work** virtual machine and click **Yes** to confirm.
 
      ![](../media/azz32.png)
 
@@ -441,19 +440,23 @@ In this task, you will test the firewall to verify that the rules are configured
 
      ![Add a network rule collection](../media/azz34.png)
 
-1. Select **More choices**.
+1. Select **More choices (1)**.
 
-1. Select **Use a different account**.
+1. Select **Use a different account (2)**.
 
 1. On the **Enter your credentials** dialog box, log into the **Srv-Work** server virtual machine, 
 
-     - On the **Username** box, enter **.\TestUser**
-     - Enter Password as `Pa55w.rd!!`
-     - Select **OK**.
+     - On the **Username** box, enter **.\TestUser (3)**
+     - Enter Password as `Pa55w.rd!!` **(4)**
+     - Select **OK (5)**.
+
+      ![](../media/lab7-02-13.png)
 
 1. Select **Yes** on the certificate message.
 
 1. Open Internet Explorer and browse to **https://www.google.com**
+
+     >**Note:** Wait for the Remote Desktop session and **Server Manager** to load. Close Server Manager. 
 
 1. On the **Security Alert** dialog box, select **OK**.
 
