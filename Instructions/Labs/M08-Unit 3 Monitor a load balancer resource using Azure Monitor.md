@@ -167,11 +167,13 @@ In this task, you will create a backend address pool for the internal load balan
 
    | **Setting**     | **Value**            |
    | --------------- | -------------------- |
-   | Name            | **myBackendPool**    |
-   | Virtual network | **IntLB-VNet**       |
-   | Backend Pool Configuration   | **NIC** |
+   | Name            | **myBackendPool (1)**    |
+   | Virtual network | **IntLB-VNet (2)**       |
+   | Backend Pool Configuration   | **NIC (3)** |
 
-1. Select **Save**.
+1. Select **Save (4)**.
+
+   ![](../media/i4.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
