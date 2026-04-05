@@ -137,7 +137,7 @@ In this task, you will create an internal Standard SKU load balancer. The reason
 
 1. Select **Save (5)**.
 
-   ![virtual network](../media/lab02-az700-ima55.png)
+   ![virtual network](../media/i3.png)
 
 1. Select **Review + create**.
    
