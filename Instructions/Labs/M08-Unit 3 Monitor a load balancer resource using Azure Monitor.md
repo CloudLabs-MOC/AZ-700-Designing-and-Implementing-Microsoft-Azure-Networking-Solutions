@@ -371,7 +371,7 @@ In this task, you will create a test VM, and then test the load balancer.
    | Region               |  **<inject key="Region" enableCopy="false"/>**                            |
    | Availability options | **No infrastructure redundancy required**    |
    | Security type | **Standard**    |
-   | Image                | Select **configure VM generation**, select Generation 1, select Apply. Now, select **Windows Server 2025 Datacenter - x64 Gen 1**   |
+   | Image                |  Select **Windows Server 2025 Datacenter - x64 Gen 2**, select **configure VM generation**, select `Generation 1`, select **Apply**.   |
    | Size                 | **Standard_DS2_v3 - 2 vcpu, 8 GiB memory** |
    | Username             | **TestUser**                                 |
    | Password             | **Provide a secure password**                |
