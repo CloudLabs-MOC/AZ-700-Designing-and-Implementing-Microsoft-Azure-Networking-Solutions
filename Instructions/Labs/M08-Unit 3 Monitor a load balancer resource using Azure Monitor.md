@@ -275,6 +275,7 @@ In this task, you will create three VMs for the backend pool of the load balance
      
    > **Note:** This will take several minutes to deploy and and you will be prompted to provide password for three times for 
     each VM deployment. When deployment completed, close the powershell.
+   
    > **Note:** If you encounter any **VMExtensionProvisioningError** for VM 1, please ignore it and proceed with providing the password for VM 2 and VM 3.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
