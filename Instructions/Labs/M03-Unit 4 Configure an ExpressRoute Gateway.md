@@ -87,7 +87,7 @@ In this task, you will create the virtual network gateway, you're setting up an 
    | **Setting**               | **Value**                  |
    | ------------------------- | -------------------------- |
    | **Project details**       |                            |
-   | Resource Group            | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** (Auto-selected)     |
+   | Resource Group            | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>** (Auto-selected after selecting the Virtual network)     |
    | **Instance details**      |                            |
    | Name                      | CoreServicesVnetGateway  **(1)**  |
    | Region                    | East US **(2)**                   |
