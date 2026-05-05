@@ -35,9 +35,9 @@ In this task, you'll create a Private DNS Zone in Azure. This involves setting u
    | Basics          | Resource group                         | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (1)** |
    |                 | Name                                   | **Contoso.com (2)**      | 
 
-1. Select **Review create (3)** and **create**
+1. Select **Review + create (3)** and **Create**.
 
-    ![](../media/l1-u6-2.png)
+    ![](../media/mod1.6-t1p1.png)
 
    >**Note:** Please Wait until the deployment is completed, and then select **Go to resource**.
 
@@ -97,21 +97,21 @@ In this task, you'll be creating two test virtual machines (VMs) to test the Pri
 
      ![](../media/pwershell4.png)
    
-1. Please make sure you have selected your resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**.
+1. Please make sure you have selected your default **Subscription (1)** and then select the resource group **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-1. Select the Region **<inject key="Region" enableCopy="false"/>**.
+1. Select the Region **<inject key="Region" enableCopy="false"/> (3)**.
 
-1. Enter **blob<inject key="DeploymentID" enableCopy="false"/>** For the **Storage account name**.
+1. Enter **blob<inject key="DeploymentID" enableCopy="false"/> (4)** For the **Storage account name**.
 
-1. Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** For the  **File share** , then click on **Create**.
+1. Enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (5)** For the  **File share** , then click on **Create (6)**.
 
-      ![](../media/pwershell5.png)
+      ![](../media/mod1.6-t1p2.png)
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**.
 
-      ![](../media/pwershell2.png)
+      ![](../media/mod1.6-t1p3.png)
 
-1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01**.
+1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **`C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01`**
 
 1. Deploy the following ARM templates to create the VMs needed for this exercise:
 
@@ -148,7 +148,7 @@ In this task, you'll verify that the DNS records for the virtual machines (VMs) 
 
 1. Click on **Recordsets** under **DNS Management** and Verify that host (A) records are listed for both VMs, as shown:
 
-   ![](../media/unit6-image-5.png)
+   ![](../media/mod1.6-t1p4.png)
 
 1. Make a note of the names and IP addresses of the VMs.
 
