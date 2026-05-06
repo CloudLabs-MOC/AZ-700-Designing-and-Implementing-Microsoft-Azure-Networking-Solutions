@@ -25,7 +25,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create two instances of a web application deployed in the two different Azure regions.
 
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp (1)**, and then select **App Services (2)** under services.
+1. On any Azure Portal page, in **Search resources, services and docs** box at the top of the portal, enter **WebApp (1)**, and then select **App Services (2)** under services.
 
    ![Web App](../media/azn50.png)
 
@@ -86,12 +86,13 @@ In this task, you will create two instances of a web application deployed in the
    | Name           | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (2)**   |
    | Region         | **West Europe (3)**                                              |
    | Windows Plan   | Select **Create  new (1)**, provide Name: **ContosoAppServicePlanWestEurope (2)** and click on **OK (3)** |
+   | Pricing Plan     | **Standard S1 100 total ACU, 1.75-GB  memory** 
 
    ![Web App](../media/azn56.png)
 
-   ![Web App](../media/azn53-1.png)         
+   ![Web App](../media/azn53-1.png)       
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **App Services (1)**, and then select **App Services (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs** box at the top of the portal, enter **App Services (1)**, and then select **App Services (2)** under services.
 
    ![Picture 19](../media/azn60.png)
 
@@ -110,7 +111,7 @@ In this task, you will create two instances of a web application deployed in the
 
 In this task you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles (1)**, and then select **Traffic Manager profiles (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs** box at the top of the portal, enter **Traffic Manager profiles (1)**, and then select **Traffic Manager profiles (2)** under services.
 
    ![Picture 19](../media/azn51.png)
 
@@ -142,7 +143,7 @@ In this task you will create a Traffic Manager profile that directs user traffic
 
 In this task, you will add the website in the **<inject key="Region" enableCopy="false"/>** as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles (1)**, and then select **Traffic Manager profiles (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs** box at the top of the portal, enter **Traffic Manager profiles (1)**, and then select **Traffic Manager profiles (2)** under services.
 
     ![Picture 19](../media/azn51.png)
 
