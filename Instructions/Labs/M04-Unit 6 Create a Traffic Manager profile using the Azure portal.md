@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 + Task 3: Add Traffic Manager endpoints
 + Task 4: Test the Traffic Manager profile
 
-## Estimated time: 50 minutes
+## Estimated time: 50 Minutes
 
 ## Architecture diagram
 
@@ -25,7 +25,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create two instances of a web application deployed in the two different Azure regions.
 
-1. On any Azure Portal page, in **Search resources, services and docs** box at the top of the portal, enter **WebApp (1)**, and then select **App Services (2)** under services.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **WebApp (1)**, and then select **App Services (2)** under services.
 
    ![Web App](../media/azn50.png)
 
@@ -74,9 +74,9 @@ In this task, you will create two instances of a web application deployed in the
 
    ![Web app](../media/azn55-1.png)
 
-    >**Note**: We are currently encountering an issue while deploying the web app in East US. If you face the same issue, kindly change the region to another, then deploy the web app and proceed with the next step.
+    >**Note:** We are currently encountering an issue while deploying the web app in East US. If you face the same issue, kindly change the region to another, then deploy the web app and proceed with the next step.
     
-    >**Note**: **If you encounter a quota issue while deploying a Standard SKU-based Web App, try switching to a different region.**
+    >**Note:** **If you encounter a quota issue while deploying a Standard SKU-based Web App, try switching to a different region.**
     
 1. Repeat steps `1-6` above to create a second web app. Use the same settings as before except for the information in the table below. 
 
@@ -92,7 +92,7 @@ In this task, you will create two instances of a web application deployed in the
 
    ![Web App](../media/azn53-1.png)       
 
-1. On Azure Portal page, in **Search resources, services and docs** box at the top of the portal, enter **App Services (1)**, and then select **App Services (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **App Services (1)**, and then select **App Services (2)** under services.
 
    ![Picture 19](../media/azn60.png)
 
@@ -111,7 +111,7 @@ In this task, you will create two instances of a web application deployed in the
 
 In this task you will create a Traffic Manager profile that directs user traffic based on endpoint priority.
 
-1. On Azure Portal page, in **Search resources, services and docs** box at the top of the portal, enter **Traffic Manager profiles (1)**, and then select **Traffic Manager profiles (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles (1)**, and then select **Traffic Manager profiles (2)** under services.
 
    ![Picture 19](../media/azn51.png)
 
@@ -143,7 +143,7 @@ In this task you will create a Traffic Manager profile that directs user traffic
 
 In this task, you will add the website in the **<inject key="Region" enableCopy="false"/>** as the primary endpoint to route all the user traffic. You will then add the website in West Europe as a failover endpoint. If the primary endpoint becomes unavailable, then traffic will automatically be routed to the failover endpoint.
 
-1. On Azure Portal page, in **Search resources, services and docs** box at the top of the portal, enter **Traffic Manager profiles (1)**, and then select **Traffic Manager profiles (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Traffic Manager profiles (1)**, and then select **Traffic Manager profiles (2)** under services.
 
     ![Picture 19](../media/azn51.png)
 
@@ -218,7 +218,7 @@ In this task, you will check the DNS name of your Traffic Manager profile, and t
 
    ![Picture 24](../media/M0406.5.png)
 
-   >**Note**: If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page.
+   >**Note:** If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page.
    >
    >  ![Picture 24](../media/azn71.png)    
    >

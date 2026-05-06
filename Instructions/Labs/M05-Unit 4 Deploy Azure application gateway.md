@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 + Task 3: Add backend servers to backend pool
 + Task 4: Test the application gateway
 
-## Estimated time: 25 minutes
+## Estimated time: 25 Minutes
 
 ## Architecture diagram
 
@@ -85,6 +85,8 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
 
 1. On the **Routing rules** column, select **+ Add a routing rule**.
 
+   ![](../media/IMG3.png)
+
 1. On **Add a routing rule** window, enter or select the following information:
 
     | **Setting**   | **Value**         |
@@ -125,21 +127,27 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
 
 1. Accept the default values for the other settings in the **Add a Backend Setting** window, then select **Add** to return to **Add a routing rule**.
 
+   ![Azure Portal search for application gateway](../media/IMG45.png)
+
 1. Select **Add** to save the routing rule and return to the **Configuration** tab.
 
 1. Select **Next: Tags** and then **Next: Review + create**.
 
-1. Review the settings on the **Review + create** tab
+1. Review the settings on the **Review + create** tab, click on **Create** to create the virtual network, the public IP address, and the application gateway.
 
-1. Select **Create** to create the virtual network, the public IP address, and the application gateway.
+   ![Azure Portal search for application gateway](../media/IMG6.png)
 
-    > **Note**:  It may take 5 minutes for Azure to create the application gateway. Wait until the deployment finishes successfully before moving on to the next section.
+    > **Note:** It may take 5 minutes for Azure to create the application gateway. Wait until the deployment finishes successfully before moving on to the next section.
    
-1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks**, and then select **Virtual 
-   networks** from the results.
+1. On any Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks (1)**, and then select **Virtual 
+   networks (2)** from the results.
 
+   ![Azure Portal search for application gateway](../media/IMG7.png)
+   
 1. On the Virtual networks page select **ContosoVNet**. 
- 
+   
+   ![Azure Portal search for application gateway](../media/IMG8.png)
+
 1. On the ContosoVNet page from left side menu under the Settings section, click on **Subnets (1)**. select **+ Subnet (2)**. On Add subnet page fill the follwing details(leave other field as default) and click on **Add (6)**.
 
     | **Setting**           | **Value**   |
@@ -238,7 +246,7 @@ In this task, you will add two virtual machines to the backend pool of your Appl
 
     ![Azure Portal search for application gateway](../media/a7z4.png)  
 
-    **Note**: Wait for the deployment to complete before proceeding to the next step.
+    **Note:** Wait for the deployment to complete before proceeding to the next step.
 
 1. Check to ensure the backend servers are healthy. Select **Monitoring** and then **Backend Health**. Both targets should be healthy. 
 
