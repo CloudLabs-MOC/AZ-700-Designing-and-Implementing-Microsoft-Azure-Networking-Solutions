@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 + Task 3: Add Traffic Manager endpoints
 + Task 4: Test the Traffic Manager profile
 
-## Estimated time: 50 minutes
+## Estimated time: 50 Minutes
 
 ## Architecture diagram
 
@@ -74,9 +74,9 @@ In this task, you will create two instances of a web application deployed in the
 
    ![Web app](../media/azn55-1.png)
 
-    >**Note**: We are currently encountering an issue while deploying the web app in East US. If you face the same issue, kindly change the region to another, then deploy the web app and proceed with the next step.
+    >**Note:** We are currently encountering an issue while deploying the web app in East US. If you face the same issue, kindly change the region to another, then deploy the web app and proceed with the next step.
     
-    >**Note**: **If you encounter a quota issue while deploying a Standard SKU-based Web App, try switching to a different region.**
+    >**Note:** **If you encounter a quota issue while deploying a Standard SKU-based Web App, try switching to a different region.**
     
 1. Repeat steps `1-6` above to create a second web app. Use the same settings as before except for the information in the table below. 
 
@@ -86,10 +86,11 @@ In this task, you will create two instances of a web application deployed in the
    | Name           | **ContosoWebAppWestEurope<inject key="DeploymentID" enableCopy="false"/> (2)**   |
    | Region         | **West Europe (3)**                                              |
    | Windows Plan   | Select **Create  new (1)**, provide Name: **ContosoAppServicePlanWestEurope (2)** and click on **OK (3)** |
+   | Pricing Plan     | **Standard S1 100 total ACU, 1.75-GB  memory** 
 
    ![Web App](../media/azn56.png)
 
-   ![Web App](../media/azn53-1.png)         
+   ![Web App](../media/azn53-1.png)       
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **App Services (1)**, and then select **App Services (2)** under services.
 
@@ -217,7 +218,7 @@ In this task, you will check the DNS name of your Traffic Manager profile, and t
 
    ![Picture 24](../media/M0406.5.png)
 
-   >**Note**: If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page.
+   >**Note:** If you get **404 Web Site not found** message, **Disable profile** from **Contoso-TMProfile<inject key="DeploymentID" enableCopy="false"/>** Traffic Manager profile overview page.
    >
    >  ![Picture 24](../media/azn71.png)    
    >
