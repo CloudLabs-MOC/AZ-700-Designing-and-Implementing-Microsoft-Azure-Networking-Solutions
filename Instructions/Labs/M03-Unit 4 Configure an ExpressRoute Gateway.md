@@ -37,13 +37,13 @@ In this task, you will create the VNet and gateway subnet, you are setting up a 
    | Virtual network name | CoreServicesVNet                 |
    | Region               | East US                          |
 
-1. To add IPv4 address space, on the **IP Addresses (1)** tab, perform the following sub-steps:
+1. To add IPv4 address space, on the **Addresses space (1)** tab, perform the following sub-steps:
       - Click on **Add IPv4 address space (2)** in new address space box.
       - Enter **10.20.0.0 (3)** in address space field.
       - Enter **/16 (4)** in size filed.
       - Then click on the **+ Add a subnet (5)** button.
 
-         ![Azure portal - add gateway subnet](../media/lab02-az700-ima22.png)
+         ![Azure portal - add gateway subnet](../media/pd36.png)
 
 1. In the **Add a subnet** pane, use the information in the following table to create the subnet and then click on **Add (6)**.
 
