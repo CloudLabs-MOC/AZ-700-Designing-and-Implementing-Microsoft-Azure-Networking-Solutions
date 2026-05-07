@@ -35,26 +35,38 @@ In this task, you will create the two spoke virtual networks each containing a s
 
 1. Select **+ Create**.
 
-1. In **Resource group** select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/>** .
+1. On the **Create virtual network** page, provide the following details to create the Virtual network.
 
-1. In **Virtual network name**, enter **Spoke-01**.
+    - Subscription: Leave the default one **(1)**
 
-1. In **Region**, select **<inject key="Region" enableCopy="false"/>**.
+    - In **Resource group** select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/> (2)**
 
-1. Select **Next**.
+    - In **Virtual network name**, enter **Spoke-01 (3)**
+
+    - In **Region**, select **<inject key="Region" enableCopy="false"/> (4)**
+
+    - Select **Next (5)**
+
+      ![virtual network](../media/pd37.png) 
 
 1. Keep the options as default in Security page, select **Next**.
 
 1. In **IPv4 address space**, replace the existing IPv4 address space with this **10.0.0.0/16**.
 
-    ![virtual network](../media/lab02-az700-ima35.png)   
+    ![virtual network](../media/pd37.png)   
 
     >**Note:** Delete any other address spaces listed here, such as 10.1.0.0/16.
 
-1. Under Subnets name, click on **Edit (1)** icon. In the **Edit subnet** dialog box, change the name to **Workload-01-SN (2)**. Change the **Starting address** to 
-   **10.0.1.0 (3)**. Select Subnet size : **/24(256 addresses) (4)**. Then click on  **Save (5)**.
+1. Under Subnets name,
 
-     ![virtual network](../media/lab02-az700-ima36.png)
+    - Click on **Edit (1)** icon.
+    - In the **Edit subnet** dialog box, change the name to **Workload-01-SN (2)**
+    - Change the **Starting address** to 
+   **10.0.1.0 (3)**
+    - Select Subnet size : **/24(256 addresses) (4)**
+    - Then click on  **Save (5)**
+
+      ![virtual network](../media/lab02-az700-ima36.png)
     
 1. Select **Review + create**.
 
@@ -92,21 +104,23 @@ In this task you will create your secured virtual hub using Firewall Manager.
 
      ![virtual hub](../media/lab02-az700-ima39.png)
 
-1. For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/> (1)**.
+1. On the **Create new Secured virtual hub** page, 
 
-1. For **Region**, select **<inject key="Region" enableCopy="false"/> (2)**.
+    - For **Resource group**, select **fw-manager-rg-<inject key="DeploymentID" enableCopy="false"/> (1)**.
 
-1. For the **Secured virtual hub name**, enter **Hub-01 (3)**.
+    - For **Region**, select **<inject key="Region" enableCopy="false"/> (2)**.
 
-1. For **Hub address space**, enter **10.2.0.0/16 (4)**.
+    - For the **Secured virtual hub name**, enter **Hub-01 (3)**.
 
-1. Choose **New vWAN (5)**.
+    - For **Hub address space**, enter **10.2.0.0/16 (4)**.
 
-1. In **Virtual WAN Name**, enter **Vwan-01 (6)**.
+    - Choose **New vWAN (5)**.
 
-1. Select **Next : Azure Firewall > (7)**.
+    - In **Virtual WAN Name**, enter **Vwan-01 (6)**.
+
+    - Select **Next : Azure Firewall > (7)**.
     
-    ![Create new secured virtual hub - Basics tab](../media/lab02-az700-ima40.png)
+      ![Create new secured virtual hub - Basics tab](../media/lab02-az700-ima40.png)
 
 1. On **Azure Firewall** tab enter **2** for **Specify number of the Public IP addresses**.
 
