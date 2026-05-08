@@ -16,7 +16,7 @@ In this lab, you will complete the following tasks:
 + Task 8: Test the application rule
 + Task 9: Test the network rule
   
-## Estimated time: 35 Minutes
+## Estimated time: 90 Minutes
 
 ## Architecture Diagram
 
