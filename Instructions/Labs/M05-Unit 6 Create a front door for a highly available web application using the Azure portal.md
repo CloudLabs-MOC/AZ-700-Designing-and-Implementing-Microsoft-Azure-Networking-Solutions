@@ -43,7 +43,7 @@ This task requires two instances of a web application that run in different Azur
    | Operating System | Select **Windows (6)**                                          |
    | Region           | Select **Central US (7)**                                       |
    | Windows Plan     | Select **Create new** and enter **myAppServicePlanCentralUS (8)** in the text box |
-   | Princing Plan    | Select **Standard S1 100 total ACU, 1.75 GB memory (9)**        |
+   | Princing Plan    | Select **Standard S1 100 total ACU, 1.75 GB memory (9)** (select from *Explore pricing plans*)        |
 
    ![Web App](../media/l5-u6-9.png)
 
@@ -68,7 +68,7 @@ This task requires two instances of a web application that run in different Azur
    | Operating System | Select **Windows (6)**                                          |
    | Region           | Select **East US 2 (7)**                                          |
    | Windows Plan     | Select **Create new** and enter **myAppServicePlanEastUS (8)** in the text box. |
-   | Pricing Plan     | Select **Standard S1 100 total ACU, 1.75 GB memory (9)**        |
+   | Pricing Plan     | Select **Standard S1 100 total ACU, 1.75 GB memory (9)** (select from *Explore pricing plans*)        |
    |||
 
    ![Web App](../media/l5-u6-4.png)
@@ -92,7 +92,7 @@ In this task, you will configure Azure Front Door to direct user traffic to the 
 
    ![Web App](../media/azn110.png)
 
-1. On the **Front Door and CDN profiles** page, select **+ Create**.
+1. On the **Load balancing and content delivery | Azure Front Door** page, select **+ Create**.
 
    ![Web App](../media/azn111.png)
 
@@ -114,7 +114,7 @@ In this task, you will configure Azure Front Door to direct user traffic to the 
       | Origin host name        | **WebAppContoso-1-<inject key="DeploymentID" enableCopy="false"/> (7)** |
       |||
 
-1. Select **Review and Create (8)**, and then select **Create**.
+1. Select **Review + create (8)**, and then select **Create**.
 
    ![Web App](../media/l5-u6-5.png)
 
@@ -151,7 +151,7 @@ In this task, you will configure Azure Front Door to direct user traffic to the 
 
 In this task, you will verify that Azure Front Door is working as expected by testing the global failover capabilities. After you create the Front Door, it will take a few minutes for the configuration to propagate across all regions. Once that's done, you'll test the Front Door's ability to direct traffic to the available web app instance.
 
-1. Navigate back to **Front Door and CDN profiles** page, on the Front Door resource in the **Overview (1)** blade, under **Properties (1)** tab locate the endpoint hostname that is created for your endpoint. This should be fdendpoint followed by a hyphen and a random string. For example, **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. **Copy** this FQDN. Copy the endpoint **(3)**.
+1. Navigate back to **Front Door and CDN profiles** page, on the Front Door resource in the **Overview (1)** blade, under **Properties (2)** tab locate the endpoint hostname that is created for your endpoint. This should be fdendpoint followed by a hyphen and a random string. For example, **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. **Copy** this FQDN. Copy the endpoint **(3)**.
 
     ![Web App](../media/azn114.png)
 
@@ -175,13 +175,14 @@ In this task, you will verify that Azure Front Door is working as expected by te
 
 1. Switch back to your browser and select Refresh. You should see the same information page.
 
-    **Note**: There may be a delay while the web app stops. If you get an error page in your browser, refresh the page.
+    >**Note**: There may be a delay while the web app stops. If you get an error page in your browser, refresh the page.
 
 1. Switch back to the Azure Portal, locate the other web app, and stop it.
 
 1. Switch back to your browser and select Refresh. This time, you should see an error message.
 
     ![Web App](../media/l5u6-14.png)
+
     ![Web App](../media/azn117.png)      
 
 Congratulations! You have configured and tested an Azure Front Door.

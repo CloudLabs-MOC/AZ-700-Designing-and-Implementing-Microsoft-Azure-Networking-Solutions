@@ -49,7 +49,7 @@ In this task, you'll create CoreServicesVnet and ManufacturingVnet, you set up t
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**
 
-    ![](../media/pwershell2.png)
+    ![](../media/mod2.3-t1p1.png)
 
 1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
@@ -81,7 +81,7 @@ In this task, you'll create CoreServicesVM, you will create the CoreServicesVM v
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**
 
-    ![](../media/pwershell2.png)
+    ![](../media/mod2.3-t1p1.png)
 
 1. Upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
 
@@ -122,7 +122,7 @@ In this task, you'll create ManufacturingVM, you will create the ManufacturingVM
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**
 
-    ![](../media/pwershell2.png)
+    ![](../media/mod2.3-t1p1.png)
 
 1. Upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**
 
@@ -175,9 +175,9 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
 1. Click on the **Keep** button within the warning pop-up that shows up.
 
-   ![](../media/m2-u3-t4-s5.png)
+   ![](../media/mod2.3-t1p2.png)
 
-     ![](../media/m2-u3-t4-s6-a.png)
+     ![](../media/mod2.3-t1p3.png)
 
 1. Open the **ManufacturingVM.rdp** file that was just downloaded and click on **Connect** when prompted.
 
@@ -189,7 +189,7 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
 1. Connect to ManufacturingTestVM using the RDP file, and enter the username **.\TestUser (1)** and Admin password **Pa55w.rd!! (2)** provided during deployment and then **OK (3)**. After connecting, minimize the RDP session.
 
-    ![](../media/l2-u1-7.png)
+    ![](../media/mod2.3-t1p4.png)
 
 1. Click on **Yes** to access the VM. 
 
@@ -215,9 +215,9 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
 1. Click on the **Keep** button within the warning pop-up that shows up.
 
-   ![](../media/m2-u3-t4-s5.png)
+   ![](../media/mod2.3-t1p5.png)
 
-     ![](../media/m2-u3-t4-s6-a.png)
+     ![](../media/mod2.3-t1p6.png)
 
 1. Open the **CoreServicesVM.rdp** file that was just downloaded and click on **Connect** when prompted.
 
@@ -369,7 +369,7 @@ In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
 
-1. On the **Hybrid Connectivity** page, expand **VPN Gateway**, then select **VPN Gateways**, and choose **CoreServicesVnetGateway**.
+1. On the **Hybrid Connectivity** page, expand **VPN Gateway (1)**, then select **VPN Gateways (2)**, and choose **CoreServicesVnetGateway (3)**.
 
     ![](../media/lab02-az700-ima12.png)
 
@@ -406,9 +406,7 @@ In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set
 
       ![](../media/l2-u1-13.png)
       
-1. On the **Tags** tab, select **Next: Review + create**, then on the **Review + create** tab, review the settings and select **Review + create**.
-
-1. Click **Create** to create the connection.
+1. On the **Tags** tab, select **Next: Review + create >**, then on the **Review + create** tab, review the settings and select **Create**.
    
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
 
@@ -416,7 +414,7 @@ In this task, you'll connect ManufacturingVnet to CoreServicesVnet, you'll estab
 
 1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
 
-1. On the **Hybrid Connectivity** page, expand **VPN Gateway**, then select **VPN Gateways**, and choose **ManufacturingVnetGateway**.
+1. On the **Hybrid Connectivity** page, expand **VPN Gateway (1)**, then select **VPN Gateways (2)**, and choose **ManufacturingVnetGateway (3)**.
 
     ![](../media/lab02-az700-ima17.png)
 
@@ -438,7 +436,7 @@ In this task, you'll connect ManufacturingVnet to CoreServicesVnet, you'll estab
 
     ![](../media/lab02-az700-ima15.png)
    
-1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection then select **Next: Tags> (7)**. 
+1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection then select **Next: Tags > (7)**. 
 
       | **Option**                     | **Value**                         |
       | ------------------------------ | --------------------------------- |
@@ -451,9 +449,7 @@ In this task, you'll connect ManufacturingVnet to CoreServicesVnet, you'll estab
 
       ![](../media/l2-u1-14.png)
       
-1. On the **Tags** tab, select **Next: Review + create**, then on the **Review + create** tab, review the settings and select **Review + create**.
-
-1. Click **Create** to create the connection.
+1. On the **Tags** tab, select **Next: Review + create >**, then on the **Review + create** tab, review the settings and select **Create**.
    
 ## Task 10: Verify that the connections connect 
 

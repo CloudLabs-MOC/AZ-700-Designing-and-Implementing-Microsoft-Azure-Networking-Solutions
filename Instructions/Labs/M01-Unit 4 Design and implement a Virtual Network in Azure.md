@@ -109,7 +109,7 @@ In this task, you'll be setting up a virtual network (VNet) called CoreServicesV
 
       ![](../media/azn4.png)
 
-1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create (1)**.
+1. Verify your configuration passed validation, Go back to virtual network and then again select **+ Create**.
 
     ![](../media/l1-4.png)
  
@@ -219,7 +219,7 @@ In this task, you'll create the ResearchVnet virtual network and its subnet.
 
 In this task, you'll be verifying the creation of the virtual networks (VNets) and subnets. 
 
-1. On the Azure portal home page, from top left corner of page click **Show portal (1)** menu and select **All resources (2)**.
+1. On the Azure portal home page, from top left corner of page click **Show portal menu (1)** and select **All resources (2)**.
 
       ![](../media/azn9.png)
 
@@ -240,6 +240,7 @@ In this task, you'll be verifying the creation of the virtual networks (VNets) a
 1. Repeat steps 3 - 5 and select **ManufacturingVnet**, and **ResearchVnet** Virtual Network to verify the subnets.
 
 ## Key takeaways
+
 + Azure Virtual Network is a service that provides the fundamental building block for your private network in Azure. An instance of the service (a virtual network) enables many types of Azure resources to securely communicate with each other, the internet, and on-premises networks. Ensure nonoverlapping address spaces. Make sure your virtual network address space (CIDR block) doesn't overlap with your organization's other network ranges.
 + All Azure resources in a virtual network are deployed into subnets within the virtual network. Subnets enable you to segment the virtual network into one or more subnetworks and allocate a portion of the virtual network's address space to each subnet. Your subnets shouldn't cover the entire address space of the virtual network. Plan ahead and reserve some address space for the future.
 

@@ -16,7 +16,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/envtab.png)
+![Explore Lab Resources](../media/mod1-6-envtab.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -76,7 +76,9 @@ Please make sure to use the CTRL+SHIFT+V or CTRL+V keys when pasting commands in
 
    ![](../media/mod8-gs-pass(1).png)
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe Later** to skip the tour.
+
+   ![Explore Lab Resources](../media/mod1.6-maybelater.png)
  
 
 ## Support Contact

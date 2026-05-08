@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 + Task 5: Configure the private DNS zone
 + Task 6: Test connectivity to the Private Endpoint
 
-## Estimated time: 45 minutes
+## Estimated time: 45 Minutes
 
 ## Architecture diagram
 
@@ -75,9 +75,9 @@ In this task, you'll create a Private Endpoint for an Azure Web App and deploy a
 
      ![](../media/azv6.png)   
 
-1. On the toolbar of the Cloud Shell pane, select the Select **Manage files** icon, in the drop-down menu, select **Upload**.
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**.
 
-   ![](../media/pwershell2.png)
+   ![](../media/mod2.3-t1p1.png)
 
 1. Navigate to `C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M07` **(1)** then select the following files **template.json** and **parameters.json** **(2)** and then **Open (3)**.
 
@@ -494,11 +494,25 @@ In this task, you will use the virtual machine you created in the previous step 
        Aliases: mywebapp8675.azurewebsites.net 
       ```  
 
-      ![](../media/azv18.png)
+      ![](../media/mod7.6-t6p1.png)
 
 1. A private IP address of **10.0.0.5** is returned for the web app name. This address is in the subnet of the virtual network you created previously.
 
+1. In the bastion connection to **myVM**, open **Internet Explorer (1)** from the task bar.
+1. Enter the url of your web app, **https://webapp<inject key="DeploymentID" enableCopy="false"/>.azurewebsites.net (2)**.
+
+   ![](../media/mod7.6-t6p2.png)
+
+1. If the **Internet Explorer Enhanced Security Configuration** warning window appears, click on **Close** to continue, or optionally click on **Add...** to add the website to the **Trusted sites** zone.
+
+   ![](../media/mod7.6-t6p3.png)
+
+1. You'll receive the default web app page if your application hasn't been deployed:
+  
+   ![](../media/mod7.6-t6p4.png)
+
 1. Close the connection to **myVM**.
+
 
 ## Key takeaways
 

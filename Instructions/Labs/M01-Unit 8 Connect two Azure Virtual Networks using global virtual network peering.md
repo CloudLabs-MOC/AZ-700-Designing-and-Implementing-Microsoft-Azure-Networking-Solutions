@@ -60,7 +60,7 @@ In this task, you will create a test VM on the Manufacturing VNet to test if you
 
 1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)**.
 
-     ![](../media/pwershell2.png)
+     ![](../media/mod1.8-t1p1.png)
    
 1. Navigate to `C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M01` **(1)**, upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** files **(2)** and then **Open (3)**.
 
@@ -113,7 +113,7 @@ In this task, your connecting to the Test VM using RDP.
 
 1. Click on **Open file**.
 
-   ![](../media/azn16.png)
+   ![](../media/mod1.8-t1p2.png)
 
 1. Select **Connect**.
 
@@ -203,7 +203,7 @@ In this task, you'll be creating VNet peering between CoreServicesVnet and Manuf
 
 1. In CoreServicesVnet, under **Settings**, select **Peerings (1)**.
 
-1. On CoreServicesVnet | Peerings, select **+ Add (2)**.
+1. On **CoreServicesVnet | Peerings**, select **+ Add (2)**.
 
     ![](../media/l1-u8-5.png)
 
@@ -228,6 +228,7 @@ In this task, you'll be creating VNet peering between CoreServicesVnet and Manuf
 1. Review your settings and select **Add (9)**. 
 
    ![](../media/l1-u8-6.png)
+
    ![](../media/l1-u8-7.png)
 
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed.
