@@ -132,7 +132,7 @@ In this task, you will create three VMs, that will be in the same availability s
 
    ![](../media/pwershell2.png)
 
-1. Navigate to `C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04` **(1)** then select all 4 files **azuredeploy.json**, **azuredeploy.parameters.vm1.json**, **azuredeploy.parameters.vm2.json** and **azuredeploy.parameters.vm3.json** **(2)** and then **Open (3)**.
+1. Navigate to `C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M04` **(1)** then select all 4 files **azuredeploy.json**, **azuredeploy.parameters.json** and then **Open (3)**.
 
    ![](../media/azn83.png)
 
@@ -141,9 +141,7 @@ In this task, you will create three VMs, that will be in the same availability s
    ```powershell
    $RGName = "IntLB-RG-<inject key="DeploymentID" enableCopy="false"/>"
    
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
  1. Each VM will be deployed sequentially. During the process, you will be prompted to enter the administrator password every time.  So please provide adminPassword: **Pa55w.rd!!**
