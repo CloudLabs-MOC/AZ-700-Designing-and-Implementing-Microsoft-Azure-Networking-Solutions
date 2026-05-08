@@ -12,7 +12,7 @@ In this lab, you will complete the following tasks:
 + Task 2: Retrieve your Service key
 + Task 3: Deprovisioning an ExpressRoute circuit
 
-## Estimated time: 15 minutes
+## Estimated time: 15 Minutes
 
 ## Architecture diagram
 
@@ -47,9 +47,11 @@ In this task, you will create and provision an ExpressRoute circuit, you're sett
    |Billing model|**Metered (11)**|
 
    ![Azure portal - create ExpressRoute circuit menu](../media/azn42.png)
-   ![Azure portal - create ExpressRoute circuit menu](../media/azn-43.png)   
+   ![Azure portal - create ExpressRoute circuit menu](../media/azn43.png)   
 
 1. Confirm that the ExpressRoute configuration passes validation and then select **Create**.
+
+   ![Azure portal - create ExpressRoute circuit menu](../media/azn118.png)
 
    - Port type determines if you are connecting to a service provider or directly into Microsoft's global network at a peering location.
    - Create new or import from classic determines if a new circuit is being created or if you are migrating a classic circuit to Azure Resource Manager.
@@ -96,11 +98,15 @@ In this task, you will retrieve your Service Key, the main objective is to retri
    - Provider status: Not provisioned
    - Circuit status: Enabled
    - The circuit changes to the following state when the connectivity provider is currently enabling it for you:
+
      - Provider status: Provisioning
      - Circuit status: Enabled
+
    - To use the ExpressRoute circuit, it must be in the following state:
+
      - Provider status: Provisioned
      - Circuit status: Enabled
+
    - You should periodically check the provisioning status and the state of the circuit status.
 
 ## Task 3: Deprovisioning an ExpressRoute circuit
@@ -109,8 +115,9 @@ In this task, you will deprovisioning an ExpressRoute circuit, the goal is to de
 
 If the ExpressRoute circuit service provider provisioning state is **Provisioning** or **Provisioned,** you must work with your service provider to deprovision the circuit on their side. Microsoft can continue to reserve resources and bill you until the service provider completes deprovisioning the circuit and notifies us.
 
-> **Note**: You must unlink all virtual networks from the ExpressRoute circuit before deprovisioning. If this operation fails, check whether any virtual networks are linked to the circuit.
-> **Note**: If the service provider has deprovisioned the circuit (the service provider provisioning state is set to Not provisioned), you can delete the circuit. This stops billing for the circuit.
+> **Note:** You must unlink all virtual networks from the ExpressRoute circuit before deprovisioning. If this operation fails, check whether any virtual networks are linked to the circuit.
+
+> **Note:** If the service provider has deprovisioned the circuit (the service provider provisioning state is set to Not provisioned), you can delete the circuit. This stops billing for the circuit.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully completed the task. 

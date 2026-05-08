@@ -34,7 +34,7 @@ In this task, you will create a virtual network in Azure and configure two subne
 
 1. Select **+ Create**.
 
-1. On the Create virtual network of **Basic** tab specify the following information to create Virtual Network and the select **IP addresses (5)**:
+1. On the Create virtual network of **Basic** tab specify the following information to create Virtual Network and the select **Address Space (5):**
 
      |  **Setting**     | **Value**            |
      | ---------------- | ------------------   |
@@ -45,7 +45,7 @@ In this task, you will create a virtual network in Azure and configure two subne
 
      ![](../media/azz1.png)
 
-1. Navigate to the **IP Addresses** tab and enter IPv4 address space **10.0.0.0/16** **(1)** if not already there by default. 
+1. Navigate to the **Address Space** tab and enter IPv4 address space **10.0.0.0/16** **(1)** if not already there by default. 
 
      - Under **Subnet name**, select the word **default(2)**.
 
@@ -78,6 +78,8 @@ In this task, you will create a virtual network in Azure and configure two subne
     ![](../media/azz4.png)
    
 1. Select **Review + create** and  **Create**.
+
+     ![](../media/azz35.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
@@ -132,9 +134,9 @@ In this task, you will create the workload virtual machine and place it in the W
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile firewall.json -TemplateParameterFile firewall.parameters.json
    ```
 
-    ![](../media/lab7-02-3.png)   
+1. You will be prompted to provide an Admin password, enter `Pa55w.rd!!`
 
-     >**Note:** You will be prompted to provide an Admin password, enter **Pa55w.rd!!**.
+    ![](../media/lab7-02-3.png) 
 
 1. When the deployment is complete, go to the Azure portal home page, then search **Virtual Machines (1)** and select **Virtual Machines (2)**.
 
@@ -150,6 +152,7 @@ In this task, you will create the workload virtual machine and place it in the W
 
      ![](../media/azz10.png)
  
+
 ## Task 3: Deploy the firewall and firewall policy
 
 In this task, you will deploy the firewall into the virtual network with a firewall policy configured.
@@ -161,6 +164,8 @@ In this task, you will deploy the firewall into the virtual network with a firew
   
 1. On the **Firewall** page, select **+ Create**.
 
+     ![](../media/azz36.png)
+
 1. On the **Basics** tab, create a firewall using the information in the table below and navigate to the **Next:Tags> (12)** tab.
 
     | **Setting**              | **Value**                                                    |
@@ -171,7 +176,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
     | Region                   | **<inject key="Region" enableCopy="false"/> (4)**               |
     | Firewall SKU             | **Standard (5)**                                                 |
     | Firewall management      | **Use a Firewall Policy to manage this firewall (6)**            |
-    | Firewall policy          | Select **Add new**<br /> Name: **fw-test-pol (7)**<br />         |
+    | Firewall policy          | Select **Add new**<br /> Name: **fw-test-pol (7)**<br /> Region: **<inject key="Region" enableCopy="false"/>**  <br/> Policy: Select **Standard** |
     | Choose a virtual network | **Use existing (8)**                                             |
     | Virtual network          | **Test-FW-VN** (Please ignore the error it will disappear once you disable the Firewall Mangagement NIC) **(9)**                                               |
     | Public IP address        | Select **Add new**<br /> Name: **fw-pip (10)**                    |
@@ -217,6 +222,8 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
    
 1. On the **Route table** page, select **+ Create**.
 
+     ![](../media/azz38.png)
+
 1. On the **Basics** tab, create a new route table using the information in the table below.
 
     | **Setting**              | **Value**                |
@@ -233,7 +240,9 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 1. Select **Create**.
 
-1. After deployment completes, select **Go to resource**.
+     ![](../media/azz37.png)
+
+1. After deployment completes, select **Go to Resource group**.
 
 1. Select **Firewall-route** route table.
 
@@ -252,7 +261,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
  
      ![](../media/azz20.png)
 
-      >**Note**:  Make sure that you select only the Workload-SN subnet for this route, otherwise your firewall won't work correctly.     
+      >**Note:**  Make sure that you select only the Workload-SN subnet for this route, otherwise your firewall won't work correctly.     
 
 1. From the left navigation menu, under **Settings**, select **Routes** and then select **+ Add (2)**.
 
@@ -415,7 +424,7 @@ In this task, you will configure the Srv-Work server's primary and secondary DNS
 
      - Select **Save (4)**.
 
-       ![](../media/azz31.png)
+          ![](../media/azz31.png)
 
 1. Navigate back to the **Srv-Work** virtual machine. Restart the **Srv-Work** virtual machine and click **Yes** to confirm.
 
