@@ -498,7 +498,21 @@ In this task, you will use the virtual machine you created in the previous step 
 
 1. A private IP address of **10.0.0.5** is returned for the web app name. This address is in the subnet of the virtual network you created previously.
 
+1. In the bastion connection to **myVM**, open **Internet Explorer (1)** from the task bar.
+1. Enter the url of your web app, **https://webapp<inject key="DeploymentID" enableCopy="false"/>.azurewebsites.net (2)**.
+
+   ![](../media/mod7.6-t6p2.png)
+
+1. If the **Internet Explorer Enhanced Security Configuration** warning window appears, click on **Close** to continue, or optionally click on **Add...** to add the website to the **Trusted sites** zone.
+
+   ![](../media/mod7.6-t6p3.png)
+
+1. You'll receive the default web app page if your application hasn't been deployed:
+  
+   ![](../media/mod7.6-t6p4.png)
+
 1. Close the connection to **myVM**.
+
 
 ## Key takeaways
 
