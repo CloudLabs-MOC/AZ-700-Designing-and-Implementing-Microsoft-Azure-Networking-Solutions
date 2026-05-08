@@ -182,8 +182,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
     | Public IP address        | Select **Add new**<br /> Name: **fw-pip (10)**                    |
     | **Enable Firewall Management NIC**              | **Unselected (11)** (Once you disable, please add the Public Ip again that is mentioned in the above step)                                                   |
     |||
-
-    ![](../media/lab7-02-5.png)    
+ 
     ![](../media/lab7-02-6.png)
 
 1. Click on **Review + create**.    
