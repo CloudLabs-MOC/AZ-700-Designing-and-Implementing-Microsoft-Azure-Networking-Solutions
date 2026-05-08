@@ -189,7 +189,7 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
 
    ![](../media/pwershell5.png)
 
-1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)** and upload the following files **backend.json** and **backend.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M05**.
+1. On the toolbar of the Cloud Shell pane, select the Select **Manage files (1)** icon, in the drop-down menu, select **Upload (2)** and upload the following files **backend.json**, **backend.parameters.json**, and **install-iis.ps1** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M05**.
 
       ![](../media/pwershell2.png)
 
@@ -215,6 +215,25 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="d91accdd-32fd-4212-96ac-3f721c86f133" />
+   
+### Install IIS on each virtual machine
+
+1. Each backend server needs IIS installed.
+
+1. Continue at the PowerShell prompt and use the provided script to install IIS on **BackendVM1**.
+
+   ```powershell
+   Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup' -Name 'BackendVM1' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
+   ```
+
+   >**Note**: While you wait review the PowerShell script. Notice that the IIS home page is being customized to provide the virtual machine name.
+
+1. Run the command again, this time for **BackendVM2**.
+
+   ```powershell
+   Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup' -Name 'BackendVM2' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
+   ```
+   >**Note**: Each command will take a couple of minutes to complete.
 
 ## Task 3: Add backend servers to backend pool
 
