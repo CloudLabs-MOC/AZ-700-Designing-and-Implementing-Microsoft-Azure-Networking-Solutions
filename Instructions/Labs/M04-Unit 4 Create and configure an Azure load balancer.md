@@ -327,14 +327,14 @@ In this task, you will create a test VM, and then test the load balancer.
     | Region               |  **<inject key="Region" enableCopy="false"/> (4)**                              |
     | Availability options | **No infrastructure redundancy required (5)**    |
     | Security type        | **Standard (6)**                                    |
-    | Image                | **Windows Server 2019 Datacenter - x64 Gen 2 (7)**   |
+    | Image                | **Windows Server 2025 Datacenter - x64 Gen 2 (7)**   |
     | Size                 | **Standard_D2s_v3 - 2 vcpu, 8 GiB memory (8)**   |
     | Username             | **TestUser (9)**                                 |
     | Password             | `Pa55w.rd!!123` **(10)**                |
     | Confirm password     | `Pa55w.rd!!123` **(11)**                |
     | Select inbound port     | **RDP(3389) (12)**                |
 
-    ![Picture 7](../media/azn101.png)
+    ![Picture 7](../media/az753.png)
 
     ![Picture 7](../media/l4-u4-3.png)
 
@@ -392,30 +392,34 @@ In this task, you will connect to the myTestVM and test the internal load balanc
 
 1. The **myTestVM** window will open in another browser tab.
 
-1. If a **Networks** pane appears, select **Yes**.
+1. On the diagnostic data screen, click **Accept**.
 
-1. If you see **See text and images copied to the clipboard** then select **Allow** and minimize the server manager tab.
+   ![Picture 7](../media/az745.png)
 
-1. Select the **Internet Explorer** icon in the task bar to open the web browser.
+1. Close the **Windows Admin Center / Azure Arc pop‑up** in Server Manager, then close or minimize Server Manager, and open **Microsoft Edge** from the taskbar.
 
-    ![Picture 7](../media/azn108.png)
+   ![Picture 7](../media/az746.png)
 
-1. Select **OK** on the **Set up Internet Explorer 11** dialog box.
+1. When Microsoft Edge opens, select **Start without your data.**
 
-1. Select **Close** on the Internet Explorer security alerts that may pop-up. 
+   ![Picture 7](../media/az747.png)
 
-1. Enter (or paste) the **Private IP address** (e.g. 10.1.0.4) from the previous step into the address bar of the browser and press Enter.
+1. On the browsing data settings screen, click **Confirm and continue** to continue with the default Microsoft Edge settings.
 
-1. Select **Yes** on the Security Alert that may pop-up.
+   ![Picture 7](../media/az748.png)
+
+1. On the Microsoft Edge welcome screen, click **Continue without Google data** to proceed without importing browser data.
+
+   ![Picture 7](../media/az749.png)
+   
+1. Open a new browser tab and enter the **Private IP address** from the previous step into the address bar of the browser and press Enter.
 
 1. The default web home page of the IIS Web server is displayed in the browser window. One of the three virtual machines in the backend pool will respond.
 
-    ![](../media/mod4-u4-12.png)
+    ![](../media/az751.png)
    
 1. If you select the refresh button in the browser a few times, you will see that the response comes randomly from the different VMs in the backend pool of the internal load balancer.
    
-    ![](../media/azn109.png)
-
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully completed the task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
