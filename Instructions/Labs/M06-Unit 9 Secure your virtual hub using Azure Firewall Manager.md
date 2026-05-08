@@ -45,25 +45,27 @@ In this task, you will create the two spoke virtual networks each containing a s
 
     - In **Region**, select **<inject key="Region" enableCopy="false"/> (4)**
 
-    - Select **Next (5)**
+    - Select **Next**
 
-      ![virtual network](../media/pd37.png) 
+      ![virtual network](../media/pd-37.png) 
 
 1. Keep the options as default in Security page, select **Next**.
 
 1. In **IPv4 address space**, replace the existing IPv4 address space with this **10.0.0.0/16**.
 
-    ![virtual network](../media/pd37.png)   
+    ![virtual network](../media/pd38.png)   
 
     >**Note:** Delete any other address spaces listed here, such as 10.1.0.0/16.
 
 1. Under Subnets name,
 
     - Click on **Edit (1)** icon.
+    
     - In the **Edit subnet** dialog box, change the name to **Workload-01-SN (2)**
-    - Change the **Starting address** to 
-   **10.0.1.0 (3)**
+    - Change the **Starting address** to **10.0.1.0 (3)**
+
     - Select Subnet size : **/24(256 addresses) (4)**
+    
     - Then click on  **Save (5)**
 
       ![virtual network](../media/lab02-az700-ima36.png)
