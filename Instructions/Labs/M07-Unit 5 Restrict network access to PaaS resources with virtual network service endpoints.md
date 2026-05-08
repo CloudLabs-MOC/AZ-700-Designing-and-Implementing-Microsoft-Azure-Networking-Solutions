@@ -35,7 +35,9 @@ In this task, you will create a virtual network and a subnet.
 
 1. Select **+ Create**.
 
-1. On the **Create virtual network** blade specify the following information and then select **IP addresses (5)**:
+   ![](../media/azn119.png)
+
+1. On the **Create virtual network** blade specify the following information and then select **Address space (5)**:
  
    | **Setting**    | **Value**                                     |
    | -------------- | --------------------------------------------- |
@@ -46,7 +48,7 @@ In this task, you will create a virtual network and a subnet.
 
     ![](../media/azv21.png)
 
-1. On the **IP Addresses** tab, select **default** to change the subnet name. 
+1. On the **Address space** tab, select **default** to change the subnet name. 
 
     ![](../media/dflt.png)
 
@@ -62,6 +64,8 @@ In this task, you will create a virtual network and a subnet.
    
 1. Select **Review + Create**. Once the resource is validated select **Create**.
 
+      ![](../media/azn120.png)
+   
 1. Click on **Go to resource**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
@@ -112,6 +116,8 @@ In this task, you will create a Network Security Group (NSG) to restrict network
 
 1. In Network security groups, select **+ Create**. 
 
+   ![](../media/azn121.png)
+
 1. Enter or select, the following information and then click on **Review+Create (5)**
 
     | **Setting**    | **Value**                                                    |
@@ -125,11 +131,15 @@ In this task, you will create a Network Security Group (NSG) to restrict network
 
 1. Once the resource is validated select **Create**.
 
+   ![](../media/azn122.png)
+
 1. After the ContosoPrivateNSG network security group is created, select **Go to resource**.
+
+   ![](../media/azn123.png)
 
 1. On the **ContosoPrivateNSG** page, from the left navigation menu, under **Settings** section, select **Outbound security rules (1)** and then **+Add (2)**.
 
-    ![](../media/azv27.png)
+   ![](../media/azv27.png)
 
 1. Create a rule that allows outbound communication to the Azure Storage service. Enter, or select, the following information:
   
@@ -165,6 +175,8 @@ In this task, you will create a Network Security Group (NSG) to restrict network
 In this task, you will add an outbound rule to deny communication to the internet for the subnet, overriding the default rule that allows outbound internet communication. 
 
 1. Select **+ Add** under **Outbound security rules**.
+
+   ![](../media/azv27.png)
 
 1. Enter, or select, the following information and then **Add (12)**:
  
@@ -251,14 +263,16 @@ The steps necessary to restrict network access to resources created through Azur
 
 1. Select **+ Create**.
 
+   ![](../media/azn124.png)
+
 1. Enter, or select, the following information and accept the remaining defaults and then click on **Review+Create (7)**:
 
     | **Setting**    | **Value**                                                    |
     | -------------- | ------------------------------------------------------------ |
     | Subscription   | **Select your subscription (1)**                                    |
     | Resource group | **myResourceGroup (2)**                                              |
-    | Region         | **<inject key="Region" enableCopy="false"/> (3)** 
     | Name           | Enter **contosostorage<inject key="DeploymentID" enableCopy="false"/> (4)** |
+    | Region         | **<inject key="Region" enableCopy="false"/> (3)** 
     | Performance    | **Standard (5)**                     |                                              |
     | Redundancy    | **Locally-redundant storage (LRS) (6)**                              |
 
@@ -298,6 +312,8 @@ In this task, your creating a file share in the storage account.
     ![](../media/azv38.png)
 
 1. Once the resource is validated select **Create**.
+
+    ![](../media/azv55.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -394,7 +410,7 @@ In this task, you'll create two virtual machines (VMs) to test network access to
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile VMs.json -TemplateParameterFile VMs.parameters.json
    ```
 
-   **Note**: You will be prompted to provide an Admin password, enter **Pa55w.rd!!**  .
+1. You will be prompted to provide an Admin password, enter `Pa55w.rd!!`
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines** to find the newly created virtual machines.
 
