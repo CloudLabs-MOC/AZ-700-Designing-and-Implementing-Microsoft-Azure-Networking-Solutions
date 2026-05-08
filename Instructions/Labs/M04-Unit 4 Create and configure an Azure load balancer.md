@@ -14,7 +14,7 @@ In this lab, you will complete the following tasks:
 + Task 4: Create load balancer resources
 + Task 5: Test the load balancer
 
-## Estimated time: 60 minutes
+## Estimated time: 90 minutes
 
 ## Architecture diagram
 
