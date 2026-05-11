@@ -51,7 +51,7 @@ In this task, you'll create CoreServicesVnet and ManufacturingVnet, you set up t
 
     ![](../media/mod2.3-t1p1.png)
 
-1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
+1. Upload the following files **azuredeploy.json** and **azuredeploy.parameters.json (1)** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02** and then click **Open (2)**.
 
     ![](../media/pwershelloo1.png)
 
@@ -83,7 +83,7 @@ In this task, you'll create CoreServicesVM, you will create the CoreServicesVM v
 
     ![](../media/mod2.3-t1p1.png)
 
-1. Upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**.
+1. Upload the following files **CoreServicesVMazuredeploy.json** and **CoreServicesVMazuredeploy.parameters.json (1)** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02** and then click **Open (2)**.
 
     ![](../media/pwershelloo2.png)
 
@@ -124,7 +124,7 @@ In this task, you'll create ManufacturingVM, you will create the ManufacturingVM
 
     ![](../media/mod2.3-t1p1.png)
 
-1. Upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02**
+1. Upload the following files **ManufacturingVMazuredeploy.json** and **ManufacturingVMazuredeploy.parameters.json (1)** into the Cloud Shell home directory one by one from the source folder **C:\AllFiles\AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions-prod\Allfiles\Exercises\M02** and then click **Open (2)**.
 
     ![](../media/pwershelloo3.png)
 
@@ -177,7 +177,9 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
    ![](../media/mod2.3-t1p2.png)
 
-     ![](../media/mod2.3-t1p3.png)
+1. Select **Open file**.
+
+    ![](../media/mod2.3-t1p3.png)
 
 1. Open the **ManufacturingVM.rdp** file that was just downloaded and click on **Connect** when prompted.
 
@@ -217,15 +219,17 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
    ![](../media/mod2.3-t1p5.png)
 
-     ![](../media/mod2.3-t1p6.png)
+1. Select **Open file**.
+
+    ![](../media/mod2.3-t1p6.png)
 
 1. Open the **CoreServicesVM.rdp** file that was just downloaded and click on **Connect** when prompted.
 
    ![](../media/m2-u3-t4-s6-b.png)
 
-1. Connect to CoreServicesTestVM using the RDP file, and the username **.\TestUser** and Admin password, enter **Pa55w.rd!!**
+1. Connect to CoreServicesTestVM using the RDP file, and the username **.\TestUser (1)** and Admin password, enter **Pa55w.rd!! (2)** and then select **OK (3)**.
 
-    ![](../media/pwershelloo7.png)
+    ![](../media/mod2.3-t1p4.png)
 
 1. On both VMs, in **Networks**, select **Yes**.
 
@@ -324,7 +328,7 @@ In this task, you'll create ManufacturingVnet Gateway, you will create a Manufac
 
     ![](../media/12.png)
 
-1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateways**, and then select **Virtual network gateways** from the results.
+1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateways (1)**, and then select **Virtual network gateways (2)** from the results.
 
    ![](../media/8.png)
 
@@ -389,7 +393,7 @@ In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set
       | Name                           | **CoreServicesGW-to-ManufacturingGW (4)** |
       | Location                       | **East US (5)**                           |
 
-1. Select **Next: Settings >**
+1. Select **Next: Settings > (6)**
 
      ![](../media/lab02-az700-ima13.png)
    
