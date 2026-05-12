@@ -49,7 +49,7 @@ In this section, you will create a virtual network and a subnet.
 
    | **Setting**    | **Value**                                           |
    | -------------- | --------------------------------------------------- |
-   | Subscription   | Select your subscription (1)                           |
+   | Subscription   | Select your subscription **(1)**                           |
    | Resource group | Select **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**   |
    | Virtual network name           | **IntLB-VNet (3)**                                      |
    | Region         | **<inject key="Region" enableCopy="false"/> (4)**                                   |
@@ -307,10 +307,13 @@ In this task, you will create three VMs for the backend pool of the load balance
 
 In this task, you will add the virtual machines (VMs) to the backend pool of the internal load balancer. The VMs will then be eligible to receive traffic based on the load balancer rules.
 
-1. On the Azure portal home page, from top left corner of page **click Show portal** menu, select **All resources** under **resources** section, select 
-   **myIntLoadBalancer** from the resources list.
+1. On the Azure portal home page, from top left corner of page **click Show portal** menu, select **All resources** under **resources** section.
 
      ![](../media/unit4-image5.png)
+
+1. Select **myIntLoadBalancer** from the resources list.
+
+      ![](../media/azv62.png)     
 
 1. On the **myIntLoadBalancer** Load balancer page, from the left-hand navigation pane, under **Settings (1)**, select **Backend pools(2)** and then select 
    **myBackendPool(3)**.
@@ -323,8 +326,6 @@ In this task, you will add the virtual machines (VMs) to the backend pool of the
   
 1. From the dropdown list, select the **IP addresses** corresponding to myVM1, myVM2, and myVM3 to associate them with their respective virtual machines.
 
-   
-
 1. On the **myBackendPool** page, select **Save**.
  
    ![](../media/azv70.png)
@@ -333,7 +334,7 @@ In this task, you will add the virtual machines (VMs) to the backend pool of the
 
 In this task, you will install IIS (Internet Information Services) on each of your virtual machines (VMs), and customize the default web page.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual machines**, and then select **Virtual machines** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual machines (1)**, and then select **Virtual machines (2)** under services.
 
    ![](../media/azv71.png)
 
@@ -345,7 +346,7 @@ In this task, you will install IIS (Internet Information Services) on each of yo
 
    ![](../media/azv73.png)
 
-1. In the **Username** box, enter **TestUser** and in the **Password** box, enter the password you provided during deployment, then select **Connect**.
+1. In the **Username** box, enter **TestUser (1)** and in the **Password (2)** box, enter the password you provided during deployment, then select **Connect (3)**.
 
    ![](../media/azv74.png)
 
@@ -361,12 +362,11 @@ In this task, you will install IIS (Internet Information Services) on each of yo
 
    ![](../media/azv75.png)
 
-
 1. Select the **Windows Start icon(1)** in the bottom left corner of the window, then select the **Windows PowerShell(2)** tile, and then click on **More (3)** and select **Run as administrator (4)**.
 
     ![](../media/psad.png)
 
-    **Note** : Kindly use **>>** icon clipboard within bastion session to copy and paste the commands into powershell.
+    > **Note:** Kindly use **>>** icon clipboard within bastion session to copy and paste the commands into powershell.
 
 1. To install IIS, run the following command in PowerShell: 
 
@@ -412,7 +412,7 @@ In this task, you will create a test VM, and then test the load balancer.
 
    | **Setting**          | **Value**                                    |
    | -------------------- | -------------------------------------------- |
-   | Subscription         | Select your subscription (1)                    |
+   | Subscription         | Select your subscription **(1)**                    |
    | Resource group       | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**                                 |
    | Virtual machine name | **myTestVM (3)**                                 |
    | Region               |  **<inject key="Region" enableCopy="false"/> (4)**                            |
@@ -456,9 +456,13 @@ In this task, you will create a test VM, and then test the load balancer.
 
 #### Task 9.2: Connect to the test VM to test the load balancer
 
-1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, under **Resources**,select **myIntLoadBalancer** from the resources list.
+1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, under **Resources**.
 
       ![](../media/unit4-image5.png)
+
+1. Select **myIntLoadBalancer** from the resources list.
+
+      ![](../media/azv62.png)
 
 1. On the **Overview** page, select **Frontend IP Configuration**, make a note of the **Frontend IP address**, or copy it to the clipboard. 
 
@@ -493,10 +497,8 @@ In this task, you will create a test VM, and then test the load balancer.
 1. Enter (or paste) the **Frontend IP address** (e.g. 10.1.0.4) from the previous step into the address bar of the browser and press Enter.
 
 1. The default web home page of the IIS Web server is displayed in the browser window. One of the three virtual machines in the backend pool will respond.
-   
 
 1. If you select the refresh button in the browser a few times, you will see that the response comes randomly from the different VMs in the backend pool of the internal load balancer.
-
 
 1. Close the **myTestVM** browser tab.
 
@@ -512,17 +514,16 @@ In this task, you will create a Log Analytics workspace to enable logging and mo
 
    ![](../media/azv87.png)
 
-1. On the **Create Log Analytics workspace** page, on the **Basics** tab, use the information in the table below to create the workspace, thesn select **Review + Create (5)**.
+1. On the **Create Log Analytics workspace** page, on the **Basics** tab, use the information in the table below to create the workspace, thesn select **Review + create (5)**.
 
    | **Setting**    | **Value**                |
    | -------------- | ------------------------ |
-   | Subscription   | Select your subscription (1) |
+   | Subscription   | Select your subscription **(1)** |
    | Resource group | **IntLB-RG-<inject key="DeploymentID" enableCopy="false"/> (2)**             |
    | Name           | **myLAworkspace (3)**        |
    | Region         | **<inject key="Region" enableCopy="false"/> (4)**              |
-
-
-   ![](../media/azv88.png)
+   
+      ![](../media/azv88.png)
 
 1. Select **Create**.
 
@@ -539,9 +540,13 @@ In this task, you will create a Log Analytics workspace to enable logging and mo
 
 In this task, you will use the Functional Dependency View in the Azure portal to visualize the topology of your network resources, such as your load balancer, and monitor key metrics.
 
-1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, under **Resources**, select **myIntLoadBalancer**.
+1. On the Azure portal home page, from top left corner of page click **Show portal** menu and select **All resources**, under **Resources**.
 
    ![](../media/unit4-image5.png)
+
+1. Select **myIntLoadBalancer** from resources list.
+
+   ![](../media/azv62.png)
 
 1. From the left-hand navigation pane, under **Monitoring (1)**, select **Insights (2)**.
 
@@ -556,6 +561,7 @@ In this task, you will use the Functional Dependency View in the Azure portal to
 1. Hover over the **LoadBalancerFrontEnd** component in the diagram, then hover over the **myBackendPool** component. 
 
       ![](../media/azv92.png)
+
       ![](../media/azv93.png)
 
 1. Notice that you can use the links in these pop-up windows to view information about these load balancer components and open their respective Azure portal blades.
@@ -618,9 +624,13 @@ In this task, you will check the health status of your Load Balancer and identif
 
 In this task, you'll configure diagnostic settings for your Load Balancer to send metrics to a Log Analytics workspace. This allows you to monitor and analyze the performance and health of your Load Balancer in more detail.
 
-1. On the Azure portal home page, from top left corner of page click **Show portal**, select **All Resources** menu and under **Resources**, select **myIntLoadBalancer**.
+1. On the Azure portal home page, from top left corner of page click **Show portal**, select **All Resources** menu and under **Resources**.
 
    ![](../media/unit4-image5.png)
+
+1. Select **myIntLoadBalancer** from resource list.  
+
+      ![](../media/azv62.png)
 
 1. From left-hand navigation menu, under **Monitoring**, select **Diagnostic settings (1)**, then select **+ Add diagnostic setting (2)**.
 
@@ -628,13 +638,13 @@ In this task, you'll configure diagnostic settings for your Load Balancer to sen
 
 1. On the **Diagnostic setting** page, in the name box, use the information below.
 
-   - enter **myLBDiagnostics (1)**
+   - Enter **myLBDiagnostics (1)**
    - Select the **AllMetrics (2)** checkbox
    - Select the **Send to Log Analytics workspace (3)** checkbox
    - Select your subscription from the list, then select **myLAworkspace <inject key="Region" enableCopy="false"/> (4)** from the workspace drop-down
-   - Select **Save (5)**
+   - Select **Save (5)**                          
 
-   ![](../media/azv106.png) 
+      ![](../media/azv106.png) 
 
 
 ## Key takeaways
