@@ -62,7 +62,7 @@ In this task, you will create a virtual network and a subnet.
 
     ![](../media/azv25.png)
    
-1. Select **Review + Create**. Once the resource is validated select **Create**.
+1. Select **Review + create**. Once the resource is validated select **Create**.
 
       ![](../media/azn120.png)
    
@@ -118,7 +118,7 @@ In this task, you will create a Network Security Group (NSG) to restrict network
 
    ![](../media/azn121.png)
 
-1. Enter or select, the following information and then click on **Review+Create (5)**
+1. Enter or select, the following information and then click on **Review + create (5)**
 
     | **Setting**    | **Value**                                                    |
     | -------------- | ------------------------------------------------------------ |
@@ -174,7 +174,7 @@ In this task, you will create a Network Security Group (NSG) to restrict network
 
 In this task, you will add an outbound rule to deny communication to the internet for the subnet, overriding the default rule that allows outbound internet communication. 
 
-1. Select **+ Add** under **Outbound security rules**.
+1. Select **+ Add (1)** under **Outbound security rules(2)**.
 
    ![](../media/azv27.png)
 
@@ -242,7 +242,7 @@ In this task, you will create an inbound security rule to allow Remote Desktop P
 
    - Under **Subnet**, select **Private (4)**, and then select **OK (5)**.
 
-    ![](../media/azv33.png)
+      ![](../media/azv33.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -265,7 +265,7 @@ The steps necessary to restrict network access to resources created through Azur
 
    ![](../media/azn124.png)
 
-1. Enter, or select, the following information and accept the remaining defaults and then click on **Review+Create (7)**:
+1. Enter, or select, the following information and accept the remaining defaults and then click on **Review + create (7)**:
 
     | **Setting**    | **Value**                                                    |
     | -------------- | ------------------------------------------------------------ |
@@ -528,9 +528,9 @@ In this task, you'll confirm that the ContosoPublic VM doesn't have access to th
 
    ![](../media/azv52.png)
 
-   **Note**:  Access is denied, because your computer is not in the Private subnet of the CoreServicesVNet virtual network.
+   >**Note**:  Access is denied, because your computer is not in the Private subnet of the CoreServicesVNet virtual network.
 
-   **Warning**: Prior to continuing you should remove all resources used for this lab. To do this On the Azure portal select Resource groups. Select any resources groups you have created. On the resource group blade select Delete Resource group, enter the Resource Group Name and select Delete. Repeat the process for any additional Resource Groups you may have created. Failure to do this may cause issues with other labs.
+   >**Warning**: Prior to continuing you should remove all resources used for this lab. To do this On the Azure portal select Resource groups. Select any resources groups you have created. On the resource group blade select Delete Resource group, enter the Resource Group Name and select Delete. Repeat the process for any additional Resource Groups you may have created. Failure to do this may cause issues with other labs.
 
 ## Key takeaways
 + Virtual network service endpoints extend your private address space in Azure by providing a direct connection to your Azure services.
