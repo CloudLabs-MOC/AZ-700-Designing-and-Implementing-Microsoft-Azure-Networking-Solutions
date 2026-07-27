@@ -1,9 +1,11 @@
 # Lab 2a: Create and configure a virtual network gateway
 
 ## Lab Overview
+
 In this lab, you will configure a Virtual Network Gateway to establish connectivity between Contoso Core Services VNet and Manufacturing VNet. This is essential for enabling cross-network communication through a secure and reliable connection.
 
 ## Lab Objectives
+
 In this lab, you will complete the following tasks:
 
 + Task 1: Create CoreServicesVnet and ManufacturingVnet
@@ -199,9 +201,9 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
     ![](../media/lab02-az700-ima9.png)
 
-1. Now, navigate back to Azure Portal home page, select **Virtual Machines**.
+1. Now, navigate back to Azure Portal home page, search **Virtual Machines (1)**, select **Virtual Machines (2)**.
 
-    ![](../media/pwershelloo4.png)
+    ![](../media/lab02-az700-ima21.png)
 
 1. Select **CoreServicesVM**.
 
@@ -227,9 +229,15 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
    ![](../media/m2-u3-t4-s6-b.png)
 
+ 1. Click on **More choices**.
+
+1. Select **Use a different account**.  
+
 1. Connect to CoreServicesTestVM using the RDP file, and the username **.\TestUser (1)** and Admin password, enter **Pa55w.rd!! (2)** and then select **OK (3)**.
 
     ![](../media/mod2.3-t1p4.png)
+
+1. Click on **Yes** to access the VM. 
 
 1. On both VMs, in **Networks**, select **Yes**.
 
@@ -259,7 +267,7 @@ In this task, you'll connect to the Test VMs using RDP, you'll connect to both M
 
 In this task you'll create CoreServicesVnet Gateway, you will create the CoreServicesVnet Gateway to enable secure connections between the virtual networks. 
 
-1. In **Search resources, services, and docs (G+/)** box at the top of the portal, enter **Virtual network gateway (1)**, and then select **Virtual network gateways (2)** from the results.
+1. In **Search resources, services, and docs (G+/)** box at the top of the portal, enter **Virtual network gateways (1)**, and then select **Virtual network gateways (2)** from the results.
 
    ![](../media/8.png)
 
@@ -272,27 +280,29 @@ In this task you'll create CoreServicesVnet Gateway, you will create the CoreSer
    | **Tab**         | **Section**       | **Option**                                  | **Value**                           |
    | --------------- | ----------------- | ------------------------------------------- | ----------------------------------- |
    | Basics          | Project Details   | Subscription                                |**No changes required (1)**          |
-   |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)**    |
-   |                 | Instance Details  | Name                                        | **CoreServicesVnetGateway (3)**     |
-   |                 |                   | Region                                      | **East US (4)**                     |
-   |                 |                   | Gateway type                                | **VPN (5)**                         |
-   |                 |                   | SKU                                         | **VpnGw1AZ (6)**                    |
-   |                 |                   | Generation                                  | **Generation1 (7)**                 |
-   |                 |                   | Virtual network                             | **CoreServicesVnet (8)**            |
-   |                 |                   | Subnet                                      | **GatewaySubnet (10.20.0.0/27) (9)**|
-   |                 | Public IP address | Public IP address                           | **Create new (10)**                 |
-   |                 |                   | Public IP address name                      | **CoreServicesVnetGateway-ip (11)** |
+   |                 |                   | Virtual network                             | **CoreServicesVnet (2)**            |
+   |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (3)**    |
+   |                 | Instance Details  | Name                                        | **CoreServicesVnetGateway (4)**     |
+   |                 |                   | Region                                      | **East US (5)**                     |
+   |                 |                   | Gateway type                                | **VPN (6)**                         |
+   |                 |                   | SKU                                         | **VpnGw1AZ (7)**                    |
+   |                 |                   | Subnet                                      | **GatewaySubnet (10.20.0.0/27) (8)**|
+   |                 | Public IP address | Public IP address                           | **Create new (9)**                 |
+   |                 |                   | Public IP address name                      | **CoreServicesVnetGateway-ip (10)** |
    |                 |                   | Public IP address type                      | **Standard**                        |
-   |                 |                   | Enable active-active mode                   | **Disabled (12)**                   |
-   |                 |                   | Configure BGP                               | **Disabled (13)**                   |
-   |                 |                   | Enable Key Vault Access                     | **Disabled (14)**                   |
+   |                 |                   | Enable active-active mode                   | **Disabled (11)**                   |
+   |                 |                   | Configure BGP                               | **Disabled (12)**                   |
+   |                 |                   | Enable Key Vault Access                     | **Disabled (13)**                   |
+   |                 |                   | Select                                      | **Review + create (14)**            |                       
 
    ![](../media/l2-u1-10.png)
    ![](../media/l2-u1-11.png)
 
-1. Select **Review + create (15)** and **Create**.
+1. Select **Create**.
 
-1. It can take up to 45 minutes to create a virtual network gateway, don't wait for deployment instead perform next task. 
+    ![](../media/img11.png)
+
+1. It can take up to **45 minutes** to create a **virtual network gateway**, don't wait for deployment instead perform next task. 
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -336,19 +346,18 @@ In this task, you'll create ManufacturingVnet Gateway, you will create a Manufac
 
 1. Use the information in the following table to create the virtual network gateway:
 
-   >**Important**: First select **Region** on the basics tab and specify the following.
+   >**Important**: First select **Region** as **West Europe** on the basics tab and specify the following.
 
    | **Tab**         | **Section**       | **Option**                                  | **Value**                        |
    | --------------- | ----------------- | ------------------------------------------- | -------------------------------- |
    | Basics          | Project Details   | Subscription                                | No changes required              |
    |                 |                   | ResourceGroup                               | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>**    |
+   |                 |                   | Region                                      | **West Europe**                 |
+   |                 |                   | Virtual network                             | **ManufacturingVnet**            |
    |                 | Instance Details  | Name                                        | **ManufacturingVnetGateway**     |
-   |                 |                   | Region                                      | **North Europe**                 |
    |                 |                   | Gateway type                                | **VPN**                          |
    |                 |                   | SKU                                         | **VpnGw1AZ**                     |
-   |                 |                   | Generation                                  | **Generation1**                  |
-   |                 |                   | Virtual network                             | **ManufacturingVnet**            |
-   |                 |                   | Subnet                                      | **10.30.0.0/27**                 |
+   |                 |                   | Subnet                                      | **10.30.9.0/27**                 |
    |                 | Public IP address | Public IP address                           | **Create new**                   |
    |                 |                   | Public IP address name                      | **ManufacturingVnetGateway-ip**  |
    |                 |                   | Public IP Address Type                      | **Standard**                     |
@@ -371,7 +380,7 @@ In this task, you'll create ManufacturingVnet Gateway, you will create a Manufac
 
 In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set up a VNet-to-VNet connection between CoreServicesVnet and ManufacturingVnet.
 
-1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateways** from the results.
+1. In **Search resources, services, and docs (G+/)**, enter **Virtual network gateway**, and then select **Virtual network gateway** from the results.
 
 1. On the **Hybrid Connectivity** page, expand **VPN Gateway (1)**, then select **VPN Gateways (2)**, and choose **CoreServicesVnetGateway (3)**.
 
@@ -397,7 +406,7 @@ In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set
 
      ![](../media/lab02-az700-ima13.png)
    
-1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection then select **Next: Tags> (7)**.
+1. On **Create connection** page of **Settings** tab, use the information in the following table to create the connection then select **Next: Monitoring> (7)**.
 
       | **Option**                     | **Value**                         |
       | ------------------------------ | --------------------------------- |
@@ -410,7 +419,11 @@ In this task, you'll connect CoreServicesVnet to ManufacturingVnet, you will set
 
       ![](../media/l2-u1-13.png)
       
+1. On the **Monitoring** tab, select **Next: Tags>**.
+
 1. On the **Tags** tab, select **Next: Review + create >**, then on the **Review + create** tab, review the settings and select **Create**.
+
+    ![](../media/img15.png)
    
 ## Task 9: Connect ManufacturingVnet to CoreServicesVnet
 
@@ -434,7 +447,7 @@ In this task, you'll connect ManufacturingVnet to CoreServicesVnet, you'll estab
       | Resource Group                 | **ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/> (2)** |
       | Connection type                | **VNet-to-VNet (3)**                    |
       | Name                           | **ManufacturingGW-to-CoreServicesGW (4)** |
-      | Location                       | **North Europe (5)**                      |
+      | Location                       | **West Europe (5)**                      |
 
 1. Select **Next: Settings > (6)**
 
@@ -453,13 +466,17 @@ In this task, you'll connect ManufacturingVnet to CoreServicesVnet, you'll estab
 
       ![](../media/l2-u1-14.png)
       
+1. On the **Monitoring** tab, select **Next: Tags>**.
+
 1. On the **Tags** tab, select **Next: Review + create >**, then on the **Review + create** tab, review the settings and select **Create**.
+
+    ![](../media/img18.png)
    
 ## Task 10: Verify that the connections connect 
 
 In this task, you'll verify that the connections connect and you'll confirm the status of the connections between CoreServicesVnet and ManufacturingVnet. 
 
-1. In **Search resources, services, and docs (G+/)**, enter **Connections**, and then select **Connections** from the results.
+1. In **Search resources, services, and docs (G+/)**, enter **Connections (1)**, and then select **Connections (2)** from the results.
 
      ![](../media/lab02-az700-ima20.png)
 
@@ -498,7 +515,7 @@ In this task, you'll test the connection between the VMs, you will verify the VN
 
 1. Close the Remote Desktop connection windows.
 
-   Congratulations! You have configured a VNet-to-VNet connection by using a virtual network gateway.
+   > **Congratulations!** You have configured a VNet-to-VNet connection by using a virtual network gateway.
 
 ## Key takeaways
 
