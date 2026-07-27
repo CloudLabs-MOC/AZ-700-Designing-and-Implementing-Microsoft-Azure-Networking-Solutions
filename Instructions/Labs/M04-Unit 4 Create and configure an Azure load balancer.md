@@ -91,10 +91,10 @@ In this task, you will create a virtual network (VNet) in Azure with two subnets
 
 1. It will take `10-15 minutes` to complete the deployment.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="f3f7612a-945c-453b-87cc-9ac4592a00cc" />
 
@@ -148,10 +148,10 @@ In this task, you will create three VMs, that will be in the same availability s
 
  1. It may take `20-25 mins` to create these three VMs. Please wait until this job completes, and you will be prompted to provide password three times for each VM deployment.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="3107853e-92fb-4898-a59b-a7cb10f5051a" />
 
@@ -200,12 +200,12 @@ In this task, you will create an internal Standard SKU load balancer. The reason
 
 1. Select **Create**. Wait for deployment to complete successfully.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-    <validation step="0aa25baa-7ec4-49ad-a99e-43e629157f51" />
+   <validation step="0aa25baa-7ec4-49ad-a99e-43e629157f51" />
 
 ## Task 4: Create load balancer resources
 
@@ -298,10 +298,10 @@ A load balancer rule is used to define how traffic is distributed to the VMs. Yo
    ![Picture 7](../media/l4-u4-1.png)
 
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="725af5b8-9a2d-4aeb-9adb-da47aa36d4aa" /> 
  
@@ -386,21 +386,21 @@ In this task, you will connect to the myTestVM and test the internal load balanc
      >**Note**: If popup blocker is preventing the new window, at top of the page select **Always allow pop-ups and redirects from hhtps://portal.azure.com** and select 
     **Done**, repeat step-5.
 
-      ![Picture 7](../media/az70011.png)
+       ![Picture 7](../media/az70011.png)
 
 1. The **myTestVM** window will open in another browser tab.
 
 1. On the diagnostic data screen, click **Accept**.
 
-   ![Picture 7](../media/az745.png)
+    ![Picture 7](../media/az745.png)
 
 1. Close the **Windows Admin Center / Azure Arc pop‑up** in Server Manager, then close or minimize Server Manager, and open **Microsoft Edge** from the taskbar.
 
-   ![Picture 7](../media/az746.png)
+    ![Picture 7](../media/az746.png)
 
 1. When Microsoft Edge opens, select **Start without your data.**
 
-   ![Picture 7](../media/az747.png)
+    ![Picture 7](../media/az747.png)
 
 1. On the browsing data settings screen, click **Confirm and continue** to continue with the default Microsoft Edge settings.
 
@@ -418,12 +418,12 @@ In this task, you will connect to the myTestVM and test the internal load balanc
    
 1. If you select the refresh button in the browser a few times, you will see that the response comes randomly from the different VMs in the backend pool of the internal load balancer.
    
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully completed the task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully completed the task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
-    <validation step="d643606f-8c58-498a-a834-5c18e2d7072a" />
+   <validation step="d643606f-8c58-498a-a834-5c18e2d7072a" />
 
 
 ## Key takeaways
