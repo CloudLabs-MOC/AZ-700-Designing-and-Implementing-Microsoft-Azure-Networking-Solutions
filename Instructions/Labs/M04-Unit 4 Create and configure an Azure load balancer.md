@@ -383,10 +383,10 @@ In this task, you will connect to the myTestVM and test the internal load balanc
 
     ![Picture 7](../media/azn107.png)
   
-     >**Note**: If popup blocker is preventing the new window, at top of the page select **Always allow pop-ups and redirects from hhtps://portal.azure.com** and select 
+     >**Note**: If popup blocker is preventing the new window, at top of the page select **Always allow pop-ups and redirects from https://portal.azure.com** and select 
     **Done**, repeat step-5.
 
-       ![Picture 7](../media/az70011.png)
+      ![Picture 7](../media/az70011.png)
 
 1. The **myTestVM** window will open in another browser tab.
 
@@ -404,18 +404,18 @@ In this task, you will connect to the myTestVM and test the internal load balanc
 
 1. On the browsing data settings screen, click **Confirm and continue** to continue with the default Microsoft Edge settings.
 
-   ![Picture 7](../media/az748.png)
+    ![Picture 7](../media/az748.png)
 
 1. On the Microsoft Edge welcome screen, click **Continue without Google data** to proceed without importing browser data.
 
-   ![Picture 7](../media/az749.png)
-   
+    ![Picture 7](../media/az749.png)
+
 1. Open a new browser tab and enter the **Private IP address** from the previous step into the address bar of the browser and press Enter.
 
 1. The default web home page of the IIS Web server is displayed in the browser window. One of the three virtual machines in the backend pool will respond.
 
     ![](../media/az751.png)
-   
+
 1. If you select the refresh button in the browser a few times, you will see that the response comes randomly from the different VMs in the backend pool of the internal load balancer.
    
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
