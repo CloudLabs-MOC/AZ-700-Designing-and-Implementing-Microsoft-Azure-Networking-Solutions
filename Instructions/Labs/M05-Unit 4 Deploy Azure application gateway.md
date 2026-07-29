@@ -20,7 +20,7 @@ In this lab, you will complete the following tasks:
 
 ## Architecture diagram
 
-  ‎![](../media/az700-m5-unit4.png)
+  ![](../media/az700-m5-unit4.png)
 
 ## Task 1: Create an application gateway
 
@@ -158,10 +158,10 @@ In this task, you'll create an Application Gateway in Azure, which is a fully ma
      
     ![Azure Portal search for application gateway](../media/lab02-az700-ima31.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="b6e75632-552c-426b-806e-3de77ccca05f" />
 
@@ -209,10 +209,10 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
 
    ![](../media/a7z3.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="d91accdd-32fd-4212-96ac-3f721c86f133" />
    
@@ -222,18 +222,19 @@ In this task, you'll use Azure Cloud Shell to deploy two virtual machines (VMs) 
 
 1. Continue at the PowerShell prompt and use the provided script to install IIS on **BackendVM1**.
 
-   ```powershell
-   Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup' -Name 'BackendVM1' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
-   ```
+    ```powershell
+    Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>' -Name 'BackendVM1' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
+    ```
 
-   >**Note**: While you wait review the PowerShell script. Notice that the IIS home page is being customized to provide the virtual machine name.
+   > **Note**: While you wait review the PowerShell script. Notice that the IIS home page is being customized to provide the virtual machine name.
 
 1. Run the command again, this time for **BackendVM2**.
 
-   ```powershell
-   Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup' -Name 'BackendVM2' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
-   ```
-   >**Note**: Each command will take a couple of minutes to complete.
+    ```powershell
+    Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup-<inject key="DeploymentID" enableCopy="false"/>' -Name 'BackendVM2' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
+    ```
+   
+   > **Note**: Each command will take a couple of minutes to complete.
 
 ## Task 3: Add backend servers to backend pool
 
@@ -241,7 +242,7 @@ In this task, you will add two virtual machines to the backend pool of your Appl
 
 1. On the Azure portal menu, from top left corner of page click **Show portal** menu and select **All resources**.
 
-   ![](../media/unit4-image5.png)
+    ![](../media/unit4-image5.png)
 
 1. Then select **ContosoAppGateway**.   
    
@@ -265,16 +266,16 @@ In this task, you will add two virtual machines to the backend pool of your Appl
 
     ![Azure Portal search for application gateway](../media/a7z4.png)  
 
-    **Note:** Wait for the deployment to complete before proceeding to the next step.
+   > **Note:** Wait for the deployment to complete before proceeding to the next step.
 
 1. Check to ensure the backend servers are healthy. Select **Monitoring** and then **Backend Health**. Both targets should be healthy. 
 
    ![Azure Portal check backend health.](../media/lab02-az700-ima34.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help.
 
    <validation step="2c0059d3-d02b-4c7a-9937-c06f943ec1ef" />
 
@@ -303,11 +304,13 @@ Although IIS isn't required to create the application gateway, you installed it 
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
+
 + Azure Application Gateway is a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications.
 + Application Gateway can make routing decisions based on additional attributes of an HTTP request, for example URI path or host headers.
 + Use Application Gateway for application hosted in a single region and when you need URL based routing. 
 
 ### Review
+
 In this lab, you have completed:
 
 - Created an application gateway
