@@ -28,11 +28,13 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create a virtual network in Azure and configure two subnets: one for the Azure Firewall and another for the workload server.
 
-1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual network (1)**, and then select **Virtual network (2)** under services.
+1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Virtual networks (1)**, and then select **Virtual networks (2)** under services.
 
     ![](../media/azv20.png)
 
 1. Select **+ Create**.
+
+     ![](../media/azvn21.png)
 
 1. On the Create virtual network of **Basic** tab specify the following information to create Virtual Network and the select **Address Space (5):**
 
@@ -166,7 +168,7 @@ In this task, you will deploy the firewall into the virtual network with a firew
 
      ![](../media/azz36.png)
 
-1. On the **Basics** tab, create a firewall using the information in the table below and navigate to the **Next:Tags> (12)** tab.
+1. On the **Basics** tab, create a firewall using the information in the table below and navigate to the **Next:Advanced > (12)** tab.
 
     | **Setting**              | **Value**                                                    |
     | --------------------     | ------------------------------------------------------------ |
@@ -184,8 +186,9 @@ In this task, you will deploy the firewall into the virtual network with a firew
     |||
  
     ![](../media/lab7-02-6.png)
+    ![](../media/lab7-02-68.png)
 
-1. Click on **Review + create**.    
+1. Click on **Next:Tags >** tab, then click on **Review + create**.    
 
 1. Select **Create** and wait for the firewall deployment to complete.
 
@@ -289,7 +292,7 @@ In this task, on the Workload-SN subnet, you will configure the outbound default
 
 In this task, you will add an application rule that allows outbound access to www.google.com.
 
-1. On the Azure portal home page, from top left corner of page click **Show portal menu** and select **All resources**.
+1. On the Azure portal home page, from top left corner of page click **Show portal menu (1)** and select **All resources (2)**.
 
      ![](../media/l6u7-9.png)
 
@@ -421,7 +424,7 @@ In this task, you will configure the Srv-Work server's primary and secondary DNS
 
      - Enter **209.244.0.3** in the **Add DNS server** text box, and **209.244.0.4** in the next text box **(3)**
 
-     - Select **Save (4)**.
+     - Select **Apply (4)**.
 
           ![](../media/azz31.png)
 
