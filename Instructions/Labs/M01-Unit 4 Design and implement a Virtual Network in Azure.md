@@ -13,7 +13,7 @@ In this lab, you will complete the following tasks:
 + Task 3: Create the ResearchVnet virtual network and subnets
 + Task 4: Verify the creation of VNets and Subnets
 
-## Estimated Duration: 25 Minutes
+## Estimated Duration: 30 Minutes
 
 ## Architecture diagram
 ![](../media/design-implement-vnet-peering01.png)
@@ -48,8 +48,10 @@ In this task, you'll be setting up a virtual network (VNet) called CoreServicesV
    ![](../media/azv20.png)
 
 1. Select **+ Create** on the **Network foundation | Virtual networks** page. 
+
+   ![](../media/azvn21.png)
    
-1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **CoreServicesVnet** virtual network and select **IP Address (5)** tab.
+1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **CoreServicesVnet** virtual network and select **Address Space (5)** tab.
  
    | **Tab**      | **Option**         | **Value**            |
    | ------------ | ------------------ | -------------------- |
@@ -60,7 +62,7 @@ In this task, you'll be setting up a virtual network (VNet) called CoreServicesV
 
    ![](../media/azn1.png) 
 
-1. On the **IP Address** tab of **Create virtual network** use the information:
+1. On the **Address Space** tab of **Create virtual network** use the information:
 
    - Remove the default IP Address space by clicking on **Delete the address space**
 
@@ -103,7 +105,9 @@ In this task, you'll be setting up a virtual network (VNet) called CoreServicesV
 
       ![](../media/azn3.png)
 
-1. Select **Create**.      
+1. Select **Create**. 
+
+   ![](../media/azvn2.png)
 
 1. Once, the creation of the **CoreServicesVnet** is completed, select **Go to resource**.
 
@@ -126,8 +130,7 @@ In this task, you'll be setting up a virtual network (VNet) called CoreServicesV
 
 In this task, you'll be setting up the ManufacturingVnet virtual network and its associated subnets, similar to what you did in previous task. 
 
-1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **ManufacturingVnet** virtual network and select **IP 
-   Address (5)** tab.
+1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **ManufacturingVnet** virtual network and select **Address Space (5)** tab.
 
    | **Tab**      | **Option**         | **Value**             |
    | ------------ | ------------------ | --------------------- |
@@ -179,8 +182,7 @@ In this task, you'll be setting up the ManufacturingVnet virtual network and its
 
 In this task, you'll create the ResearchVnet virtual network and its subnet.
 
-1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **ResearchVnet** virtual network and select **IP 
-   Address (5)** tab.
+1. On **Basic** tab of **Create virtual network** use the information in the following table to create the **ResearchVnet** virtual network and select **Address Space (5)** tab.
 
    | **Tab**      | **Option**         | **Value**            |
    | ------------ | ------------------ | -------------------- |
@@ -191,7 +193,7 @@ In this task, you'll create the ResearchVnet virtual network and its subnet.
 
    ![](../media/azn7.png)   
 
-1. Delete the existing ip address in the IP adress Tab.
+1. Delete the existing ip address in the Address Space Tab.
 
 1. Add the below ip adress with the subnets as performed in the previous task.    
 
