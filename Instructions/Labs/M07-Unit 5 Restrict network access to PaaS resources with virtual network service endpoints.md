@@ -422,7 +422,7 @@ In this task, you'll create two virtual machines (VMs) to test network access to
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines** to find the newly created virtual machines.
 
-   ![](../media/azvnh45.png)
+   ![](../media/azvnh46.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
