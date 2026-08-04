@@ -265,7 +265,7 @@ The steps necessary to restrict network access to resources created through Azur
 
    ![](../media/azn124.png)
 
-1. Enter, or select, the following information and accept the remaining defaults and then click on **Review + create (7)**:
+1. Enter, or select, the following information and accept the remaining defaults:
 
     | **Setting**    | **Value**                                                    |
     | -------------- | ------------------------------------------------------------ |
@@ -273,12 +273,19 @@ The steps necessary to restrict network access to resources created through Azur
     | Resource group | **myResourceGroup (2)**                                              |
     | Name           | Enter **contosostorage<inject key="DeploymentID" enableCopy="false"/> (4)** |
     | Region         | **<inject key="Region" enableCopy="false"/> (3)** 
-    | Performance    | **Standard (5)**                     |                                              |
-    | Redundancy    | **Locally-redundant storage (LRS) (6)**                              |
+    | Primary service    | **Azure Files (5)**                     |   
+    | Media tier    | **HDD (standard) (6)**                              |
+    | File share billing    | **Pay-as-you-go file shares (7)**                              |                                           |
+    | Redundancy    | **Locally-redundant storage (LRS) (8)**                              |
+   | Select    | **Review + create (9)**                              |
 
-    ![](../media/azv35.png)
+      ![](../media/azv35.png)
 
 1. Once the resource is validated select **Create**.
+
+1. Select **Go to resource**.
+
+   ![](../media/azvnh35.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -289,7 +296,7 @@ The steps necessary to restrict network access to resources created through Azur
 
 ## Task 7: Create a file share in the storage account
 
-In this task, your creating a file share in the storage account.
+In this task, your creating a classic file share in the storage account.
 
 1. On Azure Portal page, in **Search resources, services and docs (G+/)** box at the top of the portal, enter **Storage Account (1)**, and then select **Storage accounts (2)** under services.
 
@@ -299,7 +306,7 @@ In this task, your creating a file share in the storage account.
 
     ![](../media/conslct.png)
 
-1. From left navigation pane of storage account under **Data storage**, select **File shares (1)** and then select **+ File share (2)**.
+1. From left navigation pane of storage account under **Data storage**, select **Classic File shares (1)** and then select **+ Classic File share (2)**.
 
     ![](../media/azv36.png)
 
@@ -409,10 +416,13 @@ In this task, you'll create two virtual machines (VMs) to test network access to
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile VMs.json -TemplateParameterFile VMs.parameters.json
    ```
+   ![](../media/azvnh45.png)
 
 1. You will be prompted to provide an Admin password, enter `Pa55w.rd!!`
 
 1. When the deployment is complete, go to the Azure portal home page, and then select **Virtual Machines** to find the newly created virtual machines.
+
+   ![](../media/azvnh45.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -516,7 +526,7 @@ In this task, you'll confirm that the ContosoPublic VM doesn't have access to th
 
 1. Select **contosostorage<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. From left navigation pane of storage account under **Data storage**, select **File shares (1)** and select the **marketing (2)** file share.
+1. From left navigation pane of storage account under **Data storage**, select **Classic File shares (1)** and select the **marketing (2)** file share.
 
    ![](../media/azv50.png)
 
