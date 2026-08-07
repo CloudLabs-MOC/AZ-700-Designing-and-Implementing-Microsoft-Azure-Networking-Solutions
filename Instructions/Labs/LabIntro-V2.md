@@ -16,7 +16,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/mod1-6-envtab.png)
+![Explore Lab Resources](../media/envtab.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -28,7 +28,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../media/l1-2.png)
+![Use the Split Window Feature](../media/splittab.png)
  
 ## Managing Your Virtual Machine
  
@@ -40,7 +40,7 @@ Feel free to **Start**, **Stop**, or **Restart** your virtual machine as needed 
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
-    ![Manage Your Virtual Machine](../media/gext.png)
+    ![Manage Your Virtual Machine](../media/timextend.png)
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 

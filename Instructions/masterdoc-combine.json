@@ -5,68 +5,72 @@
     "BaseURL": "https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/aparnakhadatkar/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M01-Unit%204%20Design%20and%20implement%20a%20Virtual%20Network%20in%20Azure.md",
+        "RawFilePath": "https://raw.githubusercontent.com/aparnakhadatkar/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/combined_gettingstarted_page.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M01-Unit%206%20Configure%20DNS%20settings%20in%20Azure.md",
+        "RawFilePath": "https://raw.githubusercontent.com/aparnakhadatkar/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M01-Unit%204%20Design%20and%20implement%20a%20Virtual%20Network%20in%20Azure.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M01-Unit%208%20Connect%20two%20Azure%20Virtual%20Networks%20using%20global%20virtual%20network%20peering.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M01-Unit%206%20Configure%20DNS%20settings%20in%20Azure.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M02-Unit%203%20Create%20and%20configure%20a%20virtual%20network%20gateway.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M01-Unit%208%20Connect%20two%20Azure%20Virtual%20Networks%20using%20global%20virtual%20network%20peering.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M02-Unit%207%20Create%20a%20Virtual%20WAN%20by%20using%20Azure%20Portal.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M02-Unit%203%20Create%20and%20configure%20a%20virtual%20network%20gateway.md",
         "Order": 5
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M03-Unit%204%20Configure%20an%20ExpressRoute%20Gateway.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M02-Unit%207%20Create%20a%20Virtual%20WAN%20by%20using%20Azure%20Portal.md",
         "Order": 6
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M03-Unit%205%20Provision%20an%20ExpressRoute%20circuit.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M03-Unit%204%20Configure%20an%20ExpressRoute%20Gateway.md",
         "Order": 7
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M04-Unit%204%20Create%20and%20configure%20an%20Azure%20load%20balancer.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M03-Unit%205%20Provision%20an%20ExpressRoute%20circuit.md",
         "Order": 8
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M04-Unit%206%20Create%20a%20Traffic%20Manager%20profile%20using%20the%20Azure%20portal.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M04-Unit%204%20Create%20and%20configure%20an%20Azure%20load%20balancer.md",
         "Order": 9
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M05-Unit%204%20Deploy%20Azure%20application%20gateway.md",
-        "Order": 10
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M04-Unit%206%20Create%20a%20Traffic%20Manager%20profile%20using%20the%20Azure%20portal.md",
+        "Order": 10   
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M05-Unit%206%20Create%20a%20front%20door%20for%20a%20highly%20available%20web%20application%20using%20the%20Azure%20portal.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M05-Unit%204%20Deploy%20Azure%20application%20gateway.md",
         "Order": 11
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M06-Unit%204%20Configure%20DDoS%20Protection%20on%20a%20virtual%20network%20using%20the%20Azure%20portal.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M05-Unit%206%20Create%20a%20front%20door%20for%20a%20highly%20available%20web%20application%20using%20the%20Azure%20portal.md",
         "Order": 12
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M06-Unit%207%20Deploy%20and%20configure%20Azure%20Firewall%20using%20the%20Azure%20portal.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M06-Unit%204%20Configure%20DDoS%20Protection%20on%20a%20virtual%20network%20using%20the%20Azure%20portal.md",
         "Order": 13
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M06-Unit%209%20Secure%20your%20virtual%20hub%20using%20Azure%20Firewall%20Manager.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M06-Unit%207%20Deploy%20and%20configure%20Azure%20Firewall%20using%20the%20Azure%20portal.md",
         "Order": 14
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M07-Unit%205%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M06-Unit%209%20Secure%20your%20virtual%20hub%20using%20Azure%20Firewall%20Manager.md",
         "Order": 15
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M08-Unit%203%20Monitor%20a%20load%20balancer%20resource%20using%20Azure%20Monitor.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M07-Unit%205%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints.md",
         "Order": 16
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/M08-Unit%203%20Monitor%20a%20load%20balancer%20resource%20using%20Azure%20Monitor.md",
+        "Order": 17
       }
     ]
   }
