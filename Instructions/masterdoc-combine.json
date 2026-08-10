@@ -5,7 +5,7 @@
     "BaseURL": "https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/aparnakhadatkar/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/combined_gettingstarted_page.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/prod/Instructions/Labs/combined_gettingstarted_page.md",
         "Order": 1
       },
       {
